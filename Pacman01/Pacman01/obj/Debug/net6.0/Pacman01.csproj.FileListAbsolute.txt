@@ -1,0 +1,15 @@
+D:\2UNIVERSITY\ООП\курсовая\Pacman01\Pacman01\bin\Debug\net6.0\Pacman01.exe
+D:\2UNIVERSITY\ООП\курсовая\Pacman01\Pacman01\bin\Debug\net6.0\Pacman01.deps.json
+D:\2UNIVERSITY\ООП\курсовая\Pacman01\Pacman01\bin\Debug\net6.0\Pacman01.runtimeconfig.json
+D:\2UNIVERSITY\ООП\курсовая\Pacman01\Pacman01\bin\Debug\net6.0\Pacman01.dll
+D:\2UNIVERSITY\ООП\курсовая\Pacman01\Pacman01\bin\Debug\net6.0\Pacman01.pdb
+D:\2UNIVERSITY\ООП\курсовая\Pacman01\Pacman01\obj\Debug\net6.0\Pacman01.csproj.AssemblyReference.cache
+D:\2UNIVERSITY\ООП\курсовая\Pacman01\Pacman01\obj\Debug\net6.0\Pacman01.GeneratedMSBuildEditorConfig.editorconfig
+D:\2UNIVERSITY\ООП\курсовая\Pacman01\Pacman01\obj\Debug\net6.0\Pacman01.AssemblyInfoInputs.cache
+D:\2UNIVERSITY\ООП\курсовая\Pacman01\Pacman01\obj\Debug\net6.0\Pacman01.AssemblyInfo.cs
+D:\2UNIVERSITY\ООП\курсовая\Pacman01\Pacman01\obj\Debug\net6.0\Pacman01.csproj.CoreCompileInputs.cache
+D:\2UNIVERSITY\ООП\курсовая\Pacman01\Pacman01\obj\Debug\net6.0\Pacman01.dll
+D:\2UNIVERSITY\ООП\курсовая\Pacman01\Pacman01\obj\Debug\net6.0\refint\Pacman01.dll
+D:\2UNIVERSITY\ООП\курсовая\Pacman01\Pacman01\obj\Debug\net6.0\Pacman01.pdb
+D:\2UNIVERSITY\ООП\курсовая\Pacman01\Pacman01\obj\Debug\net6.0\Pacman01.genruntimeconfig.cache
+D:\2UNIVERSITY\ООП\курсовая\Pacman01\Pacman01\obj\Debug\net6.0\ref\Pacman01.dll
