@@ -1,124 +1,40 @@
 ﻿using System;
 
-namespace Game_pacman
+
+namespace Pacman04
 {
-    class Game_pacman
+    public static class Program
     {
-        abstract class Element
+        public abstract class Element
         {
             abstract public void Draw();
+            abstract public bool isObstacle();
         }
-        class Pacman : Element
+        public class Pacman : Element
         {
-            private int x, y, time = 0, score = 0, design;
-            private bool lost, scared = false;
-
             public Pacman(int x, int y, int design)
             {
-                this.x = x;
-                this.y = y;
-                this.design = design;
+                this.X = x;
+                this.Y = y;
+                this.Design = design;
             }
             public int Design
             {
-                get { return design; }
-                set { design = value; }
-            }
-            public int Score
-            {
-                get { return score; }
-                set { score = value; }
-            }
-            public bool Lost
-            {
-                get { return lost; }
-                set { lost = value; }
-            }
-            public bool Scared
-            {
-                get { return scared; }
-                set { scared = value; }
-            }
-
-            public int Time
-            {
-                get { return time; }
-                set { time = value; }
+                get; set;
             }
             public int X
             {
-                get { return x; }
-                set { x = value; }
+                get; set;
             }
-
             public int Y
             {
-                get { return y; }
-                set { y = value; }
-            }
-
-            public void Step(Element[,] Field, Element[,] Field_enemies, Dictionary<char, Coords> Coords_upd, char direction, Enemy enemy1, Enemy enemy2)
-            {
-                Field[x, y] = new Cell();
-
-                string tmp = Field[x + Coords_upd[direction].x, y + Coords_upd[direction].y].ToString();
-                string tmp_enemy = Field_enemies[x + Coords_upd[direction].x, y + Coords_upd[direction].y].ToString();
-
-                if (tmp_enemy.Substring(tmp_enemy.IndexOf('+') + 1) == "Enemy")
-                {
-                    if (x + Coords_upd[direction].x == enemy1.X && y + Coords_upd[direction].y == enemy1.Y)
-                    {
-                        if (enemy1.Scared)
-                        {
-                            enemy1.Eaten = true;
-                            enemy1.Scared = false;
-                        }
-                        else if (!enemy1.Eaten)
-                        {
-                            this.Lost = true;
-                            Game_over();
-                        }
-                    }
-                    if (x + Coords_upd[direction].x == enemy2.X && y + Coords_upd[direction].y == enemy2.Y)
-                    {
-                        if (enemy2.Scared)
-                        {
-                            enemy2.Eaten = true;
-                            enemy2.Scared = false;
-                        }
-                        else if (!enemy2.Eaten)
-                        {
-                            this.Lost = true;
-                            Game_over();
-                        }
-                    }
-
-                }
-                if (tmp.Substring(tmp.IndexOf('+') + 1) != "Wall")
-                {
-                    if (tmp.Substring(tmp.IndexOf('+') + 1) == "Energizer")
-                        this.scared = true;
-                    if (tmp.Substring(tmp.IndexOf('+') + 1) == "Coin")
-                        this.score++;
-
-                    this.x = x + Coords_upd[direction].x;
-                    this.y = y + Coords_upd[direction].y;
-                }
-              
-                if (this.scared)
-                    this.Time++;
-                if (this.Time == 10)
-                {
-                    this.Scared = false;
-                    this.Time = 0;
-                }
-
+                get; set;
             }
             public override void Draw()
             {
-                switch (design)
+                switch (Design)
                 {
-                    case 0: 
+                    case 0:
                         Console.Write('o');
                         break;
                     case 1:
@@ -134,230 +50,183 @@ namespace Game_pacman
                         Console.Write('o');
                         break;
                 };
-                
+
             }
+            public override bool isObstacle()
+            {
+                return false;
+            }
+
 
         }
-        class Enemy : Element
+        public class Enemy : Element
         {
-            private int x, y, eaten_time = 0;
-            private bool lost;
-            private bool scared = false, eaten = false;
-            private char prev = ' ';
-
-            public Enemy(int x, int y, bool lost = false)
+            private int timeEaten = 0;
+            private char prev = 'u';
+            private bool eaten = false;
+            public Enemy(int x, int y)
             {
-                this.x = x;
-                this.y = y;
+                this.X = x;
+                this.Y = y;
             }
-            public bool Eaten
+            public char Prev
             {
-                get { return eaten; }
-                set { eaten = value; }
+                get { return prev; }
+                set { prev = value; }
             }
-            public int Eaten_time
+            public int TimeEaten
             {
-                get { return eaten_time; }
-                set { eaten_time = value; }
-            }
-
-            public bool Scared
-            {
-                get { return scared; }
-                set { scared = value; }
-            }
-            public bool Lost
-            {
-                get { return lost; }
-                set { lost = value; }
+                get; set;
             }
             public int X
             {
-                get { return x; }
-                set { x = value; }
+                get; set;
             }
             public int Y
             {
-                get { return y; }
-                set { y = value; }
+                get; set;
             }
-
-            public bool Cycle_check(char dir, char prev)
+            public bool Eaten
             {
-                if (prev == 'u' && dir == 'd') return false;
-                if (prev == 'd' && dir == 'u') return false;
-                if (prev == 'l' && dir == 'r') return false;
-                if (prev == 'r' && dir == 'l') return false;
-                return true;
+                get; set;
             }
-            public void Step(Element[,] Field, Element[,] Field_enemies, Dictionary<char, Coords> Coords_upd, Pacman pacman)
+            public bool Scared
             {
-                if (!this.eaten)
-                {
-                    char direction = 'u';
-                    string tmp = Field[x + Coords_upd[direction].x, y + Coords_upd[direction].y].ToString();
-
-                    Random rnd = new Random();
-                    int dir = rnd.Next();
-
-                    while (tmp.Substring(tmp.IndexOf('+') + 1) == "Wall" || !Cycle_check(direction, prev))
-                    {
-                        dir++;
-                        switch (dir % 4)
-                        {
-                            case 0:
-                                direction = 'u';
-                                break;
-                            case 1:
-                               direction = 'd';
-                               break;
-                            case 2:
-                                direction = 'r';
-                                break;
-                            case 3:
-                                direction = 'l';
-                                break;
-                        }
-                        tmp = Field[x + Coords_upd[direction].x, y + Coords_upd[direction].y].ToString();
-                    }
-                    this.prev = direction;
-
-                    Field_enemies[x, y] = new Cell();
-
-                
-                    if (tmp.Substring(tmp.IndexOf('+') + 1) == "Pacman")
-                    {
-                        if (!this.scared && !this.eaten)
-                        {
-                            this.lost = true;
-                            Game_over();
-                        }
-                        if (this.scared && !this.eaten)
-                            this.eaten = true;
-                    }
-                    if (tmp.Substring(tmp.IndexOf('+') + 1) != "Wall")
-                    {
-                        this.x = x + Coords_upd[direction].x;
-                        this.y = y + Coords_upd[direction].y;
-                    }
-                }
-                else
-                    this.eaten_time++;
-
-                if (eaten_time == 10)
-                {
-                    eaten_time = 0;
-                    this.eaten = false;
-                }
-                    
+                get; set;
             }
-
             public override void Draw()
-            { 
-                if (this.scared || this.eaten)
+            {
+                if (this.Eaten || this.Scared)
                     Console.Write('V');
                 else
                     Console.Write('A');
             }
+            public override bool isObstacle()
+            {
+                return false;
+            }
         }
-        class Wall : Element
+        public class Wall : Element
         {
             public override void Draw()
             {
                 Console.Write('#');
             }
+            public override bool isObstacle()
+            {
+                return true;
+            }
+
         }
-        class Coin : Element
+        public class Coin : Element
         {
+            public void Clear()
+            {
+                Console.Write("");
+            }
             public override void Draw()
             {
                 Console.Write('.');
             }
+            public override bool isObstacle()
+            {
+                return false;
+            }
         }
-        class Cell : Element
+        public class Cell : Element
         {
             public override void Draw()
             {
                 Console.Write(' ');
             }
+            public override bool isObstacle()
+            {
+                return false;
+            }
         }
-        class Energizer : Element
+        public class Energizer : Element
         {
             public override void Draw()
             {
                 Console.Write('@');
             }
+            public override bool isObstacle()
+            {
+                return false;
+            }
         }
 
-        public struct Coords
+        public class Field
         {
-            public int x, y;
-            public Coords(int x, int y)
+            public Element[,] map = new Element[50, 50];
+            private int scaredTime = 0, height, width;
+
+            public Field(int height, int width)
             {
-                this.x = x;
-                this.y = y;
+                this.width = width;
+                this.height = height;
+            }
+            public Element this[int i, int j]
+            {
+                get => map[i, j];
+                set => map[i, j] = value;
+            }
+            public int Height
+            {
+                get { return height; }
+                set { height = value; }
+            }
+            public int Width
+            {
+                get { return width; }
+                set { width = value; }
+            }
+            public bool Scared
+            {
+                get; set;
+            }
+            public int ScaredTime
+            {
+                get { return scaredTime; }
+                set { scaredTime = value; }
+            }
+            public int Score
+            {
+                get; set;
+            }
+            public bool GameOver
+            {
+                get; set;
             }
         }
 
         static void Main(string[] args)
         {
-            //Coords dictionary
-            Dictionary<char, Coords> Coords_upd = new Dictionary<char, Coords>();
-            Coords_upd.Add('u', new Coords(-1, 0));
-            Coords_upd.Add('d', new Coords(1, 0));
-            Coords_upd.Add('r', new Coords(0, 1));
-            Coords_upd.Add('l', new Coords(0, -1));
-            //Choosing level
-            int lvl = Choose_level();
-            int pac_x, pac_y, height, width, e1_x, e1_y, e2_x, e2_y;
-            switch (lvl)
+            Console.CursorVisible = false;
+
+
+            int design = 0, generalScore = 0;
+
+            while (true)
             {
-                case 1:
-                    height = 7; width = 17;
-                    pac_x = 3; pac_y = 6;
-                    e1_x = 1; e1_y = 9;
-                    e2_x = 5; e2_y = 1;
-                    break;
-                case 2:
-                    height = 7; width = 17;
-                    pac_x = 3; pac_y = 6;
-                    e1_x = 1; e1_y = 9;
-                    e2_x = 5; e2_y = 1;
-                    break;
-                case 3:
-                    height = 7; width = 13;
-                    pac_x = 3; pac_y = 6;
-                    e1_x = 1; e1_y = 9;
-                    e2_x = 5; e2_y = 1;
-                    break;
-                default:
-                    height = 7; width = 13;
-                    pac_x = 3; pac_y = 6;
-                    e1_x = 1; e1_y = 9;
-                    e2_x = 5; e2_y = 1;
-                    break;
 
-            }
+                int lvl = Interface.Choose_level();
 
-            int general_score = 0, design = 0;
-            bool end_game = false;
-            while (!end_game)
-            {
-                Element[,] Field = new Element[height, width];
-                Element[,] Field_enemies = new Element[height, width];
-                Pacman pacman = new Pacman(pac_x, pac_y, design);
-                Enemy enemy1 = new Enemy(e1_x, e1_y);
-                Enemy enemy2 = new Enemy(e2_x, e2_y);
+                Field field = new Field(Utilities.LevelInfo(lvl).height, Utilities.LevelInfo(lvl).width);
+                Field fieldEnemies = new Field(Utilities.LevelInfo(lvl).height, Utilities.LevelInfo(lvl).width);
+                Pacman pacman = new Pacman(Utilities.LevelInfo(lvl).pacmanCoords.x, Utilities.LevelInfo(lvl).pacmanCoords.y, design);
 
-                Start(Field, Field_enemies, lvl);
-                Update(Field, Field_enemies, pacman, enemy1, enemy2, pacman.Score, general_score);
+                Enemy[] enemies = new Enemy[Utilities.LevelInfo(lvl).numberOfEnemies];
 
-                ConsoleKeyInfo key_pressed = Console.ReadKey();
+                Start(field, fieldEnemies, Utilities.LevelInfo(lvl).path, enemies, lvl);
 
-                while (!pacman.Lost && !enemy1.Lost && !enemy2.Lost)
+                DrawField(field, fieldEnemies, generalScore);
+
+                ConsoleKeyInfo key_pressed = Console.ReadKey(true);
+                while (true)
                 {
 
-                    key_pressed = (Console.KeyAvailable == false) ? key_pressed : Console.ReadKey();
+                    key_pressed = (Console.KeyAvailable == false) ? key_pressed : Console.ReadKey(true);
                     //direction pacman
                     char dir = 'r';
                     if (key_pressed.Key == ConsoleKey.W) dir = 'u';
@@ -365,244 +234,285 @@ namespace Game_pacman
                     if (key_pressed.Key == ConsoleKey.A) dir = 'l';
                     if (key_pressed.Key == ConsoleKey.D) dir = 'r';
 
-                    pacman.Step(Field, Field_enemies, Coords_upd, dir, enemy1, enemy2);
-
-                    if (pacman.Lost || enemy1.Lost || enemy2.Lost)
+                    StepPacman(pacman, field, fieldEnemies, dir, generalScore, lvl);
+                    if (field.GameOver)
                     {
-                        Game_over();
-                        end_game = true;
+                        Interface.Game_over();
+                        return;
                     }
-                    else Update(Field, Field_enemies, pacman, enemy1, enemy2, pacman.Score, general_score);
 
-                    enemy1.Step(Field, Field_enemies, Coords_upd, pacman);
-                    enemy2.Step(Field, Field_enemies, Coords_upd, pacman);
-
-                    if (pacman.Lost || enemy1.Lost || enemy2.Lost)
+                    for (int i = 0; i < Utilities.LevelInfo(lvl).numberOfEnemies; i++)
                     {
-                        Game_over();
-                        end_game = true;
+                        StepEnemy(enemies[i], field, fieldEnemies, randomDir(fieldEnemies, enemies[i]), lvl);
+                        if (field.GameOver)
+                        {
+                            Interface.Game_over();
+                            return;
+                        }
                     }
-                    else Update(Field, Field_enemies, pacman, enemy1, enemy2, pacman.Score, general_score);
 
-                    
-                    if (pacman.Score == 48 && lvl == 1)
+                    if (field.Score == 10/*levelInfo[lvl].points*/)
                     {
-                        general_score += pacman.Score;
-                        Victory(general_score);
+                        generalScore += field.Score;
+                        Interface.Victory(generalScore);
                         ConsoleKeyInfo key_pressed1 = Console.ReadKey();
-                        if (key_pressed1.Key == ConsoleKey.N) end_game = true;
-                        else if (key_pressed1.Key == ConsoleKey.S) design = Shop_purchase(general_score, design);
+                        if (key_pressed1.Key == ConsoleKey.N)
+                            return;
+                        else if (key_pressed1.Key == ConsoleKey.S)
+                            design = Shop_purchase(ref generalScore, design);
                         break;
                     }
                 }
             }
         }
-            
-        static int Choose_level()
+
+        static int Shop_purchase(ref int generalScore, int design)
         {
-            Console.Clear();
-            string path = "choose_level.txt";
-            using (StreamReader reader = new StreamReader(path))
-            {
-                string line;
-                while ((line = reader.ReadLine()) != null)
-                {
-                    Console.WriteLine(line);
-                }
-            }
-            int x = Console.Read();
-            if (x - '0' >= 1 && x - '0' <= 3) return x - '0';
-            else return 1;
 
-        }
-        static void Update(Element[,] Field, Element[,] Field_enemies, Pacman pacman, Enemy enemy1, Enemy enemy2, int score, int general_score)
-        {
-            Field[pacman.X, pacman.Y] = pacman;
-
-            Field_enemies[enemy1.X, enemy1.Y] = enemy1;
-            Field_enemies[enemy2.X, enemy2.Y] = enemy2;
-
-            if (pacman.Scared)
-            {
-                if (!enemy1.Eaten) enemy1.Scared = true;
-                if (!enemy2.Eaten) enemy2.Scared = true;
-            }
-            else
-            {
-                enemy1.Scared = false;
-                enemy2.Scared = false;
-            }
-
-            Draw(Field, Field_enemies, score, general_score);
-        }
-        static void Draw(Element[,] Field, Element[,] Field_enemies, int score, int general_score)
-        {
-            Console.Clear();
-            Console.WriteLine(); Console.WriteLine(); 
-
-            for (int i = 0; i < Field.GetLength(0); i++)
-            {
-                Console.Write("                                             ");
-                for (int j = 0; j < Field.GetLength(1); j++)
-                {
-                    string tmp = Field_enemies[i, j].ToString();
-                    string tmp1 = Field[i, j].ToString();
-                    if (tmp.Substring(tmp.IndexOf('+') + 1) == "Enemy" && tmp1.Substring(tmp.IndexOf('+') + 1) != "Pacman") Field_enemies[i, j].Draw();
-                    else Field[i, j].Draw();
-                }
-                Console.WriteLine();
-            }
-            Console.WriteLine("Score:" + score + " coins");
-            Console.WriteLine("General score:" + (general_score + score) + " coins");
-            Thread.Sleep(250);
-        }
-
-        static void Start(Element[,] Field, Element[,] Field_enemies, int lvl)
-        {
-            //filling the field 
-            string path, path_enemies;
-            switch (lvl)
-            {
-                case 1:
-                    path = "lvl1.txt";
-                    path_enemies = "lvl1_enemies.txt";
-                    break;
-                case 2:
-                    path = "lvl1.txt";
-                    path_enemies = "lvl1_enemies.txt";
-                    break;
-                case 3:
-                    path = "lvl3.txt";
-                    path_enemies = "lvl1_enemies.txt";
-                    break;
-                default:
-                    path = "lvl1.txt";
-                    path_enemies = "lvl1_enemies.txt";
-                    break;
-
-            }
-            //filling Field
-            using (StreamReader reader = new StreamReader(path))
-            {
-                string line;
-                int i = 0;
-                while ((line = reader.ReadLine()) != null)
-                {
-                    for (int j = 0; j < line.Length; j++)
-                    {
-                        if (line[j] == '#') Field[i, j] = new Wall();
-                        if (line[j] == '.') Field[i, j] = new Coin();
-                        if (line[j] == ' ') Field[i, j] = new Cell();
-                        if (line[j] == '@') Field[i, j] = new Energizer();
-                        if (line[j] == 'o') Field[i, j] = new Pacman(i, j, 0);
-                    }
-                    i++;
-                }
-            }
-            //Filling Field_enemies
-            using (StreamReader reader = new StreamReader(path_enemies))
-            {
-                string line;
-                int i = 0;
-                while ((line = reader.ReadLine()) != null)
-                {
-                    for (int j = 0; j < line.Length; j++)
-                    {
-                        if (line[j] == '#') Field_enemies[i, j] = new Wall();
-                        if (line[j] == ' ') Field_enemies[i, j] = new Cell();
-                        if (line[j] == 'A') Field_enemies[i, j] = new Enemy(i, j);
-                    }
-                    i++;
-                }
-            }
-        }
-
-        static void Game_over()
-        {
-            Console.Clear();
-            string path = "game_over.txt";
-            using (StreamReader reader = new StreamReader(path))
-            {
-                string line;
-                while ((line = reader.ReadLine()) != null)
-                {
-                    Console.WriteLine(line);
-                }
-            }
-        }
-
-        static void Victory(int general_score)
-        {
-            Console.Clear();
-            string path = "victory.txt";
-            using (StreamReader reader = new StreamReader(path))
-            {
-                string line;
-                while ((line = reader.ReadLine()) != null)
-                {
-                    Console.WriteLine(line);
-                }
-            }
-            Console.WriteLine("General score: " + general_score + " coins");
-            Thread.Sleep(3000);
-        }
-
-        static void Shop(int general_score, int design)
-        {
-            Console.Clear();
-            string path = "shop.txt";
-            using (StreamReader reader = new StreamReader(path))
-            {
-                string line;
-                while ((line = reader.ReadLine()) != null)
-                {
-                    Console.WriteLine(line);
-                }
-            }
-            Console.WriteLine("Your money: " + general_score + " coins");
-        }
-        static int Shop_purchase(int general_score, int design)
-        {
-            Shop(general_score, design);
+            Interface.Shop(generalScore, Utilities.DesignInfo(design).appearance);
             ConsoleKeyInfo key_pressed = Console.ReadKey();
+            int chosenDesign = design;
 
             while (key_pressed.Key != ConsoleKey.D4)
             {
-                int price = 0, res = design;
-
                 if (key_pressed.Key == ConsoleKey.D1)
-                {
-                    price = 20;
-                    res = 1;
-                }
+                    chosenDesign = 1;
                 if (key_pressed.Key == ConsoleKey.D2)
-                {
-                    price = 50;
-                    res = 2;
-                }
+                    chosenDesign = 2;
                 if (key_pressed.Key == ConsoleKey.D3)
-                {
-                    price = 100;
-                    res = 3;
-                }
+                    chosenDesign = 3;
 
-                if (general_score >= price)
+                if (generalScore >= Utilities.DesignInfo(design).price)
                 {
-                    general_score -= price;
-                    Shop(general_score, design);
+                    generalScore -= Utilities.DesignInfo(design).price;
+                    Interface.Shop(generalScore, Utilities.DesignInfo(design).appearance);
                     Console.WriteLine("Purchase was successfully made. Returning to the game...");
                     Thread.Sleep(3000);
-                    return res;
+                    return chosenDesign;
                 }
                 else
                 {
-                    Shop(general_score, design);
+                    Interface.Shop(generalScore, Utilities.DesignInfo(design).appearance);
                     Console.WriteLine("You do not have enough money for this purchase :(");
                 }
                 key_pressed = Console.ReadKey();
             }
 
-            return design;  
+            return chosenDesign;
         }
+        public static bool Cycle_check(char dir, char prev)
+        {
+            if (prev == 'u' && dir == 'd') return false;
+            if (prev == 'd' && dir == 'u') return false;
+            if (prev == 'l' && dir == 'r') return false;
+            if (prev == 'r' && dir == 'l') return false;
+            return true;
+        }
+
+        public static char randomDir(Field field, Enemy enemy)
+        {
+            char direction = 'u';
+            Random rnd = new Random();
+            int dir = rnd.Next();
+
+            while (field[enemy.X + Utilities.CoordsUpdate(direction).x, enemy.Y + Utilities.CoordsUpdate(direction).y].isObstacle() || !Cycle_check(direction, enemy.Prev))
+            {
+                dir++;
+                switch (dir % 4)
+                {
+                    case 0:
+                        direction = 'u';
+                        break;
+                    case 1:
+                        direction = 'd';
+                        break;
+                    case 2:
+                        direction = 'r';
+                        break;
+                    case 3:
+                        direction = 'l';
+                        break;
+                }
+
+            }
+            enemy.Prev = direction;
+            return direction;
+        }
+        static void StepPacman(Pacman pacman, Field field, Field fieldEnemies, char dir, int generalScore, int lvl)
+        {
+            if (field.Scared)
+                field.ScaredTime++;
+            if (field.ScaredTime == 10)
+            {
+                field.Scared = false;
+                field.ScaredTime = 0;
+            }
+
+            Console.SetCursorPosition(pacman.Y, pacman.X);
+            Cell cell = new Cell();
+            cell.Draw();
+            field[pacman.X, pacman.Y] = new Cell();
+
+            if (pacman.Y + Utilities.CoordsUpdate(dir).y < 0 || pacman.Y + Utilities.CoordsUpdate(dir).y > 37)
+            {
+                if (pacman.X + Utilities.CoordsUpdate(dir).x == 6 && pacman.Y + Utilities.CoordsUpdate(dir).y == -1)
+                    pacman.Y = 37;
+                else if (pacman.X + Utilities.CoordsUpdate(dir).x == 6 && pacman.Y + Utilities.CoordsUpdate(dir).y == 38)
+                    pacman.Y = 0;
+                if (field[pacman.X, pacman.Y] is Coin)
+                    field.Score++;
+            }
+            else if (!(field[pacman.X + Utilities.CoordsUpdate(dir).x, pacman.Y + Utilities.CoordsUpdate(dir).y].isObstacle()))
+            {
+
+                if (field[pacman.X + Utilities.CoordsUpdate(dir).x, pacman.Y + Utilities.CoordsUpdate(dir).y] is Coin)
+                    field.Score++;
+                if (field[pacman.X + Utilities.CoordsUpdate(dir).x, pacman.Y + Utilities.CoordsUpdate(dir).y] is Energizer)
+                    field.Scared = true;
+                if (fieldEnemies[pacman.X + Utilities.CoordsUpdate(dir).x, pacman.Y + Utilities.CoordsUpdate(dir).y] is Enemy && !field.Scared)
+                    field.GameOver = true;
+
+                pacman.X += Utilities.CoordsUpdate(dir).x;
+                pacman.Y += Utilities.CoordsUpdate(dir).y;
+
+            }
+            Console.SetCursorPosition(pacman.Y, pacman.X);
+            pacman.Draw();
+            field[pacman.X, pacman.Y] = pacman;
+
+
+
+            Console.SetCursorPosition(7, field.Height);
+            Console.Write(field.Score);
+            Console.SetCursorPosition(15, field.Height + 1);
+            Console.Write(field.Score + generalScore);
+            Thread.Sleep(300);
+
+        }
+
+        static void StepEnemy(Enemy enemy, Field field, Field fieldEnemies, char dir, int lvl)
+        {
+            if (enemy.Eaten)
+                enemy.TimeEaten++;
+            if (enemy.TimeEaten == 20)
+            {
+                enemy.Eaten = false;
+                enemy.TimeEaten = 0;
+            }
+
+            if (field.Scared)
+                enemy.Scared = true;
+            else
+                enemy.Scared = false;
+
+            if (field[enemy.X, enemy.Y] is Pacman && field.Scared)
+                enemy.Eaten = true;
+
+            if (!(field[enemy.X, enemy.Y] is Pacman))
+            {
+                Console.SetCursorPosition(enemy.Y, enemy.X);
+                enemy.Draw();
+            }
+
+            if (!enemy.Eaten)
+            {
+                Console.SetCursorPosition(enemy.Y, enemy.X);
+                field[enemy.X, enemy.Y].Draw();
+                Console.SetCursorPosition(enemy.Y + Utilities.CoordsUpdate(dir).y, enemy.X + Utilities.CoordsUpdate(dir).x);
+                enemy.Draw();
+
+                if (field[enemy.X + Utilities.CoordsUpdate(dir).x, enemy.Y + Utilities.CoordsUpdate(dir).y] is Pacman && !field.Scared)
+                    field.GameOver = true;
+                if (field[enemy.X + Utilities.CoordsUpdate(dir).x, enemy.Y + Utilities.CoordsUpdate(dir).y] is Pacman && field.Scared)
+                    enemy.Eaten = true;
+
+
+                fieldEnemies[enemy.X, enemy.Y] = new Cell();
+                enemy.X += Utilities.CoordsUpdate(dir).x;
+                enemy.Y += Utilities.CoordsUpdate(dir).y;
+                fieldEnemies[enemy.X, enemy.Y] = enemy;
+
+            }
+
+
+        }
+        static void DrawField(Field field, Field fieldEnemies, int generalScore)
+        {
+            Console.Clear();
+            for (int i = 0; i < field.Height; i++)
+            {
+                for (int j = 0; j < field.Width; j++)
+                {
+                    if (fieldEnemies[i, j] is Enemy) fieldEnemies[i, j].Draw();
+                    else field[i, j].Draw();
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("Score: " + field.Score + "   coins");
+            Console.WriteLine("General score: " + (generalScore + field.Score) + "   coins");
+            Thread.Sleep(250);
+        }
+
+        static void Start(Field field, Field fieldEnemies, string path, Enemy[] enemies, int lvl)
+        {
+            //filling Field
+            using (StreamReader reader = new StreamReader(path))
+            {
+                string line;
+                int enemyNumber = 0;
+                for (int i = 0; i < field.Height; i++)
+                {
+                    line = reader.ReadLine();
+                    for (int j = 0; j < field.Width; j++)
+                    {
+                        if (line[j] == '#')
+                        {
+                            field[i, j] = new Wall();
+                            fieldEnemies[i, j] = new Wall();
+                        }
+                        if (line[j] == '.')
+                        {
+                            field[i, j] = new Coin();
+                            fieldEnemies[i, j] = new Cell();
+                        }
+                        if (line[j] == ' ')
+                        {
+                            field[i, j] = new Cell();
+                            fieldEnemies[i, j] = new Cell();
+                        }
+                        if (line[j] == '@')
+                        {
+                            field[i, j] = new Energizer();
+                            fieldEnemies[i, j] = new Cell();
+                        }
+                        if (line[j] == 'o')
+                        {
+                            field[i, j] = new Pacman(i, j, 0);
+                            fieldEnemies[i, j] = new Cell();
+                        }
+                        if (line[j] == 'A')
+                        {
+                            field[i, j] = new Coin();
+                            fieldEnemies[i, j] = new Enemy(i, j);
+                            enemies[enemyNumber] = new Enemy(i, j);
+                            enemyNumber++;
+                        }
+                    }
+                }
+                if (lvl == 3)
+                {
+                    fieldEnemies[6, 0] = new Wall();
+                    fieldEnemies[6, 37] = new Wall();
+                }
+            }
+        }
+
     }
 }
+
+
+
+
+
+
+
