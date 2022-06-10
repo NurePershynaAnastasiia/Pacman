@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Nastia\\.nuget\\packages\\": {}
+    "C:\\Users\\Anastasiia\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\2UNIVERSITY\\ООП\\курсовая\\Pacman01\\Pacman01\\Pacman01.csproj",
+      "projectUniqueName": "C:\\Users\\Anastasiia\\Documents\\GitHub\\Pacman\\Pacman01\\Pacman01\\Pacman01.csproj",
       "projectName": "Pacman01",
-      "projectPath": "D:\\2UNIVERSITY\\ООП\\курсовая\\Pacman01\\Pacman01\\Pacman01.csproj",
-      "packagesPath": "C:\\Users\\Nastia\\.nuget\\packages\\",
-      "outputPath": "D:\\2UNIVERSITY\\ООП\\курсовая\\Pacman01\\Pacman01\\obj\\",
+      "projectPath": "C:\\Users\\Anastasiia\\Documents\\GitHub\\Pacman\\Pacman01\\Pacman01\\Pacman01.csproj",
+      "packagesPath": "C:\\Users\\Anastasiia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Anastasiia\\Documents\\GitHub\\Pacman\\Pacman01\\Pacman01\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Nastia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Anastasiia\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

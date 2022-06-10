@@ -4,11 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pacman04
+namespace Pacman
 {
     class Interface
     {
-
+        public static void DrawField(string path, int generalScore)
+        {
+            FileReader(path);
+            Console.WriteLine("Score: 0   coins");
+            Console.WriteLine("General score: " + generalScore + "   coins");
+        }
         public static void Game_over()
         {
             FileReader("game_over.txt");
@@ -31,10 +36,14 @@ namespace Pacman04
         public static int Choose_level()
         {
             FileReader("choose_level.txt");
-            int x = Console.Read();
-            x -= '0';
-            if (x >= 1 && x <= 3) return x;
-            else return 1;
+            ConsoleKeyInfo keyPressed = Console.ReadKey(true);
+            if (keyPressed.Key == ConsoleKey.D1)
+                return 1;
+            if (keyPressed.Key == ConsoleKey.D2)
+                return 2;
+            if (keyPressed.Key == ConsoleKey.D3)
+                return 3;
+            return 1;
 
         }
 
