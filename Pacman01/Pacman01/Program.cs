@@ -28,7 +28,7 @@ namespace Pacman
                 {
 
                     keyPressed = (Console.KeyAvailable == false) ? keyPressed : Console.ReadKey(true);//checking if new key is pressed, if not - use the old one (inertia)
-                    char key = GetDirection(keyPressed);
+                    char key = PacmanStep.GetDirection(keyPressed);
                     if (key == 'p') //pause
                     {
                         keyPressed = Pause(field);
@@ -75,21 +75,7 @@ namespace Pacman
             Console.Write("      ");
             return key;
         }
-        public static char GetDirection(ConsoleKeyInfo key_pressed)
-        {
-            char dir = 'r'; //direction pacman
-            if (key_pressed.Key == ConsoleKey.W)
-                dir = 'u';
-            if (key_pressed.Key == ConsoleKey.S)
-                dir = 'd';
-            if (key_pressed.Key == ConsoleKey.A)
-                dir = 'l';
-            if (key_pressed.Key == ConsoleKey.D)
-                dir = 'r';
-            if (key_pressed.Key == ConsoleKey.P)
-                dir = 'p';
-            return dir;
-        }
+       
         public static int Shop_purchase(ref int generalScore, int design)
         {
             Interface.Shop(generalScore, Utilities.Utility.DesignInfo(design).appearance);
@@ -173,9 +159,7 @@ namespace Pacman
             return direction;
         }
 
-       
-
-        public static void StepEnemy(Elements.Enemy enemy, Elements.Field field, Elements.Field fieldEnemies, char dir, int lvl)
+       public static void EnemyStatus(Elements.Enemy enemy, Elements.Field field)
         {
             if (enemy.Eaten)
                 enemy.TimeEaten++;
@@ -189,9 +173,15 @@ namespace Pacman
                 enemy.Scared = true;
             else
                 enemy.Scared = false;
-            
+
             if (field[enemy.X, enemy.Y] is Elements.Pacman && field.Scared)
                 enemy.Eaten = true;
+
+        }
+
+        public static void StepEnemy(Elements.Enemy enemy, Elements.Field field, Elements.Field fieldEnemies, char dir, int lvl)
+        {
+           EnemyStatus(enemy, field);
 
             if (!(field[enemy.X, enemy.Y] is Elements.Pacman))
             {

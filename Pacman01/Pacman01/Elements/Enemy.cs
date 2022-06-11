@@ -8,9 +8,7 @@ namespace Pacman.Elements
 {
     public class Enemy : Element
     {
-        private int timeEaten = 0;
         private char prev = 'u';
-        private bool eaten = false;
         public Enemy(int x, int y)
         {
             this.X = x;
@@ -50,6 +48,13 @@ namespace Pacman.Elements
         }
         public override bool isObstacle()
         {
+            return false;
+        }
+
+        public override bool isEaten()
+        {
+            if (this.Eaten)
+                return true;
             return false;
         }
     }

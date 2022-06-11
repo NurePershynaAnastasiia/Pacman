@@ -8,6 +8,21 @@ namespace Pacman
 {
     public class PacmanStep
     {
+        public static char GetDirection(ConsoleKeyInfo key_pressed)
+        {
+            char dir = 'r'; //direction pacman
+            if (key_pressed.Key == ConsoleKey.W)
+                dir = 'u';
+            if (key_pressed.Key == ConsoleKey.S)
+                dir = 'd';
+            if (key_pressed.Key == ConsoleKey.A)
+                dir = 'l';
+            if (key_pressed.Key == ConsoleKey.D)
+                dir = 'r';
+            if (key_pressed.Key == ConsoleKey.P)
+                dir = 'p';
+            return dir;
+        }
         public static void FieldScared(Elements.Field field)
         {
             if (field.Scared)
@@ -43,7 +58,7 @@ namespace Pacman
                 field.Score++;
             if (field[pacman.X, pacman.Y] is Elements.Energizer)
                 field.Scared = true;
-            if (fieldEnemies[pacman.X, pacman.Y] is Elements.Enemy && !field.Scared)
+            if (fieldEnemies[pacman.X, pacman.Y] is Elements.Enemy && !field.Scared && !fieldEnemies[pacman.X, pacman.Y].isEaten())
                 field.GameOver = true;
         }
         public static void StepPacman(Elements.Pacman pacman, Elements.Field field, Elements.Field fieldEnemies, char dir, int generalScore, int lvl)

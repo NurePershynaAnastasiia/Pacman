@@ -16,5 +16,9 @@ namespace Pacman.Elements
         {
             return false;
         }
+        public override bool isEaten()
+        {
+            return false;
+        }
     }
 }
