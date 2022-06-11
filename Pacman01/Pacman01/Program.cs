@@ -29,14 +29,12 @@ namespace Pacman
 
                     keyPressed = (Console.KeyAvailable == false) ? keyPressed : Console.ReadKey(true);
                     char key = GetDirection(keyPressed);
-                    if (key == 'p')
+                    if (key == 'p') //pause
                     {
                         keyPressed = Pause(field);
                         continue;
                     }
                         
-
-
                     StepPacman(pacman, field, fieldEnemies, key, generalScore, lvl);
                     if (field.GameOver)
                     {
@@ -45,7 +43,7 @@ namespace Pacman
                     }
                     for (int i = 0; i < Utilities.Utility.LevelInfo(lvl).numberOfEnemies; i++) //all the enemies make their step
                     {
-                        StepEnemy(enemies[i], field, fieldEnemies, randomDir(fieldEnemies, enemies[i]), lvl);
+                        StepEnemy(enemies[i], field, fieldEnemies, RandomDir(fieldEnemies, enemies[i]), lvl);
                         if (field.GameOver)
                         {
                             Interface.Game_over();
@@ -94,24 +92,34 @@ namespace Pacman
         }
         static int Shop_purchase(ref int generalScore, int design)
         {
-
             Interface.Shop(generalScore, Utilities.Utility.DesignInfo(design).appearance);
-            ConsoleKeyInfo keyPressed = Console.ReadKey();
             int chosenDesign = design;
 
-            while (keyPressed.Key != ConsoleKey.D4)
+            ConsoleKeyInfo keyPressed;
+            do
             {
-                if (keyPressed.Key == ConsoleKey.D1)
-                    chosenDesign = 1;
-                if (keyPressed.Key == ConsoleKey.D2)
-                    chosenDesign = 2;
-                if (keyPressed.Key == ConsoleKey.D3)
-                    chosenDesign = 3;
-
-                if (generalScore >= Utilities.Utility.DesignInfo(design).price)
+                keyPressed = Console.ReadKey();
+                switch (keyPressed.Key)
                 {
-                    generalScore -= Utilities.Utility.DesignInfo(design).price;
-                    Interface.Shop(generalScore, Utilities.Utility.DesignInfo(design).appearance);
+                    case ConsoleKey.D1:
+                        chosenDesign = 1;
+                        break;
+                    case ConsoleKey.D2:
+                        chosenDesign = 2;
+                        break;
+                    case ConsoleKey.D3:
+                        chosenDesign = 3;
+                        break;
+                    case ConsoleKey.D9: //пасхалка на добавление монет
+                        generalScore += 10;
+                        Interface.Shop(generalScore, Utilities.Utility.DesignInfo(design).appearance);
+                        continue;
+                }
+
+                if (generalScore >= Utilities.Utility.DesignInfo(chosenDesign).price)
+                {
+                    generalScore -= Utilities.Utility.DesignInfo(chosenDesign).price;
+                    Interface.Shop(generalScore, Utilities.Utility.DesignInfo(chosenDesign).appearance);
                     Console.WriteLine("Purchase was successfully made. Returning to the game...");
                     Thread.Sleep(3000);
                     return chosenDesign;
@@ -121,10 +129,10 @@ namespace Pacman
                     Interface.Shop(generalScore, Utilities.Utility.DesignInfo(design).appearance);
                     Console.WriteLine("You do not have enough money for this purchase :(");
                 }
-                keyPressed = Console.ReadKey();
-            }
 
-            return chosenDesign;
+            } while (keyPressed.Key != ConsoleKey.D4);
+
+              return chosenDesign;
         }
         public static bool Cycle_check(char dir, char prev)
         {
@@ -135,7 +143,7 @@ namespace Pacman
             return true;
         }
 
-        public static char randomDir(Elements.Field field, Elements.Enemy enemy)
+        public static char RandomDir(Elements.Field field, Elements.Enemy enemy)
         {
             char direction = 'u';
             Random rnd = new Random();
@@ -257,10 +265,7 @@ namespace Pacman
                 enemy.X += Utilities.Utility.CoordsUpdate(dir).x;
                 enemy.Y += Utilities.Utility.CoordsUpdate(dir).y;
                 fieldEnemies[enemy.X, enemy.Y] = enemy;
-
             }
-           
-
         }
        
 
