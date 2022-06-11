@@ -27,7 +27,7 @@ namespace Pacman
                 while (true)
                 {
 
-                    keyPressed = (Console.KeyAvailable == false) ? keyPressed : Console.ReadKey(true);
+                    keyPressed = (Console.KeyAvailable == false) ? keyPressed : Console.ReadKey(true);//checking if new key is pressed, if not - use the old one (inertia)
                     char key = GetDirection(keyPressed);
                     if (key == 'p') //pause
                     {
@@ -35,7 +35,7 @@ namespace Pacman
                         continue;
                     }
                         
-                    StepPacman(pacman, field, fieldEnemies, key, generalScore, lvl);
+                    PacmanStep.StepPacman(pacman, field, fieldEnemies, key, generalScore, lvl);//pacman makes its step
                     if (field.GameOver)
                     {
                         Interface.Game_over();
@@ -58,7 +58,7 @@ namespace Pacman
                         ConsoleKeyInfo key_pressed1 = Console.ReadKey();
                         if (key_pressed1.Key == ConsoleKey.N)
                             return;
-                        else if (key_pressed1.Key == ConsoleKey.S)
+                        else if (key_pressed1.Key == ConsoleKey.S)//shop
                             design = Shop_purchase(ref generalScore, design);
                         break;
                     }
@@ -66,7 +66,7 @@ namespace Pacman
             }
         }
 
-        static ConsoleKeyInfo Pause(Elements.Field field)
+        public static ConsoleKeyInfo Pause(Elements.Field field)
         {
             Console.SetCursorPosition(30, field.Height + 2);
             Console.Write("Paused");
@@ -75,7 +75,7 @@ namespace Pacman
             Console.Write("      ");
             return key;
         }
-        static char GetDirection(ConsoleKeyInfo key_pressed)
+        public static char GetDirection(ConsoleKeyInfo key_pressed)
         {
             char dir = 'r'; //direction pacman
             if (key_pressed.Key == ConsoleKey.W)
@@ -90,7 +90,7 @@ namespace Pacman
                 dir = 'p';
             return dir;
         }
-        static int Shop_purchase(ref int generalScore, int design)
+        public static int Shop_purchase(ref int generalScore, int design)
         {
             Interface.Shop(generalScore, Utilities.Utility.DesignInfo(design).appearance);
             int chosenDesign = design;
@@ -134,7 +134,7 @@ namespace Pacman
 
               return chosenDesign;
         }
-        public static bool Cycle_check(char dir, char prev)
+        public static bool CycleCheck(char dir, char prev)
         {
             if (prev == 'u' && dir == 'd') return false;
             if (prev == 'd' && dir == 'u') return false;
@@ -149,7 +149,7 @@ namespace Pacman
             Random rnd = new Random();
             int dir = rnd.Next();
 
-            while (field[enemy.X + Utilities.Utility.CoordsUpdate(direction).x, enemy.Y + Utilities.Utility.CoordsUpdate(direction).y].isObstacle() || !Cycle_check(direction, enemy.Prev))
+            while (field[enemy.X + Utilities.Utility.CoordsUpdate(direction).x, enemy.Y + Utilities.Utility.CoordsUpdate(direction).y].isObstacle() || !CycleCheck(direction, enemy.Prev))
             {
                 dir++;
                 switch (dir % 4)
@@ -173,83 +173,9 @@ namespace Pacman
             return direction;
         }
 
-        public static void FieldScared(Elements.Field field)
-        {
-            if (field.Scared)
-                field.ScaredTime++;
-            if (field.ScaredTime == 10)
-            {
-                field.Scared = false;
-                field.ScaredTime = 0;
-            }
-        }
-        public static bool ThorMapCheck(Elements.Field field, Utilities.Utility.Coords pacmanCoords)
-        {
-            if (pacmanCoords.y < 0 || pacmanCoords.y > field.Width || pacmanCoords.x < 0 || pacmanCoords.x > field.Height)
-                return true;
-            return false;
-        }
+       
 
-        public static void ThorMapStep(Elements.Field field, Elements.Pacman pacman)
-        {
-            if (pacman.Y < 0)
-                pacman.Y = field.Width - 1;
-            if (pacman.Y == field.Width)
-                pacman.Y = 0;
-            if (pacman.X < 0)
-                pacman.X = field.Height - 1;
-            if (pacman.X == field.Height)
-                pacman.X = 0;
-        }
-
-        public static void StepPacmanCheck(Elements.Field field, Elements.Field fieldEnemies, Elements.Pacman pacman)
-        {
-            if (field[pacman.X, pacman.Y] is Elements.Coin)
-                field.Score++;
-            if (field[pacman.X, pacman.Y] is Elements.Energizer)
-                field.Scared = true;
-            if (fieldEnemies[pacman.X, pacman.Y] is Elements.Enemy && !field.Scared)
-                field.GameOver = true;
-        }
-        static void StepPacman (Elements.Pacman pacman, Elements.Field field, Elements.Field fieldEnemies, char dir, int generalScore, int lvl)
-        {
-            FieldScared(field);
-            
-            //empty cell on the place where pacman was
-            Console.SetCursorPosition(pacman.Y, pacman.X);
-            Elements.Cell cell = new Elements.Cell();
-            cell.Draw();
-            field[pacman.X, pacman.Y] = new Elements.Cell();
-
-            if (ThorMapCheck(field, new Utilities.Utility.Coords (pacman.X + Utilities.Utility.CoordsUpdate(dir).x, pacman.Y + Utilities.Utility.CoordsUpdate(dir).y)))
-            {
-                pacman.X += Utilities.Utility.CoordsUpdate(dir).x;
-                pacman.Y += Utilities.Utility.CoordsUpdate(dir).y;
-                ThorMapStep(field, pacman);
-            }
-            else if (!(field[pacman.X + Utilities.Utility.CoordsUpdate(dir).x, pacman.Y + Utilities.Utility.CoordsUpdate(dir).y].isObstacle()))
-            {
-                pacman.X += Utilities.Utility.CoordsUpdate(dir).x;
-                pacman.Y += Utilities.Utility.CoordsUpdate(dir).y;
-            }
-            StepPacmanCheck(field, fieldEnemies, pacman);
-
-            //pacman on its new place
-            Console.SetCursorPosition(pacman.Y, pacman.X);
-            pacman.Draw();
-            field[pacman.X, pacman.Y] = pacman;
-
-
-
-            Console.SetCursorPosition(7, field.Height);
-            Console.Write(field.Score);
-            Console.SetCursorPosition(15, field.Height + 1);
-            Console.Write(field.Score + generalScore);
-            Thread.Sleep(300);
-
-        }
-
-        static void StepEnemy(Elements.Enemy enemy, Elements.Field field, Elements.Field fieldEnemies, char dir, int lvl)
+        public static void StepEnemy(Elements.Enemy enemy, Elements.Field field, Elements.Field fieldEnemies, char dir, int lvl)
         {
             if (enemy.Eaten)
                 enemy.TimeEaten++;
@@ -292,9 +218,9 @@ namespace Pacman
                 fieldEnemies[enemy.X, enemy.Y] = enemy;
             }
         }
-       
 
-        static void Start(Pacman.Elements.Field field, Pacman.Elements.Field fieldEnemies, string path, Elements.Enemy[] enemies, int lvl)
+
+        public static void Start(Pacman.Elements.Field field, Pacman.Elements.Field fieldEnemies, string path, Elements.Enemy[] enemies, int lvl)
         {
             //filling Field
             using (StreamReader reader = new StreamReader(path))
