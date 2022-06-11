@@ -9,12 +9,13 @@ namespace Pacman
         static void Main(string[] args)
         {
             Console.CursorVisible = false;
-            int design = 0, generalScore = 0; 
+            int design = 0, generalScore = 0;
 
+            Interface.Intro();
+            Interface.Instructions();
             while (true)
             {
-                Interface.Intro();
-                Interface.Instructions();
+               
                 int lvl = Interface.Choose_level();
 
                 Elements.Field field = new Elements.Field(Utilities.Utility.LevelInfo(lvl).height, Utilities.Utility.LevelInfo(lvl).width);
