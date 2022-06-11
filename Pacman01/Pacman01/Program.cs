@@ -59,13 +59,12 @@ namespace Pacman
                         if (key_pressed1.Key == ConsoleKey.N)
                             return;
                         else if (key_pressed1.Key == ConsoleKey.S)//shop
-                            design = Shop_purchase(ref generalScore, design);
+                            design = ShopPurchase(ref generalScore, design);
                         break;
                     }
                 }
             }
         }
-
         public static ConsoleKeyInfo Pause(Elements.Field field)
         {
             Console.SetCursorPosition(30, field.Height + 2);
@@ -76,7 +75,7 @@ namespace Pacman
             return key;
         }
        
-        public static int Shop_purchase(ref int generalScore, int design)
+        public static int ShopPurchase(ref int generalScore, int design)
         {
             Interface.Shop(generalScore, Utilities.Utility.DesignInfo(design).appearance);
             int chosenDesign = design;
