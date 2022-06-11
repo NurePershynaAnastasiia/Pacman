@@ -172,7 +172,8 @@ namespace Pacman
             enemy.Prev = direction;
             return direction;
         }
-        static void StepPacman (Elements.Pacman pacman, Elements.Field field, Elements.Field fieldEnemies, char dir, int generalScore, int lvl)
+
+        public static void FieldScared(Elements.Field field)
         {
             if (field.Scared)
                 field.ScaredTime++;
@@ -181,35 +182,59 @@ namespace Pacman
                 field.Scared = false;
                 field.ScaredTime = 0;
             }
+        }
+        public static bool ThorMapCheck(Elements.Field field, Utilities.Utility.Coords pacmanCoords)
+        {
+            if (pacmanCoords.y < 0 || pacmanCoords.y > field.Width || pacmanCoords.x < 0 || pacmanCoords.x > field.Height)
+                return true;
+            return false;
+        }
 
+        public static void ThorMapStep(Elements.Field field, Elements.Pacman pacman)
+        {
+            if (pacman.Y < 0)
+                pacman.Y = field.Width - 1;
+            if (pacman.Y == field.Width)
+                pacman.Y = 0;
+            if (pacman.X < 0)
+                pacman.X = field.Height - 1;
+            if (pacman.X == field.Height)
+                pacman.X = 0;
+        }
+
+        public static void StepPacmanCheck(Elements.Field field, Elements.Field fieldEnemies, Elements.Pacman pacman)
+        {
+            if (field[pacman.X, pacman.Y] is Elements.Coin)
+                field.Score++;
+            if (field[pacman.X, pacman.Y] is Elements.Energizer)
+                field.Scared = true;
+            if (fieldEnemies[pacman.X, pacman.Y] is Elements.Enemy && !field.Scared)
+                field.GameOver = true;
+        }
+        static void StepPacman (Elements.Pacman pacman, Elements.Field field, Elements.Field fieldEnemies, char dir, int generalScore, int lvl)
+        {
+            FieldScared(field);
+            
+            //empty cell on the place where pacman was
             Console.SetCursorPosition(pacman.Y, pacman.X);
             Elements.Cell cell = new Elements.Cell();
             cell.Draw();
             field[pacman.X, pacman.Y] = new Elements.Cell();
 
-            if (pacman.Y + Utilities.Utility.CoordsUpdate(dir).y < 0 || pacman.Y + Utilities.Utility.CoordsUpdate(dir).y > 37)
+            if (ThorMapCheck(field, new Utilities.Utility.Coords (pacman.X + Utilities.Utility.CoordsUpdate(dir).x, pacman.Y + Utilities.Utility.CoordsUpdate(dir).y)))
             {
-                if (pacman.X + Utilities.Utility.CoordsUpdate(dir).x == 6 && pacman.Y + Utilities.Utility.CoordsUpdate(dir).y == -1)
-                    pacman.Y = 37;
-                else if (pacman.X + Utilities.Utility.CoordsUpdate(dir).x == 6 && pacman.Y + Utilities.Utility.CoordsUpdate(dir).y == 38)
-                    pacman.Y = 0;
-                if (field[pacman.X, pacman.Y] is Elements.Coin)
-                    field.Score++;
+                pacman.X += Utilities.Utility.CoordsUpdate(dir).x;
+                pacman.Y += Utilities.Utility.CoordsUpdate(dir).y;
+                ThorMapStep(field, pacman);
             }
             else if (!(field[pacman.X + Utilities.Utility.CoordsUpdate(dir).x, pacman.Y + Utilities.Utility.CoordsUpdate(dir).y].isObstacle()))
             {
-
-                if (field[pacman.X + Utilities.Utility.CoordsUpdate(dir).x, pacman.Y + Utilities.Utility.CoordsUpdate(dir).y] is Elements.Coin)
-                    field.Score++;
-                if (field[pacman.X + Utilities.Utility.CoordsUpdate(dir).x, pacman.Y + Utilities.Utility.CoordsUpdate(dir).y] is Elements.Energizer)
-                    field.Scared = true;
-                if (fieldEnemies[pacman.X + Utilities.Utility.CoordsUpdate(dir).x, pacman.Y + Utilities.Utility.CoordsUpdate(dir).y] is Elements.Enemy && !field.Scared)
-                    field.GameOver = true;
-              
                 pacman.X += Utilities.Utility.CoordsUpdate(dir).x;
                 pacman.Y += Utilities.Utility.CoordsUpdate(dir).y;
-                
             }
+            StepPacmanCheck(field, fieldEnemies, pacman);
+
+            //pacman on its new place
             Console.SetCursorPosition(pacman.Y, pacman.X);
             pacman.Draw();
             field[pacman.X, pacman.Y] = pacman;
