@@ -19,6 +19,22 @@ namespace Pacman
             FileReader("game_over.txt");
         }
 
+        public static void Intro()
+        {
+            FileReader("intro.txt");
+            Thread.Sleep(500);
+            FileReader("intro1.txt");
+            Thread.Sleep(1500);
+            FileReader("intro2.txt");
+            Thread.Sleep(1500);
+            FileReader("intro3.txt");
+            Thread.Sleep(1000);
+        }
+        public static void Instructions()
+        {
+            FileReader("instructions.txt");
+            Console.ReadKey();
+        }
         public static void Victory(int general_score)
         {
             FileReader("victory.txt");

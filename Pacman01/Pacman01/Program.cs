@@ -13,6 +13,8 @@ namespace Pacman
 
             while (true)
             {
+                Interface.Intro();
+                Interface.Instructions();
                 int lvl = Interface.Choose_level();
 
                 Elements.Field field = new Elements.Field(Utilities.Utility.LevelInfo(lvl).height, Utilities.Utility.LevelInfo(lvl).width);
