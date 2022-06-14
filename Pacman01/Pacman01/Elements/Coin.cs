@@ -24,5 +24,13 @@ namespace Pacman.Elements
         {
             return false;
         }
+        public override int X
+        {
+            get; set;
+        }
+        public override int Y
+        {
+            get; set;
+        }
     }
 }

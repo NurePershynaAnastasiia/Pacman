@@ -50,7 +50,7 @@ namespace Pacman.Utilities
             Dictionary<int, Utilities.Level> levelInfo = new Dictionary<int, Utilities.Level>();
             levelInfo.Add(1, new Utilities.Level(path: "lvl1.txt", pathOutput: "lvl1Output.txt", points: 49, pacmanCoords: new Utilities.Utility.Coords(3, 6), numberOfEnemies: 2, height: 7, width: 17));
             levelInfo.Add(2, new Utilities.Level(path: "lvl2.txt", pathOutput: "lvl2Output.txt", points: 97, pacmanCoords: new Utilities.Utility.Coords(1, 14), numberOfEnemies: 3, height: 9, width: 29));
-            levelInfo.Add(3, new Utilities.Level(path: "lvl3.txt", pathOutput: "lvl3Output.txt", points: 207, pacmanCoords: new Utilities.Utility.Coords(6, 18), numberOfEnemies: 4, height: 12, width: 38));
+            levelInfo.Add(3, new Utilities.Level(path: "lvl3.txt", pathOutput: "lvl3Output.txt", points: 205, pacmanCoords: new Utilities.Utility.Coords(6, 18), numberOfEnemies: 4, height: 12, width: 38));
 
             return levelInfo[lvl];
         }

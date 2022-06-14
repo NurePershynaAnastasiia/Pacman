@@ -18,11 +18,11 @@ namespace Pacman.Elements
         {
             get; set;
         }
-        public int X
+        public override int X
         {
             get; set;
         }
-        public int Y
+        public override int Y
         {
             get; set;
         }

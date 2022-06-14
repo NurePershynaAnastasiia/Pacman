@@ -31,14 +31,14 @@ namespace Pacman
                 {
 
                     keyPressed = (Console.KeyAvailable == false) ? keyPressed : Console.ReadKey(true);//checking if new key is pressed, if not - use the old one (inertia)
-                    char key = PacmanStep.GetDirection(keyPressed);
+                    char key = Moves.PacmanStep.GetDirection(keyPressed);
                     if (key == 'p') //pause
                     {
                         keyPressed = Pause(field);
                         continue;
                     }
-                        
-                    PacmanStep.StepPacman(pacman, field, fieldEnemies, key, generalScore, lvl);//pacman makes its step
+
+                    Moves.PacmanStep.StepPacman(pacman, field, fieldEnemies, key, generalScore, lvl);//pacman makes its step
                     if (field.GameOver)
                     {
                         Interface.Game_over();
@@ -46,7 +46,7 @@ namespace Pacman
                     }
                     for (int i = 0; i < Utilities.Utility.LevelInfo(lvl).numberOfEnemies; i++) //all the enemies make their step
                     {
-                        EnemyStep.StepEnemy(enemies[i], field, fieldEnemies, EnemyStep.RandomDir(fieldEnemies, enemies[i]), lvl);
+                        Moves.EnemyStep.StepEnemy(enemies[i], field, fieldEnemies, Moves.EnemyStep.RandomDir(fieldEnemies, enemies[i]), lvl);
                         if (field.GameOver)
                         {
                             Interface.Game_over();
@@ -168,11 +168,6 @@ namespace Pacman
                             enemyNumber++;
                         }
                     }
-                }
-                if (lvl == 3)
-                {
-                    fieldEnemies[6, 0] = new Elements.Wall();
-                    fieldEnemies[6, 37] = new Elements.Wall();
                 }
             }
         }

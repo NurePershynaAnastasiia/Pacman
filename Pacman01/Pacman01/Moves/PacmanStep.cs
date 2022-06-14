@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pacman
+namespace Pacman.Moves
 {
     public class PacmanStep
     {
@@ -33,25 +33,7 @@ namespace Pacman
                 field.ScaredTime = 0;
             }
         }
-        public static bool ThorMapCheck(Elements.Field field, Utilities.Utility.Coords pacmanCoords)
-        {
-            if (pacmanCoords.y < 0 || pacmanCoords.y > field.Height || pacmanCoords.x < 0 || pacmanCoords.x > field.Width)
-                return true;
-            return false;
-        }
-
-        public static void ThorMapStep(Elements.Field field, Elements.Pacman pacman)
-        {
-            if (pacman.Y < 0)
-                pacman.Y = field.Width - 1;
-            if (pacman.Y == field.Width)
-                pacman.Y = 0;
-            if (pacman.X < 0)
-                pacman.X = field.Height - 1;
-            if (pacman.X == field.Height)
-                pacman.X = 0;
-        }
-
+        
         public static void StepPacmanCheck(Elements.Field field, Elements.Field fieldEnemies, Elements.Pacman pacman)
         {
             if (field[pacman.X, pacman.Y] is Elements.Coin)
@@ -71,16 +53,13 @@ namespace Pacman
             cell.Draw();
             field[pacman.X, pacman.Y] = new Elements.Cell();
 
-            if (ThorMapCheck(field, new Utilities.Utility.Coords(pacman.X + Utilities.Utility.CoordsUpdate(dir).x, pacman.Y + Utilities.Utility.CoordsUpdate(dir).y)))
+          
+            if (!(field[pacman.X + Utilities.Utility.CoordsUpdate(dir).x, pacman.Y + Utilities.Utility.CoordsUpdate(dir).y].isObstacle()))
             {
                 pacman.X += Utilities.Utility.CoordsUpdate(dir).x;
                 pacman.Y += Utilities.Utility.CoordsUpdate(dir).y;
-                ThorMapStep(field, pacman);
-            }
-            else if (!(field[pacman.X + Utilities.Utility.CoordsUpdate(dir).x, pacman.Y + Utilities.Utility.CoordsUpdate(dir).y].isObstacle()))
-            {
-                pacman.X += Utilities.Utility.CoordsUpdate(dir).x;
-                pacman.Y += Utilities.Utility.CoordsUpdate(dir).y;
+                if (ThorMap.ThorMapCheck(field, new Utilities.Utility.Coords(pacman.X, pacman.Y)))
+                    ThorMap.ThorMapStep(field, pacman);
             }
             StepPacmanCheck(field, fieldEnemies, pacman);
 

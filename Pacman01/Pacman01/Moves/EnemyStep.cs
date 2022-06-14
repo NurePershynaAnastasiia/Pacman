@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pacman
+namespace Pacman.Moves
 {
     public class EnemyStep
     {
@@ -81,18 +81,24 @@ namespace Pacman
             {
                 Console.SetCursorPosition(enemy.Y, enemy.X);
                 field[enemy.X, enemy.Y].Draw();
-                Console.SetCursorPosition(enemy.Y + Utilities.Utility.CoordsUpdate(dir).y, enemy.X + Utilities.Utility.CoordsUpdate(dir).x);
+                fieldEnemies[enemy.X, enemy.Y] = new Elements.Cell();
+
+                enemy.X += Utilities.Utility.CoordsUpdate(dir).x;
+                enemy.Y += Utilities.Utility.CoordsUpdate(dir).y;
+
+                if (ThorMap.ThorMapCheck(field, new Utilities.Utility.Coords(enemy.X, enemy.Y)))
+                    ThorMap.ThorMapStep(field, enemy);
+
+                Console.SetCursorPosition(enemy.Y, enemy.X);
                 enemy.Draw();
 
-                if (field[enemy.X + Utilities.Utility.CoordsUpdate(dir).x, enemy.Y + Utilities.Utility.CoordsUpdate(dir).y] is Elements.Pacman && !field.Scared)
+                if (field[enemy.X, enemy.Y] is Elements.Pacman && !field.Scared)
                     field.GameOver = true;
-                if (field[enemy.X + Utilities.Utility.CoordsUpdate(dir).x, enemy.Y + Utilities.Utility.CoordsUpdate(dir).y] is Elements.Pacman && field.Scared)
+                if (field[enemy.X, enemy.Y] is Elements.Pacman && field.Scared)
                     enemy.Eaten = true;
 
 
-                fieldEnemies[enemy.X, enemy.Y] = new Elements.Cell();
-                enemy.X += Utilities.Utility.CoordsUpdate(dir).x;
-                enemy.Y += Utilities.Utility.CoordsUpdate(dir).y;
+              
                 fieldEnemies[enemy.X, enemy.Y] = enemy;
             }
         }
