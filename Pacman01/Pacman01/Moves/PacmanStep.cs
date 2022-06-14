@@ -53,7 +53,6 @@ namespace Pacman.Moves
             cell.Draw();
             field[pacman.X, pacman.Y] = new Elements.Cell();
 
-          
             if (!(field[pacman.X + Utilities.Utility.CoordsUpdate(dir).x, pacman.Y + Utilities.Utility.CoordsUpdate(dir).y].isObstacle()))
             {
                 pacman.X += Utilities.Utility.CoordsUpdate(dir).x;
@@ -67,8 +66,6 @@ namespace Pacman.Moves
             Console.SetCursorPosition(pacman.Y, pacman.X);
             pacman.Draw();
             field[pacman.X, pacman.Y] = pacman;
-
-
 
             Console.SetCursorPosition(7, field.Height);
             Console.Write(field.Score);
