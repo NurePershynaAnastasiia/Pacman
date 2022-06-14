@@ -53,7 +53,7 @@ namespace Pacman
                             return;
                         }
                     }
-
+                      
                     if (field.Score == Utilities.Utility.LevelInfo(lvl).points)
                     {
                         generalScore += field.Score;

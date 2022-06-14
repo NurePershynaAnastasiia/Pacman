@@ -35,7 +35,7 @@ namespace Pacman
         }
         public static bool ThorMapCheck(Elements.Field field, Utilities.Utility.Coords pacmanCoords)
         {
-            if (pacmanCoords.y < 0 || pacmanCoords.y > field.Width || pacmanCoords.x < 0 || pacmanCoords.x > field.Height)
+            if (pacmanCoords.y < 0 || pacmanCoords.y > field.Height || pacmanCoords.x < 0 || pacmanCoords.x > field.Width)
                 return true;
             return false;
         }
