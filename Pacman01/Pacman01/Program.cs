@@ -1,4 +1,5 @@
 ﻿using System;
+using Pacman.Moves;
 
 
 namespace Pacman
@@ -15,7 +16,6 @@ namespace Pacman
             Interface.Instructions();
             while (true)
             {
-               
                 int lvl = Interface.Choose_level();
 
                 Elements.Field field = new Elements.Field(Utilities.Utility.LevelInfo(lvl).height, Utilities.Utility.LevelInfo(lvl).width);
@@ -27,9 +27,8 @@ namespace Pacman
                 Interface.DrawField(Utilities.Utility.LevelInfo(lvl).pathOutput, generalScore);
 
                 ConsoleKeyInfo keyPressed = Console.ReadKey(true);
-                while (true)
+                while (!field.GameOver)
                 {
-
                     keyPressed = (Console.KeyAvailable == false) ? keyPressed : Console.ReadKey(true);//checking if new key is pressed, if not - use the old one (inertia)
                     char key = Moves.PacmanStep.GetDirection(keyPressed);
                     if (key == 'p') //pause
@@ -38,7 +37,7 @@ namespace Pacman
                         continue;
                     }
 
-                    Moves.PacmanStep.StepPacman(pacman, field, fieldEnemies, key, generalScore, lvl);//pacman makes its step
+                    PacmanStep.StepPacman(pacman, field, fieldEnemies, key, generalScore, lvl);//pacman makes its step
                     if (field.GameOver)
                     {
                         Interface.Game_over();
@@ -54,7 +53,7 @@ namespace Pacman
                         }
                     }
                       
-                    if (field.Score == Utilities.Utility.LevelInfo(lvl).points)
+                    if (field.Score == 10/*Utilities.Utility.LevelInfo(lvl).points*/)
                     {
                         generalScore += field.Score;
                         Interface.Victory(generalScore);

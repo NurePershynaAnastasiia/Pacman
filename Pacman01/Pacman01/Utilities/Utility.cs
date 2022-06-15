@@ -34,7 +34,7 @@ namespace Pacman.Utilities
                     return new Coords(0, 0);
             }
         }
-        public static Design DesignInfo (int key)
+        public static Design DesignInfo(int key)
         {
             Dictionary<int, Utilities.Design> designInfo = new Dictionary<int, Utilities.Design>();
             designInfo.Add(0, new Utilities.Design(appearace: 'o', price: 0));
@@ -45,7 +45,7 @@ namespace Pacman.Utilities
             return designInfo[key];
         }
 
-        public static Level LevelInfo (int lvl)
+        public static Level LevelInfo(int lvl)
         {
             Dictionary<int, Utilities.Level> levelInfo = new Dictionary<int, Utilities.Level>();
             levelInfo.Add(1, new Utilities.Level(path: "lvl1.txt", pathOutput: "lvl1Output.txt", points: 49, pacmanCoords: new Utilities.Utility.Coords(3, 6), numberOfEnemies: 2, height: 7, width: 17));

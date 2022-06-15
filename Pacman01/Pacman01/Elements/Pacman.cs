@@ -18,14 +18,8 @@ namespace Pacman.Elements
         {
             get; set;
         }
-        public override int X
-        {
-            get; set;
-        }
-        public override int Y
-        {
-            get; set;
-        }
+        public override int X { get; set; }
+        public override int Y { get; set; }
         public override void Draw()
         {
             switch (Design)

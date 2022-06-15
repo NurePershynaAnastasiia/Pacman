@@ -64,7 +64,6 @@ namespace Pacman.Moves
 
             if (field[enemy.X, enemy.Y] is Elements.Pacman && field.Scared)
                 enemy.Eaten = true;
-
         }
 
         public static void StepEnemy(Elements.Enemy enemy, Elements.Field field, Elements.Field fieldEnemies, char dir, int lvl)
@@ -97,8 +96,6 @@ namespace Pacman.Moves
                 if (field[enemy.X, enemy.Y] is Elements.Pacman && field.Scared)
                     enemy.Eaten = true;
 
-
-              
                 fieldEnemies[enemy.X, enemy.Y] = enemy;
             }
         }

@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\bin",
+    "\\Elements",
+    "\\Moves",
+    "\\obj"
   ],
-  "SelectedNode": "\\Program.cs",
+  "SelectedNode": "\\Pacman01.csproj",
   "PreviewInSolutionExplorer": false
 }
