@@ -3,8 +3,9 @@
     "",
     "\\Pacman01",
     "\\Pacman01\\Pacman01",
+    "\\Pacman01\\Pacman01\\GameProcess",
     "\\Pacman01\\Pacman01\\Utilities"
   ],
-  "SelectedNode": "\\Pacman01\\Pacman01\\Program.cs",
+  "SelectedNode": "\\Pacman01\\Pacman01\\GameProcess\\GameFunctions.cs",
   "PreviewInSolutionExplorer": false
 }

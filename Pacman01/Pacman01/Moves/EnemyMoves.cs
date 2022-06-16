@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Pacman01.Elements;
+using Pacman01.Utilities;
+using Pacman01.Moves;
+using Pacman01.GameProcess;
 
-namespace Pacman.Moves
+namespace Pacman01.Moves
 {
-    public class EnemyStep
+    public class EnemyMoves
     {
         public static bool CycleCheck(char dir, char prev)
         {
@@ -17,13 +21,13 @@ namespace Pacman.Moves
             return true;
         }
 
-        public static char RandomDir(Elements.Field field, Elements.Enemy enemy)
+        public static char RandomDir(Field field, Enemy enemy)
         {
             char direction = 'u';
             Random rnd = new Random();
             int dir = rnd.Next();
 
-            while (field[enemy.X + Utilities.Utility.CoordsUpdate(direction).x, enemy.Y + Utilities.Utility.CoordsUpdate(direction).y].isObstacle() || !CycleCheck(direction, enemy.Prev))
+            while (field[enemy.X + Utility.CoordsUpdate(direction).x, enemy.Y + Utility.CoordsUpdate(direction).y].isObstacle() || !CycleCheck(direction, enemy.Prev))
             {
                 dir++;
                 switch (dir % 4)
@@ -47,7 +51,7 @@ namespace Pacman.Moves
             return direction;
         }
 
-        public static void EnemyStatus(Elements.Enemy enemy, Elements.Field field)
+        public static void EnemyStatus(Enemy enemy, Field field)
         {
             if (enemy.Eaten)
                 enemy.TimeEaten++;
@@ -66,11 +70,11 @@ namespace Pacman.Moves
                 enemy.Eaten = true;
         }
 
-        public static void StepEnemy(Elements.Enemy enemy, Elements.Field field, Elements.Field fieldEnemies, char dir, int lvl)
+        public static void Step(CurrentLevel currentLevel, Enemy enemy, char dir)
         {
-            EnemyStatus(enemy, field);
+            EnemyStatus(enemy, currentLevel.Field);
 
-            if (!(field[enemy.X, enemy.Y] is Elements.Pacman))
+            if (!(currentLevel.Field[enemy.X, enemy.Y] is Pacman))
             {
                 Console.SetCursorPosition(enemy.Y, enemy.X);
                 enemy.Draw();
@@ -79,24 +83,22 @@ namespace Pacman.Moves
             if (!enemy.Eaten)
             {
                 Console.SetCursorPosition(enemy.Y, enemy.X);
-                field[enemy.X, enemy.Y].Draw();
-                fieldEnemies[enemy.X, enemy.Y] = new Elements.Cell();
+                currentLevel.Field[enemy.X, enemy.Y].Draw();
+                currentLevel.FieldEnemies[enemy.X, enemy.Y] = new Cell();
 
-                enemy.X += Utilities.Utility.CoordsUpdate(dir).x;
-                enemy.Y += Utilities.Utility.CoordsUpdate(dir).y;
-
-                if (ThorMap.ThorMapCheck(field, new Utilities.Utility.Coords(enemy.X, enemy.Y)))
-                    ThorMap.ThorMapStep(field, enemy);
+                enemy.X += Utility.CoordsUpdate(dir).x;
+                enemy.Y += Utility.CoordsUpdate(dir).y;
+                ThorMap.ThorMapStep(currentLevel.Field, enemy);
 
                 Console.SetCursorPosition(enemy.Y, enemy.X);
                 enemy.Draw();
 
-                if (field[enemy.X, enemy.Y] is Elements.Pacman && !field.Scared)
-                    field.GameOver = true;
-                if (field[enemy.X, enemy.Y] is Elements.Pacman && field.Scared)
+                if (currentLevel.Field[enemy.X, enemy.Y] is Pacman && !currentLevel.Field.Scared)
+                    currentLevel.Field.GameOver = true;
+                if (currentLevel.Field[enemy.X, enemy.Y] is Pacman && currentLevel.Field.Scared)
                     enemy.Eaten = true;
 
-                fieldEnemies[enemy.X, enemy.Y] = enemy;
+                currentLevel.FieldEnemies[enemy.X, enemy.Y] = enemy;
             }
         }
     }

@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Pacman01.Elements;
+using Pacman01.Utilities;
+using Pacman01.Moves;
+using Pacman01.GameProcess;
 
-namespace Pacman
+namespace Pacman01
 {
     class Interface
     {
@@ -14,7 +18,7 @@ namespace Pacman
             Console.WriteLine("Score: 0   coins");
             Console.WriteLine("General score: " + generalScore + "   coins");
         }
-        public static void Game_over()
+        public static void GameOver()
         {
             FileReader("game_over.txt");
         }
@@ -35,21 +39,21 @@ namespace Pacman
             FileReader("instructions.txt");
             Console.ReadKey();
         }
-        public static void Victory(int general_score)
+        public static void Victory(int generalScore)
         {
             FileReader("victory.txt");
-            Console.WriteLine("General score: " + general_score + " coins");
+            Console.WriteLine("General score: " + generalScore + " coins");
             Thread.Sleep(3000);
         }
 
-        public static void Shop(int general_score, char design)
+        public static void Shop(int generalScore, char design)
         {
             FileReader("shop.txt");
-            Console.WriteLine("Your money: " + general_score + " coins");
+            Console.WriteLine("Your money: " + generalScore + " coins");
             Console.WriteLine("Pacman design now: " + design);
         }
 
-        public static int Choose_level()
+        public static int ChooseLevel()
         {
             FileReader("choose_level.txt");
             ConsoleKeyInfo keyPressed = Console.ReadKey(true);

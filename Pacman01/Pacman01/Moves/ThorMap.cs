@@ -3,19 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Pacman01.Elements;
+using Pacman01.Utilities;
+using Pacman01.Moves;
+using Pacman01.GameProcess;
 
-namespace Pacman.Moves
+namespace Pacman01.Moves
 {
     public class ThorMap
     {
-        public static bool ThorMapCheck(Elements.Field field, Utilities.Utility.Coords pacmanCoords)
-        {
-            if (pacmanCoords.y == 0 || pacmanCoords.y == field.Width - 1 || pacmanCoords.x == 0 || pacmanCoords.x == field.Height - 1)
-                return true;
-            return false;
-        }
-
-        public static void ThorMapStep(Elements.Field field, Elements.Element element)
+        public static void ThorMapStep(Field field, Element element)
         {
             if (element.Y == 0)
                 element.Y = field.Width - 2;

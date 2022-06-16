@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Pacman01.Elements;
+using Pacman01.Utilities;
+using Pacman01.Moves;
+using Pacman01.GameProcess;
 
-namespace Pacman.Utilities
+namespace Pacman01.Utilities
 {
     public static class Utility
     {
@@ -36,21 +40,21 @@ namespace Pacman.Utilities
         }
         public static Design DesignInfo(int key)
         {
-            Dictionary<int, Utilities.Design> designInfo = new Dictionary<int, Utilities.Design>();
-            designInfo.Add(0, new Utilities.Design(appearace: 'o', price: 0));
-            designInfo.Add(1, new Utilities.Design(appearace: 'O', price: 20));
-            designInfo.Add(2, new Utilities.Design(appearace: 'Q', price: 50));
-            designInfo.Add(3, new Utilities.Design(appearace: 'G', price: 100));
+            Dictionary<int, Design> designInfo = new Dictionary<int, Design>();
+            designInfo.Add(0, new Design(appearace: 'o', price: 0));
+            designInfo.Add(1, new Design(appearace: 'O', price: 20));
+            designInfo.Add(2, new Design(appearace: 'Q', price: 50));
+            designInfo.Add(3, new Design(appearace: 'G', price: 100));
 
             return designInfo[key];
         }
 
         public static Level LevelInfo(int lvl)
         {
-            Dictionary<int, Utilities.Level> levelInfo = new Dictionary<int, Utilities.Level>();
-            levelInfo.Add(1, new Utilities.Level(path: "lvl1.txt", pathOutput: "lvl1Output.txt", points: 49, pacmanCoords: new Utilities.Utility.Coords(3, 6), numberOfEnemies: 2, height: 7, width: 17));
-            levelInfo.Add(2, new Utilities.Level(path: "lvl2.txt", pathOutput: "lvl2Output.txt", points: 97, pacmanCoords: new Utilities.Utility.Coords(1, 14), numberOfEnemies: 3, height: 9, width: 29));
-            levelInfo.Add(3, new Utilities.Level(path: "lvl3.txt", pathOutput: "lvl3Output.txt", points: 205, pacmanCoords: new Utilities.Utility.Coords(6, 18), numberOfEnemies: 4, height: 12, width: 38));
+            Dictionary<int, Level> levelInfo = new Dictionary<int, Level>();
+            levelInfo.Add(1, new Level(path: "lvl1.txt", pathOutput: "lvl1Output.txt"));
+            levelInfo.Add(2, new Level(path: "lvl2.txt", pathOutput: "lvl2Output.txt"));
+            levelInfo.Add(3, new Level(path: "lvl3.txt", pathOutput: "lvl3Output.txt"));
 
             return levelInfo[lvl];
         }

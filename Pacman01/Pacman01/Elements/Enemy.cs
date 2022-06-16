@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Pacman01.Elements;
+using Pacman01.Utilities;
+using Pacman01.Moves;
+using Pacman01.GameProcess;
 
-namespace Pacman.Elements
+namespace Pacman01.Elements
 {
     public class Enemy : Element
     {
@@ -56,6 +60,13 @@ namespace Pacman.Elements
             if (this.Eaten)
                 return true;
             return false;
+        }
+        public override void Action(Game game)
+        {
+            if (!game.CurrentLevel.Field.Scared)
+                game.CurrentLevel.Field.GameOver = true;
+            else
+                this.Eaten = true;
         }
     }
 }
