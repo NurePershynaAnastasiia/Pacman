@@ -15,7 +15,7 @@ namespace Pacman01.GameProcess
         {
             ConsoleKeyInfo keyPressed = Console.ReadKey(true);
             CurrentLevel currentLevel = game.CurrentLevel;
-            while (!game.Finished || currentLevel.Field.Score != currentLevel.Points)
+            while (!game.Finished && currentLevel.Field.Score != currentLevel.Points)
             {
                 keyPressed = (Console.KeyAvailable == false) ? keyPressed : Console.ReadKey(true);//checking if new key is pressed, if not - use the old one (inertia)
                 keyPressed = Pause(keyPressed, game.CurrentLevel.Field); //checking if "P" is pressed => game on Pause
@@ -101,6 +101,7 @@ namespace Pacman01.GameProcess
                         }
                         if (line[j] == 'A')
                         {
+                            currentLevel.Points++;
                             field[i, j] = new Coin();
                             fieldEnemies[i, j] = new Enemy(i, j);
                             enemies.Add(new Enemy(i, j));
