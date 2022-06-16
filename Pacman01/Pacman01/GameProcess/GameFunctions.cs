@@ -14,23 +14,20 @@ namespace Pacman01.GameProcess
         public static void Playing(Game game)
         {
             ConsoleKeyInfo keyPressed = Console.ReadKey(true);
-            while (!game.Finished)
+            CurrentLevel currentLevel = game.CurrentLevel;
+            while (!game.Finished || currentLevel.Field.Score != currentLevel.Points)
             {
-                CurrentLevel currentLevel = game.CurrentLevel;
                 keyPressed = (Console.KeyAvailable == false) ? keyPressed : Console.ReadKey(true);//checking if new key is pressed, if not - use the old one (inertia)
                 keyPressed = Pause(keyPressed, game.CurrentLevel.Field); //checking if "P" is pressed => game on Pause
 
                 PacmanMoves.Step(game, PacmanMoves.GetDirection(keyPressed));//pacman makes its step
                 foreach (Enemy enemy in currentLevel.Enemies) //all the enemies make their step
                     EnemyMoves.Step(game, enemy, EnemyMoves.RandomDir(currentLevel.FieldEnemies, enemy));
-
-                if (currentLevel.Field.Score == currentLevel.Points)
-                {
-                    VictoryAction(game);
-                    return;
-                }
             }
-            Interface.GameOver();
+            if (currentLevel.Field.Score == currentLevel.Points)
+                VictoryAction(game);
+            else
+                Interface.GameOver();
         }
         public static void VictoryAction(Game game)
         {
