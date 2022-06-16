@@ -64,7 +64,7 @@ namespace Pacman01.Elements
         public override void Action(Game game)
         {
             if (!game.CurrentLevel.Field.Scared)
-                game.CurrentLevel.Field.GameOver = true;
+                game.Finished = true;
             else
                 this.Eaten = true;
         }

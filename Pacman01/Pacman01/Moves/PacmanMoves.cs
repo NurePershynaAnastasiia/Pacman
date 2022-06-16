@@ -54,7 +54,11 @@ namespace Pacman01.Moves
                 currentLevel.Pacman.Y += Utility.CoordsUpdate(dir).y;
                 ThorMap.ThorMapStep(currentLevel.Field, currentLevel.Pacman);
             }
+            currentLevel.FieldEnemies[currentLevel.Pacman.X, currentLevel.Pacman.Y].Action(game);
+            if (game.Finished)
+                return;
             currentLevel.Field[currentLevel.Pacman.X, currentLevel.Pacman.Y].Action(game);
+            
 
             //pacman on its new place
             Console.SetCursorPosition(currentLevel.Pacman.Y, currentLevel.Pacman.X);

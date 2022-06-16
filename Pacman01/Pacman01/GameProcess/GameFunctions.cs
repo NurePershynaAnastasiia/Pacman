@@ -11,57 +11,53 @@ namespace Pacman01.GameProcess
 {
     public class GameFunctions
     {
-
         public static void Playing(Game game)
         {
             ConsoleKeyInfo keyPressed = Console.ReadKey(true);
-            while (!game.CurrentLevel.Field.GameOver)
+            while (!game.Finished)
             {
                 CurrentLevel currentLevel = game.CurrentLevel;
                 keyPressed = (Console.KeyAvailable == false) ? keyPressed : Console.ReadKey(true);//checking if new key is pressed, if not - use the old one (inertia)
-                char key = PacmanMoves.GetDirection(keyPressed);
-                if (key == 'p') //pause
-                {
-                    keyPressed = Pause(game.CurrentLevel.Field);
-                }
+                keyPressed = Pause(keyPressed, game.CurrentLevel.Field); //checking if "P" is pressed => game on Pause
 
-                PacmanMoves.Step(game, key);//pacman makes its step
-                if (currentLevel.Field.GameOver)
-                {
-                    Interface.GameOver();
-                    game.Finished = true;
-                }
+                PacmanMoves.Step(game, PacmanMoves.GetDirection(keyPressed));//pacman makes its step
                 foreach (Enemy enemy in currentLevel.Enemies) //all the enemies make their step
-                {
-                    EnemyMoves.Step(currentLevel, enemy, EnemyMoves.RandomDir(currentLevel.FieldEnemies, enemy));
-                    if (currentLevel.Field.GameOver)
-                    {
-                        Interface.GameOver();
-                        game.Finished = true;
-                    }
-                }
+                    EnemyMoves.Step(game, enemy, EnemyMoves.RandomDir(currentLevel.FieldEnemies, enemy));
 
                 if (currentLevel.Field.Score == currentLevel.Points)
                 {
-                    game.GeneralScore += currentLevel.Field.Score;
-                    Interface.Victory(game.GeneralScore);
-                    ConsoleKeyInfo keyPressed1 = Console.ReadKey();
-                    if (keyPressed1.Key == ConsoleKey.N)
-                        return;
-                    else if (keyPressed1.Key == ConsoleKey.S)//shop
-                        ShopPurchase(game);
+                    VictoryAction(game);
+                    return;
                 }
-
             }
+            Interface.GameOver();
         }
-        public static ConsoleKeyInfo Pause(Field field)
+
+        public static void VictoryAction(Game game)
         {
-            Console.SetCursorPosition(30, field.Height + 2);
-            Console.Write("Paused");
-            ConsoleKeyInfo key = Console.ReadKey(true);
-            Console.SetCursorPosition(30, field.Height + 2);
-            Console.Write("      ");
-            return key;
+            Interface.Victory(game.GeneralScore);
+            ConsoleKeyInfo keyPressed1 = Console.ReadKey();
+            if (keyPressed1.Key == ConsoleKey.N)
+            {
+                game.Finished = true;
+                return;
+            }
+            if (keyPressed1.Key == ConsoleKey.Y)
+                return;
+            else if (keyPressed1.Key == ConsoleKey.S)//shop
+                ShopPurchase(game);
+        }
+        public static ConsoleKeyInfo Pause(ConsoleKeyInfo keyPressed, Field field)
+        {
+            while (keyPressed.Key == ConsoleKey.P)
+            {
+                Console.SetCursorPosition(30, field.Height + 2);
+                Console.Write("Paused");
+                keyPressed = Console.ReadKey(true);
+                Console.SetCursorPosition(30, field.Height + 2);
+                Console.Write("      ");
+            }
+            return keyPressed;
         }
         public static CurrentLevel Initialize(int lvl)
         {

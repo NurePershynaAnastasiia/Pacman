@@ -48,10 +48,6 @@ namespace Pacman01.Elements
         {
             get; set;
         }
-        public bool GameOver
-        {
-            get; set;
-        }
        
     }
 }

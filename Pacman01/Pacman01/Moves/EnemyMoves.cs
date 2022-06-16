@@ -70,8 +70,11 @@ namespace Pacman01.Moves
                 enemy.Eaten = true;
         }
 
-        public static void Step(CurrentLevel currentLevel, Enemy enemy, char dir)
+        public static void Step(Game game, Enemy enemy, char dir)
         {
+            if (game.Finished)
+                return;
+            CurrentLevel currentLevel = game.CurrentLevel;
             EnemyStatus(enemy, currentLevel.Field);
 
             if (!(currentLevel.Field[enemy.X, enemy.Y] is Pacman))
@@ -94,7 +97,7 @@ namespace Pacman01.Moves
                 enemy.Draw();
 
                 if (currentLevel.Field[enemy.X, enemy.Y] is Pacman && !currentLevel.Field.Scared)
-                    currentLevel.Field.GameOver = true;
+                    game.Finished= true;
                 if (currentLevel.Field[enemy.X, enemy.Y] is Pacman && currentLevel.Field.Scared)
                     enemy.Eaten = true;
 
