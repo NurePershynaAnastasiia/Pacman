@@ -32,7 +32,6 @@ namespace Pacman01.GameProcess
             }
             Interface.GameOver();
         }
-
         public static void VictoryAction(Game game)
         {
             Interface.Victory(game.GeneralScore);

@@ -35,6 +35,7 @@ namespace Pacman01.Elements
         public override void Action(Game game)
         {
             game.CurrentLevel.Field.Scared = true;
+
         }
     }
 }

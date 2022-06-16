@@ -32,9 +32,6 @@ namespace Pacman01.Elements
         {
             get; set;
         }
-        public override void Action(Game game)
-        {
-            return;
-        }
+        public override void Action(Game game) { }
     }
 }

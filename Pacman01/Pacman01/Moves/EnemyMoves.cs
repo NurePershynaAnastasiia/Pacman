@@ -76,22 +76,16 @@ namespace Pacman01.Moves
                 return;
             CurrentLevel currentLevel = game.CurrentLevel;
             EnemyStatus(enemy, currentLevel.Field);
-
-            if (!(currentLevel.Field[enemy.X, enemy.Y] is Pacman))
-            {
-                Console.SetCursorPosition(enemy.Y, enemy.X);
-                enemy.Draw();
-            }
+            Console.SetCursorPosition(enemy.Y, enemy.X);
 
             if (!enemy.Eaten)
             {
-                Console.SetCursorPosition(enemy.Y, enemy.X);
-                currentLevel.Field[enemy.X, enemy.Y].Draw();
                 currentLevel.FieldEnemies[enemy.X, enemy.Y] = new Cell();
+                currentLevel.Field[enemy.X, enemy.Y].Draw();
 
                 enemy.X += Utility.CoordsUpdate(dir).x;
                 enemy.Y += Utility.CoordsUpdate(dir).y;
-                ThorMap.ThorMapStep(currentLevel.Field, enemy);
+                ThorMap.Step(currentLevel.Field, enemy);
 
                 Console.SetCursorPosition(enemy.Y, enemy.X);
                 enemy.Draw();
@@ -103,6 +97,8 @@ namespace Pacman01.Moves
 
                 currentLevel.FieldEnemies[enemy.X, enemy.Y] = enemy;
             }
+            else if (!(currentLevel.Field[enemy.X, enemy.Y] is Pacman))
+                enemy.Draw();
         }
     }
 }

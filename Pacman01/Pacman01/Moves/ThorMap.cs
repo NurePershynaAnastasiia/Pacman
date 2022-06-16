@@ -12,7 +12,7 @@ namespace Pacman01.Moves
 {
     public class ThorMap
     {
-        public static void ThorMapStep(Field field, Element element)
+        public static void Step(Field field, Element element)
         {
             if (element.Y == 0)
                 element.Y = field.Width - 2;

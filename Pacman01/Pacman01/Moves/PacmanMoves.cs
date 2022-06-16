@@ -40,30 +40,29 @@ namespace Pacman01.Moves
         public static void Step(Game game, char dir)
         {
             CurrentLevel currentLevel = game.CurrentLevel;
+            Pacman pacman = currentLevel.Pacman;
             FieldScared(currentLevel.Field);
 
             //empty cell on the place where pacman was
-            Console.SetCursorPosition(currentLevel.Pacman.Y, currentLevel.Pacman.X);
-            Cell cell = new Cell();
-            cell.Draw();
-            currentLevel.Field[currentLevel.Pacman.X, currentLevel.Pacman.Y] = new Cell();
+            Console.SetCursorPosition(pacman.Y, pacman.X);
+            currentLevel.Field[pacman.X, pacman.Y] = new Cell();
+            currentLevel.Field[pacman.X, pacman.Y].Draw();
 
-            if (!(currentLevel.Field[currentLevel.Pacman.X + Utility.CoordsUpdate(dir).x, currentLevel.Pacman.Y + Utility.CoordsUpdate(dir).y].isObstacle()))
+            if (!(currentLevel.Field[pacman.X + Utility.CoordsUpdate(dir).x, pacman.Y + Utility.CoordsUpdate(dir).y].isObstacle()))
             {
-                currentLevel.Pacman.X += Utility.CoordsUpdate(dir).x;
-                currentLevel.Pacman.Y += Utility.CoordsUpdate(dir).y;
-                ThorMap.ThorMapStep(currentLevel.Field, currentLevel.Pacman);
+                pacman.X += Utility.CoordsUpdate(dir).x;
+                pacman.Y += Utility.CoordsUpdate(dir).y;
+                ThorMap.Step(currentLevel.Field, pacman);
             }
-            currentLevel.FieldEnemies[currentLevel.Pacman.X, currentLevel.Pacman.Y].Action(game);
+            currentLevel.FieldEnemies[pacman.X, pacman.Y].Action(game);
             if (game.Finished)
                 return;
-            currentLevel.Field[currentLevel.Pacman.X, currentLevel.Pacman.Y].Action(game);
+            currentLevel.Field[pacman.X, pacman.Y].Action(game);
             
-
             //pacman on its new place
-            Console.SetCursorPosition(currentLevel.Pacman.Y, currentLevel.Pacman.X);
+            Console.SetCursorPosition(pacman.Y, pacman.X);
             currentLevel.Pacman.Draw();
-            currentLevel.Field[currentLevel.Pacman.X, currentLevel.Pacman.Y] = currentLevel.Pacman;
+            currentLevel.Field[pacman.X, pacman.Y] = pacman;
 
             Console.SetCursorPosition(7, currentLevel.Field.Height);
             Console.Write(currentLevel.Field.Score);
