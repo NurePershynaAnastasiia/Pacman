@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "CodeBase/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/CodeBase.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CodeBase.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "CodeBase/1.0.0": {
+      "type": "project",
+      "path": "../CodeBase/CodeBase.csproj",
+      "msbuildProject": "../CodeBase/CodeBase.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "CodeBase >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Anastasiia\\.nuget\\packages\\": {}
@@ -13,9 +32,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Anastasiia\\Documents\\GitHub\\Pacman\\Pacman01\\Pacman01\\Pacman01.csproj",
-      "projectName": "Pacman01",
-      "projectPath": "C:\\Users\\Anastasiia\\Documents\\GitHub\\Pacman\\Pacman01\\Pacman01\\Pacman01.csproj",
+      "projectUniqueName": "C:\\Users\\Anastasiia\\Documents\\GitHub\\Pacman\\Pacman01\\Pacman01\\PacmanConsole.csproj",
+      "projectName": "PacmanConsole",
+      "projectPath": "C:\\Users\\Anastasiia\\Documents\\GitHub\\Pacman\\Pacman01\\Pacman01\\PacmanConsole.csproj",
       "packagesPath": "C:\\Users\\Anastasiia\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Anastasiia\\Documents\\GitHub\\Pacman\\Pacman01\\Pacman01\\obj\\",
       "projectStyle": "PackageReference",
@@ -33,7 +52,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Anastasiia\\Documents\\GitHub\\Pacman\\Pacman01\\CodeBase\\CodeBase.csproj": {
+              "projectPath": "C:\\Users\\Anastasiia\\Documents\\GitHub\\Pacman\\Pacman01\\CodeBase\\CodeBase.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

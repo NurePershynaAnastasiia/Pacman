@@ -3,12 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Pacman01.Elements;
-using Pacman01.Utilities;
-using Pacman01.Moves;
-using Pacman01.GameProcess;
+using CodeBase.GameProcess;
 
-namespace Pacman01
+namespace PacmanConsole
 {
     class Interface
     {
@@ -67,7 +64,7 @@ namespace Pacman01
 
         }
 
-        public static void FileReader (string path)
+        public static void FileReader(string path)
         {
             Console.Clear();
             using (StreamReader reader = new StreamReader(path))

@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "PacmanConsole/1.0.0": {
+        "dependencies": {
+          "CodeBase": "1.0.0"
+        },
+        "runtime": {
+          "PacmanConsole.dll": {}
+        }
+      },
+      "CodeBase/1.0.0": {
+        "runtime": {
+          "CodeBase.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PacmanConsole/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CodeBase/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

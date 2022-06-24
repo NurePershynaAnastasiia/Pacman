@@ -1,0 +1,15 @@
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\obj\Debug\net6.0\CodeBase.csproj.AssemblyReference.cache
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\obj\Debug\net6.0\CodeBase.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\obj\Debug\net6.0\CodeBase.AssemblyInfoInputs.cache
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\obj\Debug\net6.0\CodeBase.AssemblyInfo.cs
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\obj\Debug\net6.0\CodeBase.csproj.CoreCompileInputs.cache
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\bin\Debug\net6.0\CodeBase.exe
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\bin\Debug\net6.0\CodeBase.deps.json
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\bin\Debug\net6.0\CodeBase.runtimeconfig.json
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\bin\Debug\net6.0\CodeBase.dll
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\bin\Debug\net6.0\CodeBase.pdb
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\obj\Debug\net6.0\CodeBase.dll
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\obj\Debug\net6.0\refint\CodeBase.dll
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\obj\Debug\net6.0\CodeBase.pdb
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\obj\Debug\net6.0\CodeBase.genruntimeconfig.cache
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\obj\Debug\net6.0\ref\CodeBase.dll
