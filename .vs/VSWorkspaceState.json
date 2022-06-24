@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Pacman01"
+    "\\Pacman01",
+    "\\Pacman01\\CodeBase",
+    "\\Pacman01\\Pacman01"
   ],
   "SelectedNode": "\\Pacman01\\Pacman01.sln",
   "PreviewInSolutionExplorer": false

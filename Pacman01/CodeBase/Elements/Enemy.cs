@@ -70,5 +70,9 @@ namespace CodeBase.Elements
             else
                 this.Eaten = true;
         }
+        public override string Name()
+        {
+            return "enemy";
+        }
     }
 }

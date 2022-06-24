@@ -33,5 +33,9 @@ namespace CodeBase.Elements
             get; set;
         }
         public override void Action(Game game) { }
+        public override string Name()
+        {
+            return "wall";
+        }
     }
 }

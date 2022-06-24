@@ -46,5 +46,9 @@ namespace CodeBase.Elements
             game.CurrentLevel.Field.Score++;
             game.GeneralScore++;
         }
+        public override string Name()
+        {
+            return "coin";
+        }
     }
 }

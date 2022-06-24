@@ -24,5 +24,6 @@ namespace CodeBase.Elements
         abstract public void Draw();
         abstract public bool isObstacle();
         abstract public bool isEaten();
+        abstract public string Name();
     }
 }

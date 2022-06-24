@@ -42,5 +42,9 @@ namespace CodeBase.Elements
             game.CurrentLevel.Field.Scared = true;
 
         }
+        public override string Name()
+        {
+            return "energizer";
+        }
     }
 }
