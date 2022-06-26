@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "AFxouB7BtykEUL8Zokwa7kt8eEnOc/O/hn6+GRqBDmnJMotrQNPq6nb9/Uw4pF0DK5C53kqSm5kMTdhEvyT4VA==",
+  "success": true,
+  "projectFilePath": "D:\\2UNIVERSITY\\курсовая\\PacmanGUI\\PacmanGUI\\PacmanGUI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Anastasiia\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.2\\microsoft.netcore.app.runtime.win-x64.6.0.2.nupkg.sha512",
+    "C:\\Users\\Anastasiia\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\6.0.2\\microsoft.windowsdesktop.app.runtime.win-x64.6.0.2.nupkg.sha512",
+    "C:\\Users\\Anastasiia\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.2\\microsoft.aspnetcore.app.runtime.win-x64.6.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

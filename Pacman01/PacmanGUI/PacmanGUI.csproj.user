@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>D:\2UNIVERSITY\курсовая\PacmanGUI\PacmanGUI\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="Forms\ChooseLevelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\GameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\InstructionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\MenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ShopForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Victory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

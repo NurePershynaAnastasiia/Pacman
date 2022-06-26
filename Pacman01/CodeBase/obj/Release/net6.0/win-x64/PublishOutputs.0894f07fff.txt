@@ -1,0 +1,2 @@
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\bin\Release\net6.0\CodeBase.pdb
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\bin\Release\net6.0\CodeBase.exe

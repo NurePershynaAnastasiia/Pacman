@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "PacmanGUI/1.0.0": {
+        "dependencies": {
+          "CodeBase": "1.0.0"
+        },
+        "runtime": {
+          "PacmanGUI.dll": {}
+        }
+      },
+      "CodeBase/1.0.0": {
+        "runtime": {
+          "CodeBase.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PacmanGUI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CodeBase/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
