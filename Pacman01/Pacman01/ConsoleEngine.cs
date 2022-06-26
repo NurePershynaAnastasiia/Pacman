@@ -20,9 +20,10 @@ namespace PacmanConsole
             while (!game.Finished && currentLevel.Field.Score != currentLevel.Points)
             {
                 keyPressed = Console.KeyAvailable == false ? keyPressed : Console.ReadKey(true);//checking if new key is pressed, if not - use the old one (inertia)
-                //keyPressed = Pause(keyPressed, game.CurrentLevel.Field); //checking if "P" is pressed => game on Pause
+                keyPressed = Pause(keyPressed, game.CurrentLevel.Field); //checking if "P" is pressed => game on Pause
 
                 PacmanMoves.Step(game, PacmanMoves.GetDirection(keyPressed), draw, drawStats);//pacman makes its step
+                Thread.Sleep(400);
                 foreach (Enemy enemy in currentLevel.Enemies) //all the enemies make their step
                     EnemyMoves.Step(game, enemy, EnemyMoves.RandomDir(currentLevel.FieldEnemies, enemy), draw);
             }

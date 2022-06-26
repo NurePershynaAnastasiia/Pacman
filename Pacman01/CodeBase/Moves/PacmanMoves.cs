@@ -62,7 +62,6 @@ namespace CodeBase.Moves
             draw(currentLevel.Field[pacman.X, pacman.Y]);
 
             drawStats(game);
-            Thread.Sleep(300);
         }
     }
 }

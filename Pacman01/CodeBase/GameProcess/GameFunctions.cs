@@ -73,7 +73,5 @@ namespace CodeBase.GameProcess
             }
             return new CurrentLevel(lvl, field, fieldEnemies, pacman, enemies, currentLevel.Points);
         }
-        
-       
     }
 }

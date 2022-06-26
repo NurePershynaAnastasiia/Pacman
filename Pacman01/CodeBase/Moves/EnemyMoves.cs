@@ -95,7 +95,7 @@ namespace CodeBase.Moves
                 currentLevel.FieldEnemies[enemy.X, enemy.Y] = enemy;
             }
             else if (!(currentLevel.Field[enemy.X, enemy.Y] is Pacman))
-                draw(currentLevel.Field[enemy.X, enemy.Y]);
+                draw(enemy);
         }
     }
 }

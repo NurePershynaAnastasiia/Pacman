@@ -18,10 +18,7 @@ namespace CodeBase.Elements
             this.Y = y;
             this.Design = design;
         }
-        public int Design
-        {
-            get; set;
-        }
+        public int Design { get; set; }
         public override int X { get; set; }
         public override int Y { get; set; }
         public override void Draw()
