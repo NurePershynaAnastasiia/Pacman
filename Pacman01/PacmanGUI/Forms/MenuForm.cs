@@ -7,16 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CodeBase.Utilities;
+using CodeBase.Elements;
+using CodeBase.Moves;
+using CodeBase.GameProcess;
 
 
 namespace PacmanGUI
 {
     public partial class MenuForm : Form
     {
-        public MenuForm()
+        public Game game { get; set; }
+        public MenuForm(Game game)
         {
             InitializeComponent();
-            this.Size = new System.Drawing.Size(800, 850);
+            this.Size = new Size(800, 870);
+            this.game = game;
         }
 
         private void ExitBtn_Click(object sender, EventArgs e)
@@ -27,19 +33,19 @@ namespace PacmanGUI
         private void PlayBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ChooseLevelForm chooseLevelForm = new ChooseLevelForm();
+            ChooseLevelForm chooseLevelForm = new ChooseLevelForm(game);
             chooseLevelForm.Show();
         }
         private void InstructionsBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            InstructionsForm instructionsForm = new InstructionsForm();
+            InstructionsForm instructionsForm = new InstructionsForm(game);
             instructionsForm.Show();
         }
         private void ShopBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ShopForm shopForm = new ShopForm();
+            ShopForm shopForm = new ShopForm(game);
             shopForm.Show();
         }
     }

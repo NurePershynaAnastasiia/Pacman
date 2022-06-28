@@ -63,7 +63,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PacmanGUI.Resources.background;
+            this.BackgroundImage = global::PacmanGUI.Resources.bg;
             this.ClientSize = new System.Drawing.Size(800, 749);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.pictureBox1);

@@ -37,5 +37,6 @@ namespace CodeBase.Elements
         {
             return "wall";
         }
+        public override char Direction { get; set; }
     }
 }

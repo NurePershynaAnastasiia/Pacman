@@ -58,12 +58,13 @@
             this.BackBtn.TabIndex = 10;
             this.BackBtn.Text = "Back";
             this.BackBtn.UseVisualStyleBackColor = false;
+            this.BackBtn.Click += new EventHandler(BackBtn_Click);
             // 
             // ShopForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PacmanGUI.Resources.background;
+            this.BackgroundImage = global::PacmanGUI.Resources.bg;
             this.ClientSize = new System.Drawing.Size(800, 777);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.pictureBox1);

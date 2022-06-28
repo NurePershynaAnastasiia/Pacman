@@ -22,15 +22,30 @@ namespace PacmanConsole
                 keyPressed = Console.KeyAvailable == false ? keyPressed : Console.ReadKey(true);//checking if new key is pressed, if not - use the old one (inertia)
                 keyPressed = Pause(keyPressed, game.CurrentLevel.Field); //checking if "P" is pressed => game on Pause
 
-                PacmanMoves.Step(game, PacmanMoves.GetDirection(keyPressed), draw, drawStats);//pacman makes its step
+                PacmanMoves.Step(game, GetDirection(keyPressed), draw, drawStats);//pacman makes its step
                 Thread.Sleep(400);
                 foreach (Enemy enemy in currentLevel.Enemies) //all the enemies make their step
-                    EnemyMoves.Step(game, enemy, EnemyMoves.RandomDir(currentLevel.FieldEnemies, enemy), draw);
+                    EnemyMoves.Step(game, enemy, draw);
             }
             if (currentLevel.Field.Score == currentLevel.Points)
                 VictoryAction(game);
             else
                 Interface.GameOver();
+        }
+        public static char GetDirection(ConsoleKeyInfo keyPressed)
+        {
+            char dir = 'r'; //direction pacman
+            if (keyPressed.Key == ConsoleKey.W)
+                dir = 'u';
+            if (keyPressed.Key == ConsoleKey.S)
+                dir = 'd';
+            if (keyPressed.Key == ConsoleKey.A)
+                dir = 'l';
+            if (keyPressed.Key == ConsoleKey.D)
+                dir = 'r';
+            if (keyPressed.Key == ConsoleKey.P)
+                dir = 'p';
+            return dir;
         }
         public static void ShopPurchase(Game game)
         {

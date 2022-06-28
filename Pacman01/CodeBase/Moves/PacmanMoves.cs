@@ -11,21 +11,6 @@ namespace CodeBase.Moves
 {
     public class PacmanMoves
     {
-        public static char GetDirection(ConsoleKeyInfo keyPressed)
-        {
-            char dir = 'r'; //direction pacman
-            if (keyPressed.Key == ConsoleKey.W)
-                dir = 'u';
-            if (keyPressed.Key == ConsoleKey.S)
-                dir = 'd';
-            if (keyPressed.Key == ConsoleKey.A)
-                dir = 'l';
-            if (keyPressed.Key == ConsoleKey.D)
-                dir = 'r';
-            if (keyPressed.Key == ConsoleKey.P)
-                dir = 'p';
-            return dir;
-        }
         public static void FieldScared(Field field)
         {
             if (field.Scared)
@@ -40,6 +25,7 @@ namespace CodeBase.Moves
         {
             CurrentLevel currentLevel = game.CurrentLevel;
             Pacman pacman = currentLevel.Pacman;
+            pacman.Direction = dir;
             FieldScared(currentLevel.Field);
 
             //empty cell on the place where pacman was

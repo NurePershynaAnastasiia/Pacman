@@ -124,6 +124,9 @@
   <data name="backgroundGame" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\backgroundGame.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\bg (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cell" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\cell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -133,11 +136,32 @@
   <data name="coin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\coin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="enemy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="enemy_down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\enemy_down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="enemy_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\enemy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="enemy_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\enemy_right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="enemy_scared" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\enemy_scared.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="enemy_scared2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\enemy_scared2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="enemy_up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\enemy_up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="energizer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\energizer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GameOver" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\GameOver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gameOverGif" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\ezgif.com-gif-maker (4).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Lvl1Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Lvl1Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,6 +175,12 @@
   <data name="pacman0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\pacman0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pacmanName" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\pacmanName.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sadFace" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\ezgif.com-gif-maker (3).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="textInstructions" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\textInstructions.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -162,6 +192,9 @@
   </data>
   <data name="Victory" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Victory.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="victoryGif" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\ezgif.com-gif-maker (2).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="wall" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\wall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

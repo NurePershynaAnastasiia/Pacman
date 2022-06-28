@@ -20,7 +20,7 @@ namespace CodeBase.Moves
             return true;
         }
 
-        public static char RandomDir(Field field, Enemy enemy)
+        public static void RandomDir(Field field, Enemy enemy)
         {
             char direction = 'u';
             Random rnd = new Random();
@@ -47,7 +47,7 @@ namespace CodeBase.Moves
 
             }
             enemy.Prev = direction;
-            return direction;
+            enemy.Direction = direction;
         }
 
         public static void EnemyStatus(Enemy enemy, Field field)
@@ -69,20 +69,21 @@ namespace CodeBase.Moves
                 enemy.Eaten = true;
         }
 
-        public static void Step(Game game, Enemy enemy, char dir, GameFunctions.Draw draw)
+        public static void Step(Game game, Enemy enemy, GameFunctions.Draw draw)
         {
             if (game.Finished)
                 return;
             CurrentLevel currentLevel = game.CurrentLevel;
             EnemyStatus(enemy, currentLevel.Field);
+            RandomDir(currentLevel.Field, enemy);
 
             if (!enemy.Eaten)
             {
                 currentLevel.FieldEnemies[enemy.X, enemy.Y] = new Cell(enemy.X, enemy.Y);
                 draw(currentLevel.Field[enemy.X, enemy.Y]);
 
-                enemy.X += Utility.CoordsUpdate(dir).x;
-                enemy.Y += Utility.CoordsUpdate(dir).y;
+                enemy.X += Utility.CoordsUpdate(enemy.Direction).x;
+                enemy.Y += Utility.CoordsUpdate(enemy.Direction).y;
                 ThorMap.Step(currentLevel.Field, enemy);
 
                 draw(enemy);

@@ -134,13 +134,12 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox2.TabIndex = 15;
             this.pictureBox2.TabStop = false;
-            this.DoubleBuffered = true;
             // 
             // ChooseLevelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PacmanGUI.Resources.background;
+            this.BackgroundImage = global::PacmanGUI.Resources.bg;
             this.ClientSize = new System.Drawing.Size(803, 699);
             this.Controls.Add(this.Lvl3Btn);
             this.Controls.Add(this.Lvl2Btn);
@@ -148,6 +147,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.pictureBox2);
+            this.DoubleBuffered = true;
             this.Name = "ChooseLevelForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChooseLevelForm";

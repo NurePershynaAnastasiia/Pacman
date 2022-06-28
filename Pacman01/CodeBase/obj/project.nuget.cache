@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "g7NmdUfkCV5BPA5YqlxGJ537iBq4gwc4lB/pzCS6hKsueGPVMFHh9bVm9tslArb+INBk5dE4yLWmkjQTuT9zZA==",
+  "dgSpecHash": "Dq+DUqKobMoF7/U/L06iGIp+d7Ck1TBbvh9A8fdExA5Q9HFHg4XbgGwZHK9nMiFnxGjF3i3qtrTW1pin1A9TQQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Anastasiia\\Documents\\GitHub\\Pacman\\Pacman01\\CodeBase\\CodeBase.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Anastasiia\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.2\\microsoft.netcore.app.runtime.win-x64.6.0.2.nupkg.sha512",
-    "C:\\Users\\Anastasiia\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\6.0.2\\microsoft.windowsdesktop.app.runtime.win-x64.6.0.2.nupkg.sha512",
-    "C:\\Users\\Anastasiia\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.2\\microsoft.aspnetcore.app.runtime.win-x64.6.0.2.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

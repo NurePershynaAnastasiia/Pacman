@@ -51,7 +51,7 @@ namespace CodeBase.Utilities
             levelInfo.Add(1, new Level(path: "lvl1.txt", pathOutput: "lvl1Output.txt"));
             levelInfo.Add(2, new Level(path: "lvl2.txt", pathOutput: "lvl2Output.txt"));
             levelInfo.Add(3, new Level(path: "lvl3.txt", pathOutput: "lvl3Output.txt"));
-
+            
             return levelInfo[lvl];
         }
     }

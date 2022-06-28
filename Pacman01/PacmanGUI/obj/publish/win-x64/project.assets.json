@@ -29,8 +29,8 @@
   "libraries": {
     "CodeBase/1.0.0": {
       "type": "project",
-      "path": "C:\\Users\\Anastasiia\\Documents\\GitHub\\Pacman\\Pacman01\\CodeBase\\CodeBase.csproj",
-      "msbuildProject": "C:\\Users\\Anastasiia\\Documents\\GitHub\\Pacman\\Pacman01\\CodeBase\\CodeBase.csproj"
+      "path": "../CodeBase/CodeBase.csproj",
+      "msbuildProject": "../CodeBase/CodeBase.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -44,11 +44,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\2UNIVERSITY\\курсовая\\PacmanGUI\\PacmanGUI\\PacmanGUI.csproj",
+      "projectUniqueName": "C:\\Users\\Anastasiia\\Documents\\GitHub\\Pacman\\Pacman01\\PacmanGUI\\PacmanGUI.csproj",
       "projectName": "PacmanGUI",
-      "projectPath": "D:\\2UNIVERSITY\\курсовая\\PacmanGUI\\PacmanGUI\\PacmanGUI.csproj",
+      "projectPath": "C:\\Users\\Anastasiia\\Documents\\GitHub\\Pacman\\Pacman01\\PacmanGUI\\PacmanGUI.csproj",
       "packagesPath": "C:\\Users\\Anastasiia\\.nuget\\packages\\",
-      "outputPath": "D:\\2UNIVERSITY\\курсовая\\PacmanGUI\\PacmanGUI\\obj\\publish\\win-x64\\",
+      "outputPath": "C:\\Users\\Anastasiia\\Documents\\GitHub\\Pacman\\Pacman01\\PacmanGUI\\obj\\publish\\win-x64\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Anastasiia\\AppData\\Roaming\\NuGet\\NuGet.Config",

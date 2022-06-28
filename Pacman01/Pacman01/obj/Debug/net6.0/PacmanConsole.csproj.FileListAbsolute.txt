@@ -19,3 +19,7 @@ C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\Pacman01\obj\Debug\net6.0\r
 C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\Pacman01\obj\Debug\net6.0\PacmanConsole.pdb
 C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\Pacman01\obj\Debug\net6.0\PacmanConsole.genruntimeconfig.cache
 C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\Pacman01\obj\Debug\net6.0\ref\PacmanConsole.dll
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\Pacman01\bin\Debug\net6.0\Properties\Resources.resx
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\Pacman01\bin\Debug\net6.0\Resources\lvl1.txt
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\Pacman01\bin\Debug\net6.0\Resources\lvl2.txt
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\Pacman01\bin\Debug\net6.0\Resources\lvl3.txt

@@ -7,21 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CodeBase.Utilities;
+using CodeBase.Elements;
+using CodeBase.Moves;
+using CodeBase.GameProcess;
 
 namespace PacmanGUI
 {
     public partial class InstructionsForm : Form
     {
-        public InstructionsForm()
+        public Game game { get; set; }
+        public InstructionsForm(Game game)
         {
             InitializeComponent();
-            this.Size = new Size(800, 850);
+            this.Size = new Size(800, 870);
+            this.game = game;
             BackBtn.Click += new EventHandler(BackBtn_Click);
         }
         private void BackBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            MenuForm menuForm = new MenuForm();
+            MenuForm menuForm = new MenuForm(game);
             menuForm.Show();
         }
 

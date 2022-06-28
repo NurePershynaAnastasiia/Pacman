@@ -1,0 +1,15 @@
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\PacmanGUI\bin\Release\net6.0-windows\publish\win-x64\PacmanGUI.pdb
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\PacmanGUI\bin\Release\net6.0-windows\publish\win-x64\Properties\Resources.resx
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\PacmanGUI\bin\Release\net6.0-windows\publish\win-x64\Resources\lvl1.txt
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\PacmanGUI\bin\Release\net6.0-windows\publish\win-x64\Resources\lvl2.txt
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\PacmanGUI\bin\Release\net6.0-windows\publish\win-x64\Resources\lvl3.txt
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\PacmanGUI\bin\Release\net6.0-windows\publish\win-x64\CodeBase.exe
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\PacmanGUI\bin\Release\net6.0-windows\publish\win-x64\Resources.resx
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\PacmanGUI\bin\Release\net6.0-windows\publish\win-x64\CodeBase.runtimeconfig.json
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\PacmanGUI\bin\Release\net6.0-windows\publish\win-x64\D3DCompiler_47_cor3.dll
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\PacmanGUI\bin\Release\net6.0-windows\publish\win-x64\PenImc_cor3.dll
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\PacmanGUI\bin\Release\net6.0-windows\publish\win-x64\PresentationNative_cor3.dll
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\PacmanGUI\bin\Release\net6.0-windows\publish\win-x64\vcruntime140_cor3.dll
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\PacmanGUI\bin\Release\net6.0-windows\publish\win-x64\wpfgfx_cor3.dll
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\PacmanGUI\bin\Release\net6.0-windows\publish\win-x64\CodeBase.pdb
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\PacmanGUI\bin\Release\net6.0-windows\publish\win-x64\PacmanGUI.exe

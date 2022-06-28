@@ -14,7 +14,7 @@ namespace CodeBase
     {
         static void Main(string[] args)
         {
-            
+     
         }
     }
 }

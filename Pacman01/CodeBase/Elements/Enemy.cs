@@ -65,7 +65,7 @@ namespace CodeBase.Elements
         }
         public override void Action(Game game)
         {
-            if (!game.CurrentLevel.Field.Scared)
+            if (!game.CurrentLevel.Field.Scared && !this.Eaten)
                 game.Finished = true;
             else
                 this.Eaten = true;
@@ -74,5 +74,6 @@ namespace CodeBase.Elements
         {
             return "enemy";
         }
+        public override char Direction { get; set; }
     }
 }

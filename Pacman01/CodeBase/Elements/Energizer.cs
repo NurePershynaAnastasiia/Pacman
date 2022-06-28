@@ -46,5 +46,6 @@ namespace CodeBase.Elements
         {
             return "energizer";
         }
+        public override char Direction { get; set; }
     }
 }

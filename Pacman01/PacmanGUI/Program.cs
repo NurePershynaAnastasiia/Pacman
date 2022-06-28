@@ -17,8 +17,9 @@ namespace PacmanGUI
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
+            Game game = new Game(new CurrentLevel(), 0, 0);
             ApplicationConfiguration.Initialize();
-            Application.Run(new MenuForm());
+            Application.Run(new MenuForm(game));
             Application.Exit();
             //Console.CursorVisible = false;
         }

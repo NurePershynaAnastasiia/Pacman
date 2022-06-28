@@ -8,12 +8,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PacmanConsole", "Pacman01\P
 		{DB00EFA6-3D0A-487C-9601-B524EA000300} = {DB00EFA6-3D0A-487C-9601-B524EA000300}
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PacmanGUI", "D:\2UNIVERSITY\курсовая\PacmanGUI\PacmanGUI\PacmanGUI.csproj", "{36EDDFFD-1501-4870-9FD4-382972864A23}"
-	ProjectSection(ProjectDependencies) = postProject
-		{DB00EFA6-3D0A-487C-9601-B524EA000300} = {DB00EFA6-3D0A-487C-9601-B524EA000300}
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeBase", "CodeBase\CodeBase.csproj", "{DB00EFA6-3D0A-487C-9601-B524EA000300}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeBase", "CodeBase\CodeBase.csproj", "{DB00EFA6-3D0A-487C-9601-B524EA000300}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PacmanGUI", "PacmanGUI\PacmanGUI.csproj", "{E1886607-5911-4DD4-984F-05BED21FD528}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +22,14 @@ Global
 		{555B86B5-769B-4C96-AA98-79F09B827917}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{555B86B5-769B-4C96-AA98-79F09B827917}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{555B86B5-769B-4C96-AA98-79F09B827917}.Release|Any CPU.Build.0 = Release|Any CPU
-		{36EDDFFD-1501-4870-9FD4-382972864A23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{36EDDFFD-1501-4870-9FD4-382972864A23}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{36EDDFFD-1501-4870-9FD4-382972864A23}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{36EDDFFD-1501-4870-9FD4-382972864A23}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DB00EFA6-3D0A-487C-9601-B524EA000300}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DB00EFA6-3D0A-487C-9601-B524EA000300}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB00EFA6-3D0A-487C-9601-B524EA000300}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB00EFA6-3D0A-487C-9601-B524EA000300}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1886607-5911-4DD4-984F-05BED21FD528}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1886607-5911-4DD4-984F-05BED21FD528}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1886607-5911-4DD4-984F-05BED21FD528}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1886607-5911-4DD4-984F-05BED21FD528}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

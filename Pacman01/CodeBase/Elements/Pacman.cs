@@ -58,5 +58,6 @@ namespace CodeBase.Elements
         {
             return "pacman";
         }
+        public override char Direction { get; set; }
     }
 }

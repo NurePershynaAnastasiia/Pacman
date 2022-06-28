@@ -13,3 +13,9 @@ C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\obj\Debug\net6.0\r
 C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\obj\Debug\net6.0\CodeBase.pdb
 C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\obj\Debug\net6.0\CodeBase.genruntimeconfig.cache
 C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\obj\Debug\net6.0\ref\CodeBase.dll
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\obj\Debug\net6.0\CodeBase.Properties.Resources.resources
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\obj\Debug\net6.0\CodeBase.csproj.GenerateResource.cache
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\bin\Debug\net6.0\Properties\Resources.resx
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\bin\Debug\net6.0\Resources\lvl1.txt
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\bin\Debug\net6.0\Resources\lvl2.txt
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\bin\Debug\net6.0\Resources\lvl3.txt

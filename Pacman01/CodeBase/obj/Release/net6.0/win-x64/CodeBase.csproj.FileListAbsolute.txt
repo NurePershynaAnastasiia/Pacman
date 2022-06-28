@@ -235,3 +235,9 @@ C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\obj\Release\net6.0
 C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\obj\Release\net6.0\win-x64\CodeBase.pdb
 C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\obj\Release\net6.0\win-x64\CodeBase.genruntimeconfig.cache
 C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\obj\Release\net6.0\win-x64\ref\CodeBase.dll
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\obj\Release\net6.0\win-x64\CodeBase.Properties.Resources.resources
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\obj\Release\net6.0\win-x64\CodeBase.csproj.GenerateResource.cache
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\bin\Release\net6.0\win-x64\Properties\Resources.resx
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\bin\Release\net6.0\win-x64\Resources\lvl1.txt
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\bin\Release\net6.0\win-x64\Resources\lvl2.txt
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\bin\Release\net6.0\win-x64\Resources\lvl3.txt

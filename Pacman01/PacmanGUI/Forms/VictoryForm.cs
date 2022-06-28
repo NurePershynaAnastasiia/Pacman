@@ -1,0 +1,41 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using CodeBase.Utilities;
+using CodeBase.Elements;
+using CodeBase.Moves;
+using CodeBase.GameProcess;
+
+namespace PacmanGUI
+{
+    public partial class VictoryForm : Form
+    {
+        public Game game { get; set; }
+        public VictoryForm(Game game)
+        {
+            InitializeComponent();
+            this.Size = new Size(800, 870);
+            GeneralScoreTextBox.Text = "General Score: " + game.GeneralScore.ToString();
+            this.game = game;
+        }
+
+        private void BackToMenuBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            MenuForm menuForm = new MenuForm(game);
+            menuForm.Show();
+        }
+
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
+        }
+    }
+}

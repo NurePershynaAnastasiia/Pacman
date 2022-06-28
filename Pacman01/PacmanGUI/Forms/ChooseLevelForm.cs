@@ -7,20 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CodeBase.Utilities;
+using CodeBase.Elements;
+using CodeBase.Moves;
+using CodeBase.GameProcess;
 
 namespace PacmanGUI
 {
     public partial class ChooseLevelForm : Form
     {
-        public ChooseLevelForm()
+        public Game game { get; set; }
+        public ChooseLevelForm(Game game)
         {
             InitializeComponent();
-            this.Size = new Size(800, 850);
+            this.Size = new Size(800, 870);
+            this.game = game;
         }
         public void BackBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            MenuForm menuForm = new MenuForm();
+            MenuForm menuForm = new MenuForm(game);
             menuForm.Show();
         }
 
@@ -31,7 +37,7 @@ namespace PacmanGUI
         private void Lvl1Btn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            GameForm gameForm = new GameForm(1);
+            GameForm gameForm = new GameForm(game, 1);
             gameForm.Show();
         }
         private void Lvl2Btn_MouseHover(object sender, EventArgs e)
@@ -41,7 +47,7 @@ namespace PacmanGUI
         private void Lvl2Btn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            GameForm gameForm = new GameForm(2);
+            GameForm gameForm = new GameForm(game, 2);
             gameForm.Show();
         }
         private void Lvl3Btn_MouseHover(object sender, EventArgs e)
@@ -51,7 +57,7 @@ namespace PacmanGUI
         private void Lvl3Btn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            GameForm gameForm = new GameForm(3);
+            GameForm gameForm = new GameForm(game, 3);
             gameForm.Show();
         }
         private void LvlBtn_MouseLeave(object sender, EventArgs e)

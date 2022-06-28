@@ -56,10 +56,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::PacmanGUI.Resources.textPacman;
-            this.pictureBox1.Location = new System.Drawing.Point(55, 108);
+            this.pictureBox1.BackgroundImage = global::PacmanGUI.Resources.pacmanName;
+            this.pictureBox1.Location = new System.Drawing.Point(36, 67);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(702, 131);
+            this.pictureBox1.Size = new System.Drawing.Size(715, 190);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
@@ -121,8 +122,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PacmanGUI.Resources.background;
-            this.ClientSize = new System.Drawing.Size(791, 632);
+            this.BackgroundImage = global::PacmanGUI.Resources.bg;
+            this.ClientSize = new System.Drawing.Size(794, 632);
             this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.InstructionsBtn);
             this.Controls.Add(this.ShopBtn);

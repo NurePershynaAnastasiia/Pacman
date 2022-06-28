@@ -18,31 +18,29 @@ namespace PacmanGUI
     public partial class GameForm : Form
     {
         public Field field, fieldEnemies;
-        public Game game;
         int lvl = 1;
-        public GameForm(int lvl)
+        public Game game { get; set; }
+
+        public GameForm(Game game, int lvl)
         {
             InitializeComponent();
             this.Size = new Size(1300, 870);
             this.lvl = lvl;
-
+            this.game = game;
             resetGame();
         }
         private void resetGame()
         {
-            Game game = new Game(new CurrentLevel(), 0, 0);//Game = CurrentLevel + Design + GeneralScore + Finished
-
             CurrentLevel currentLevel = GameFunctions.Initialize(lvl);
             field = currentLevel.Field;
             fieldEnemies = currentLevel.FieldEnemies;
-            game = new Game(currentLevel, game.GeneralScore, game.Design);
-            this.game = game;
+            game = new Game(currentLevel, game.GeneralScore, game.Design);//Game = CurrentLevel + Design + GeneralScore + Finished
 
             timerGame.Start();
         }
         private void MainGameTimer(object sender, EventArgs e)
         {
-            GuiEngine.Playing(game, Draw, DrawStats);
+            GuiEngine.Playing(game, Draw, DrawStats, this);
         }
         public void pictureBoxField_Paint(object sender, PaintEventArgs e)
         {
@@ -53,7 +51,7 @@ namespace PacmanGUI
                 {
                     Bitmap currentObj;
                     if (fieldEnemies[i, j].Name() == "enemy" && !field.Scared)
-                        currentObj = Resources.enemy;
+                        currentObj = Resources.enemy_left;
                     else
                         currentObj = GuiEngine.DefineTexture(field[i, j]);
                     
@@ -67,15 +65,12 @@ namespace PacmanGUI
             g.DrawImage(GuiEngine.DefineTexture(element), new Rectangle(element.Y + (30 * element.Y), element.X + (30 * element.X), 30, 30));
             //pictureBoxField.Refresh();
         }
-        public static void DrawStats(Game game)
+        public void DrawStats(Game game)
         {
-            /*CurrentLevel currentLevel = game.CurrentLevel;
-            Console.SetCursorPosition(7, currentLevel.Field.Height);
-            Console.Write(currentLevel.Field.Score);
-            Console.SetCursorPosition(15, currentLevel.Field.Height + 1);
-            Console.Write(game.GeneralScore);*/
+            CurrentLevel currentLevel = game.CurrentLevel;
+            scoreTextBox.Text = "Score: " + (currentLevel.Field.Score).ToString();
+            generalScoreTextBox.Text = "General score: " + game.GeneralScore.ToString();
         }
-
         public void GameForm_KeyDown(object sender, KeyEventArgs e)
         {
             GuiEngine.GetDirection(e);

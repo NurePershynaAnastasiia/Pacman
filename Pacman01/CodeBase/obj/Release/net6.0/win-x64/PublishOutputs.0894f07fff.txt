@@ -1,2 +1,6 @@
 C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\bin\Release\net6.0\CodeBase.pdb
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\bin\Release\net6.0\Resources\lvl1.txt
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\bin\Release\net6.0\Resources\lvl2.txt
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\bin\Release\net6.0\Resources\lvl3.txt
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\bin\Release\net6.0\Properties\Resources.resx
 C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\bin\Release\net6.0\CodeBase.exe

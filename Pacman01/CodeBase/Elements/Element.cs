@@ -12,14 +12,9 @@ namespace CodeBase.Elements
 {
     public abstract class Element
     {
-        abstract public int X
-        {
-            get; set;
-        }
-        abstract public int Y
-        {
-            get; set;
-        }
+        abstract public int X { get; set; }
+        abstract public int Y { get; set; }
+        abstract public char Direction { get; set; }
         abstract public void Action(Game game);
         abstract public void Draw();
         abstract public bool isObstacle();

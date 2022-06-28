@@ -37,6 +37,7 @@ namespace CodeBase.Elements
         {
             get; set;
         }
+        public override char Direction { get; set; }
         public override void Action(Game game) { }
         public override string Name()
         {
