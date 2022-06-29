@@ -4,7 +4,7 @@ using NAudio.Wave;
 
 namespace CodeBase.SoundEngine
 {
-    class CachedSound
+    public class CachedSound
     {
         public float[] AudioData { get; private set; }
         public WaveFormat WaveFormat { get; private set; }

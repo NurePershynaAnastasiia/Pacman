@@ -20,7 +20,7 @@ namespace PacmanGUI
         public InstructionsForm(Game game)
         {
             InitializeComponent();
-            this.Size = new Size(800, 820);
+            this.Size = new Size(800, 870);
             this.game = game;
             BackBtn.Click += new EventHandler(BackBtn_Click);
         }

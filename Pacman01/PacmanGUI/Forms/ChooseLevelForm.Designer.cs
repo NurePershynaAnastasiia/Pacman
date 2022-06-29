@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChooseLevelForm));
             this.BackBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Lvl1Btn = new System.Windows.Forms.Button();
@@ -49,7 +50,7 @@
             this.BackBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.BackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackBtn.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BackBtn.Location = new System.Drawing.Point(44, 585);
+            this.BackBtn.Location = new System.Drawing.Point(212, 559);
             this.BackBtn.Name = "BackBtn";
             this.BackBtn.Size = new System.Drawing.Size(268, 62);
             this.BackBtn.TabIndex = 10;
@@ -62,7 +63,7 @@
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.BackgroundImage = global::PacmanGUI.Resources.chooseLevel;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(266, 64);
+            this.pictureBox1.Location = new System.Drawing.Point(262, 72);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(584, 87);
             this.pictureBox1.TabIndex = 11;
@@ -79,7 +80,7 @@
             this.Lvl1Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Salmon;
             this.Lvl1Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Lvl1Btn.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Lvl1Btn.Location = new System.Drawing.Point(640, 180);
+            this.Lvl1Btn.Location = new System.Drawing.Point(586, 192);
             this.Lvl1Btn.Name = "Lvl1Btn";
             this.Lvl1Btn.Size = new System.Drawing.Size(306, 61);
             this.Lvl1Btn.TabIndex = 12;
@@ -100,7 +101,7 @@
             this.Lvl2Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Salmon;
             this.Lvl2Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Lvl2Btn.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Lvl2Btn.Location = new System.Drawing.Point(640, 273);
+            this.Lvl2Btn.Location = new System.Drawing.Point(586, 296);
             this.Lvl2Btn.Name = "Lvl2Btn";
             this.Lvl2Btn.Size = new System.Drawing.Size(306, 61);
             this.Lvl2Btn.TabIndex = 13;
@@ -121,7 +122,7 @@
             this.Lvl3Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Salmon;
             this.Lvl3Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Lvl3Btn.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Lvl3Btn.Location = new System.Drawing.Point(640, 372);
+            this.Lvl3Btn.Location = new System.Drawing.Point(586, 416);
             this.Lvl3Btn.Name = "Lvl3Btn";
             this.Lvl3Btn.Size = new System.Drawing.Size(306, 61);
             this.Lvl3Btn.TabIndex = 14;
@@ -135,7 +136,7 @@
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox2.Location = new System.Drawing.Point(53, 287);
+            this.pictureBox2.Location = new System.Drawing.Point(195, 296);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(697, 241);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -148,7 +149,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PacmanGUI.Resources.bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1102, 831);
+            this.ClientSize = new System.Drawing.Size(1157, 831);
             this.Controls.Add(this.Lvl3Btn);
             this.Controls.Add(this.Lvl2Btn);
             this.Controls.Add(this.Lvl1Btn);
@@ -156,10 +157,10 @@
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.pictureBox2);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ChooseLevelForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChooseLevelForm";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ChooseLevelForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

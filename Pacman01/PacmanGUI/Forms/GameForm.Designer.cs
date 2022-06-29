@@ -29,11 +29,13 @@
         public void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameForm));
             this.pictureBoxField = new System.Windows.Forms.PictureBox();
             this.timerGame = new System.Windows.Forms.Timer(this.components);
             this.scoreLabel = new System.Windows.Forms.Label();
             this.generalScoreLabel = new System.Windows.Forms.Label();
             this.pauseLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxField)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,6 +96,19 @@
             this.pauseLabel.TabIndex = 5;
             this.pauseLabel.Text = "Pause";
             // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(828, 590);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(390, 65);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Press P to Pause";
+            // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -101,15 +116,16 @@
             this.BackgroundImage = global::PacmanGUI.Resources.bgGameGif;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1284, 831);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pauseLabel);
             this.Controls.Add(this.generalScoreLabel);
             this.Controls.Add(this.scoreLabel);
             this.Controls.Add(this.pictureBoxField);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GameForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GameForm";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.GameForm_FormClosed);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GameForm_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxField)).EndInit();
@@ -124,5 +140,6 @@
         private Label scoreLabel;
         private Label generalScoreLabel;
         public Label pauseLabel;
+        private Label label1;
     }
 }

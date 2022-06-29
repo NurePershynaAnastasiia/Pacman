@@ -7,6 +7,7 @@ using CodeBase.Utilities;
 using CodeBase.Elements;
 using CodeBase.Moves;
 using CodeBase.GameProcess;
+using CodeBase.SoundEngine;
 
 namespace PacmanGUI
 {
@@ -31,6 +32,7 @@ namespace PacmanGUI
 
             if (game.Finished)
             {
+                AudioPlaybackEngine.Instance.PlaySound(new CachedSound("pacman_death.wav"));
                 gameForm.timerGame.Stop();
                 gameForm.Hide();
                 GameOverForm gameOverForm = new GameOverForm(game.GeneralScore);
@@ -38,6 +40,7 @@ namespace PacmanGUI
             }
             if (currentLevel.Field.Score == currentLevel.Points)
             {
+                AudioPlaybackEngine.Instance.PlaySound(new CachedSound("pacman_victory.wav"));
                 gameForm.timerGame.Stop();
                 gameForm.Hide();
                 VictoryForm victoryForm = new VictoryForm(game);

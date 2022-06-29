@@ -50,8 +50,7 @@ namespace CodeBase.Elements
             game.CurrentLevel.Field.Score++;
             game.GeneralScore++;
 
-            //var chomp = new CachedSound("pacman_chomp.wav");
-            //AudioPlaybackEngine.Instance.PlaySound(chomp);
+            AudioPlaybackEngine.Instance.PlaySound(new CachedSound("pacman_chomp.wav"));
         }
         public override string Name()
         {

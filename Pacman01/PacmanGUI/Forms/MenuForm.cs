@@ -21,7 +21,7 @@ namespace PacmanGUI
         public MenuForm(Game game)
         {
             InitializeComponent();
-            this.Size = new Size(800, 820);
+            this.Size = new Size(800, 870);
             this.game = game;
         }
 

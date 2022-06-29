@@ -10,7 +10,7 @@ using NAudio.Wave.SampleProviders;
 
 namespace CodeBase.SoundEngine
 {
-    class AudioPlaybackEngine : IDisposable
+    public class AudioPlaybackEngine : IDisposable
     {
         private readonly IWavePlayer outputDevice;
         private readonly MixingSampleProvider mixer;

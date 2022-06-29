@@ -7,6 +7,7 @@ using CodeBase.Elements;
 using CodeBase.Utilities;
 using CodeBase.Moves;
 using CodeBase.GameProcess;
+using CodeBase.SoundEngine;
 
 namespace CodeBase.Elements
 {
@@ -41,6 +42,7 @@ namespace CodeBase.Elements
         {
             game.CurrentLevel.Field.Scared = true;
             game.CurrentLevel.Field.ScaredTime += 10;
+            AudioPlaybackEngine.Instance.PlaySound(new CachedSound("pacman_energizer.wav"));
         }
         public override string Name()
         {
