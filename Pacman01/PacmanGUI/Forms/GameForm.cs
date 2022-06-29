@@ -46,6 +46,7 @@ namespace PacmanGUI
         public void pictureBoxField_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
+            int cellSize = Utility.BiggerCells(game.CurrentLevel.Level);
             for (int i = 0; i < field.Height; i++)
             {
                 for (int j = 0; j < field.Width; j++)
@@ -56,15 +57,15 @@ namespace PacmanGUI
                     else
                         currentObj = GuiEngine.DefineTexture(field[i, j]);
                     
-                    g.DrawImage(currentObj, new Rectangle(j + (30 * j), i + (30 * i), 30, 30));
+                    g.DrawImage(currentObj, new Rectangle(j * cellSize, i * cellSize, cellSize, cellSize));
                 }
             }
         }
         public void Draw(Element element)
         {
             Graphics g = pictureBoxField.CreateGraphics();
-            g.DrawImage(GuiEngine.DefineTexture(element), new Rectangle(element.Y + (30 * element.Y), element.X + (30 * element.X), 30, 30));
-            //pictureBoxField.Refresh();
+            int cellSize = Utility.BiggerCells(game.CurrentLevel.Level);
+            g.DrawImage(GuiEngine.DefineTexture(element), new Rectangle(element.Y * cellSize, element.X * cellSize, cellSize, cellSize));
         }
         public void DrawStats(Game game)
         {
@@ -72,6 +73,12 @@ namespace PacmanGUI
             scoreLabel.Text = "Score: " + (currentLevel.Field.Score).ToString();
             generalScoreLabel.Text = "General score: " + game.GeneralScore.ToString();
         }
+
+        private void GameForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
         public void GameForm_KeyDown(object sender, KeyEventArgs e)
         {
             GuiEngine.GetDirection(e);

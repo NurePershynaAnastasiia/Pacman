@@ -100,5 +100,10 @@ namespace PacmanGUI
             else
                 NotEnoughPointsAction(Buy3Btn);
         }
+
+        private void ShopForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

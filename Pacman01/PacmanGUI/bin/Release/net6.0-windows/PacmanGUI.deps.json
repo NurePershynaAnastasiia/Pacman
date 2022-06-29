@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v6.0": {
       "PacmanGUI/1.0.0": {
         "dependencies": {
-          "CodeBase": "1.0.0"
+          "CodeBase": "1.0.0",
+          "NAudio": "2.1.0"
         },
         "runtime": {
           "PacmanGUI.dll": {}

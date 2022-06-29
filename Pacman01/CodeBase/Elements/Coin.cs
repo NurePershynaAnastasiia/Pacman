@@ -7,6 +7,7 @@ using CodeBase.Elements;
 using CodeBase.Utilities;
 using CodeBase.Moves;
 using CodeBase.GameProcess;
+using CodeBase.SoundEngine;
 using System.IO;
 using System.Reflection;
 
@@ -49,8 +50,8 @@ namespace CodeBase.Elements
             game.CurrentLevel.Field.Score++;
             game.GeneralScore++;
 
-            var assembly = Assembly.GetExecutingAssembly();
-            Stream stream = assembly.GetManifestResourceStream("CodeBase.Resources.pacman_chomp.wav");
+            //var chomp = new CachedSound("pacman_chomp.wav");
+            //AudioPlaybackEngine.Instance.PlaySound(chomp);
         }
         public override string Name()
         {

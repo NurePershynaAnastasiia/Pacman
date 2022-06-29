@@ -39,7 +39,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pictureBox1.Image = global::PacmanGUI.Resources.victoryGif;
             this.pictureBox1.Location = new System.Drawing.Point(91, 138);
@@ -51,7 +51,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pictureBox2.Image = global::PacmanGUI.Resources.Victory;
             this.pictureBox2.Location = new System.Drawing.Point(187, 238);
@@ -63,7 +63,7 @@
             // 
             // ExitBtn
             // 
-            this.ExitBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ExitBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ExitBtn.BackColor = System.Drawing.Color.Teal;
             this.ExitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ExitBtn.FlatAppearance.BorderColor = System.Drawing.Color.Brown;
@@ -72,7 +72,7 @@
             this.ExitBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitBtn.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ExitBtn.Location = new System.Drawing.Point(73, 696);
+            this.ExitBtn.Location = new System.Drawing.Point(53, 635);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(268, 62);
             this.ExitBtn.TabIndex = 10;
@@ -82,7 +82,7 @@
             // 
             // BackToMenuBtn
             // 
-            this.BackToMenuBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BackToMenuBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BackToMenuBtn.BackColor = System.Drawing.Color.Teal;
             this.BackToMenuBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BackToMenuBtn.FlatAppearance.BorderColor = System.Drawing.Color.Brown;
@@ -91,7 +91,7 @@
             this.BackToMenuBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.BackToMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackToMenuBtn.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BackToMenuBtn.Location = new System.Drawing.Point(429, 696);
+            this.BackToMenuBtn.Location = new System.Drawing.Point(419, 635);
             this.BackToMenuBtn.Name = "BackToMenuBtn";
             this.BackToMenuBtn.Size = new System.Drawing.Size(268, 62);
             this.BackToMenuBtn.TabIndex = 11;
@@ -101,12 +101,12 @@
             // 
             // generalScoreLabel
             // 
-            this.generalScoreLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.generalScoreLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.generalScoreLabel.AutoSize = true;
             this.generalScoreLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.generalScoreLabel.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.generalScoreLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.generalScoreLabel.Location = new System.Drawing.Point(73, 560);
+            this.generalScoreLabel.Location = new System.Drawing.Point(40, 507);
             this.generalScoreLabel.Name = "generalScoreLabel";
             this.generalScoreLabel.Size = new System.Drawing.Size(359, 65);
             this.generalScoreLabel.TabIndex = 13;
@@ -128,6 +128,8 @@
             this.Name = "VictoryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Victory";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.VictoryForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

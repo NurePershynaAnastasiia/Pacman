@@ -54,6 +54,14 @@ namespace CodeBase.Utilities
             
             return levelInfo[lvl];
         }
+
+        public static int BiggerCells(int lvl)
+        {
+            if (lvl == 1) return 50;
+            if (lvl == 2) return 40;
+            return 30;
+        }
+
     }
 }
 

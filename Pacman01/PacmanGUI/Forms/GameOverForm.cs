@@ -22,6 +22,10 @@ namespace PacmanGUI
         private void ExitBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void GameOverForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
             Application.Exit();
         }
     }

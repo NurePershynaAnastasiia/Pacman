@@ -64,5 +64,10 @@ namespace PacmanGUI
         {
             this.pictureBox2.Image = null;
         }
+
+        private void ChooseLevelForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

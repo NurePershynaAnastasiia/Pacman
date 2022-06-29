@@ -40,7 +40,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pictureBox1.Image = global::PacmanGUI.Resources.gameOverGif;
             this.pictureBox1.Location = new System.Drawing.Point(40, 114);
@@ -52,7 +52,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pictureBox2.Image = global::PacmanGUI.Resources.GameOver;
             this.pictureBox2.Location = new System.Drawing.Point(139, 202);
@@ -64,7 +64,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pictureBox3.Image = global::PacmanGUI.Resources.sadFace;
             this.pictureBox3.Location = new System.Drawing.Point(301, 334);
@@ -76,7 +76,7 @@
             // 
             // ExitBtn
             // 
-            this.ExitBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ExitBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ExitBtn.BackColor = System.Drawing.Color.Teal;
             this.ExitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ExitBtn.FlatAppearance.BorderColor = System.Drawing.Color.Brown;
@@ -85,7 +85,7 @@
             this.ExitBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitBtn.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ExitBtn.Location = new System.Drawing.Point(253, 715);
+            this.ExitBtn.Location = new System.Drawing.Point(247, 677);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(268, 62);
             this.ExitBtn.TabIndex = 9;
@@ -95,12 +95,12 @@
             // 
             // generalScoreLabel
             // 
-            this.generalScoreLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.generalScoreLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.generalScoreLabel.AutoSize = true;
             this.generalScoreLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.generalScoreLabel.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.generalScoreLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.generalScoreLabel.Location = new System.Drawing.Point(40, 606);
+            this.generalScoreLabel.Location = new System.Drawing.Point(40, 563);
             this.generalScoreLabel.Name = "generalScoreLabel";
             this.generalScoreLabel.Size = new System.Drawing.Size(359, 65);
             this.generalScoreLabel.TabIndex = 14;
@@ -122,6 +122,8 @@
             this.Name = "GameOverForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GameOverForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.GameOverForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

@@ -38,7 +38,7 @@
             // 
             // PlayBtn
             // 
-            this.PlayBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PlayBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PlayBtn.AutoSize = true;
             this.PlayBtn.BackColor = System.Drawing.Color.Teal;
             this.PlayBtn.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -48,7 +48,7 @@
             this.PlayBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.PlayBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PlayBtn.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.PlayBtn.Location = new System.Drawing.Point(274, 294);
+            this.PlayBtn.Location = new System.Drawing.Point(384, 294);
             this.PlayBtn.MinimumSize = new System.Drawing.Size(100, 50);
             this.PlayBtn.Name = "PlayBtn";
             this.PlayBtn.Size = new System.Drawing.Size(268, 64);
@@ -59,10 +59,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.BackgroundImage = global::PacmanGUI.Resources.pacmanName;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(36, 67);
+            this.pictureBox1.Location = new System.Drawing.Point(146, 67);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(715, 190);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -71,7 +71,7 @@
             // 
             // ShopBtn
             // 
-            this.ShopBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ShopBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ShopBtn.BackColor = System.Drawing.Color.Teal;
             this.ShopBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ShopBtn.FlatAppearance.BorderColor = System.Drawing.Color.Brown;
@@ -80,7 +80,7 @@
             this.ShopBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ShopBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ShopBtn.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ShopBtn.Location = new System.Drawing.Point(274, 391);
+            this.ShopBtn.Location = new System.Drawing.Point(384, 391);
             this.ShopBtn.Name = "ShopBtn";
             this.ShopBtn.Size = new System.Drawing.Size(268, 62);
             this.ShopBtn.TabIndex = 6;
@@ -90,7 +90,7 @@
             // 
             // InstructionsBtn
             // 
-            this.InstructionsBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.InstructionsBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.InstructionsBtn.BackColor = System.Drawing.Color.Teal;
             this.InstructionsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.InstructionsBtn.FlatAppearance.BorderColor = System.Drawing.Color.Brown;
@@ -99,7 +99,7 @@
             this.InstructionsBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.InstructionsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.InstructionsBtn.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.InstructionsBtn.Location = new System.Drawing.Point(274, 480);
+            this.InstructionsBtn.Location = new System.Drawing.Point(384, 480);
             this.InstructionsBtn.Name = "InstructionsBtn";
             this.InstructionsBtn.Size = new System.Drawing.Size(268, 62);
             this.InstructionsBtn.TabIndex = 7;
@@ -109,7 +109,7 @@
             // 
             // ExitBtn
             // 
-            this.ExitBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ExitBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ExitBtn.BackColor = System.Drawing.Color.Teal;
             this.ExitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ExitBtn.FlatAppearance.BorderColor = System.Drawing.Color.Brown;
@@ -118,7 +118,7 @@
             this.ExitBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitBtn.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ExitBtn.Location = new System.Drawing.Point(274, 569);
+            this.ExitBtn.Location = new System.Drawing.Point(384, 569);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(268, 62);
             this.ExitBtn.TabIndex = 8;
@@ -133,7 +133,7 @@
             this.AutoSize = true;
             this.BackgroundImage = global::PacmanGUI.Resources.bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(784, 831);
+            this.ClientSize = new System.Drawing.Size(1004, 800);
             this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.InstructionsBtn);
             this.Controls.Add(this.ShopBtn);
@@ -143,6 +143,8 @@
             this.Name = "MenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MenuForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

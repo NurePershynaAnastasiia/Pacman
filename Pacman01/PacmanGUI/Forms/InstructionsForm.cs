@@ -20,7 +20,7 @@ namespace PacmanGUI
         public InstructionsForm(Game game)
         {
             InitializeComponent();
-            this.Size = new Size(800, 870);
+            this.Size = new Size(800, 820);
             this.game = game;
             BackBtn.Click += new EventHandler(BackBtn_Click);
         }
@@ -29,6 +29,11 @@ namespace PacmanGUI
             this.Hide();
             MenuForm menuForm = new MenuForm(game);
             menuForm.Show();
+        }
+
+        private void InstructionsForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

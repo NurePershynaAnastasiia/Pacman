@@ -31,13 +31,15 @@ namespace PacmanGUI
 
             if (game.Finished)
             {
-                gameForm.Close();
+                gameForm.timerGame.Stop();
+                gameForm.Hide();
                 GameOverForm gameOverForm = new GameOverForm(game.GeneralScore);
                 gameOverForm.Show();
             }
             if (currentLevel.Field.Score == currentLevel.Points)
             {
-                gameForm.Close();
+                gameForm.timerGame.Stop();
+                gameForm.Hide();
                 VictoryForm victoryForm = new VictoryForm(game);
                 victoryForm.Show();
             }

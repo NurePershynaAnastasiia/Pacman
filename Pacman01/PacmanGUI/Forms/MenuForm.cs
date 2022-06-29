@@ -21,7 +21,7 @@ namespace PacmanGUI
         public MenuForm(Game game)
         {
             InitializeComponent();
-            this.Size = new Size(800, 870);
+            this.Size = new Size(800, 820);
             this.game = game;
         }
 
@@ -47,6 +47,11 @@ namespace PacmanGUI
             this.Hide();
             ShopForm shopForm = new ShopForm(game);
             shopForm.Show();
+        }
+
+        private void MenuForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

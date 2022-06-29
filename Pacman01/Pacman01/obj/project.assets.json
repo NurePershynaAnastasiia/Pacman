@@ -423,7 +423,8 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "CodeBase >= 1.0.0"
+      "CodeBase >= 1.0.0",
+      "NAudio >= 2.1.0"
     ]
   },
   "packageFolders": {
@@ -468,6 +469,12 @@
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
+        "dependencies": {
+          "NAudio": {
+            "target": "Package",
+            "version": "[2.1.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

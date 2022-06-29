@@ -603,7 +603,8 @@
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
-      "CodeBase >= 1.0.0"
+      "CodeBase >= 1.0.0",
+      "NAudio >= 2.1.0"
     ]
   },
   "packageFolders": {
@@ -612,11 +613,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Anastasiia\\Documents\\GitHub\\Pacman\\Pacman01\\PacmanGUI\\PacmanGUI.csproj",
+      "projectUniqueName": "D:\\CourseProject\\Pacman\\Pacman01\\PacmanGUI\\PacmanGUI.csproj",
       "projectName": "PacmanGUI",
-      "projectPath": "C:\\Users\\Anastasiia\\Documents\\GitHub\\Pacman\\Pacman01\\PacmanGUI\\PacmanGUI.csproj",
+      "projectPath": "D:\\CourseProject\\Pacman\\Pacman01\\PacmanGUI\\PacmanGUI.csproj",
       "packagesPath": "C:\\Users\\Anastasiia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Anastasiia\\Documents\\GitHub\\Pacman\\Pacman01\\PacmanGUI\\obj\\publish\\win-x64\\",
+      "outputPath": "D:\\CourseProject\\Pacman\\Pacman01\\PacmanGUI\\obj\\publish\\win-x64\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Anastasiia\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -633,8 +634,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\Anastasiia\\Documents\\GitHub\\Pacman\\Pacman01\\CodeBase\\CodeBase.csproj": {
-              "projectPath": "C:\\Users\\Anastasiia\\Documents\\GitHub\\Pacman\\Pacman01\\CodeBase\\CodeBase.csproj"
+            "D:\\CourseProject\\Pacman\\Pacman01\\CodeBase\\CodeBase.csproj": {
+              "projectPath": "D:\\CourseProject\\Pacman\\Pacman01\\CodeBase\\CodeBase.csproj"
             }
           }
         }
@@ -648,6 +649,12 @@
     "frameworks": {
       "net6.0-windows7.0": {
         "targetAlias": "net6.0-windows",
+        "dependencies": {
+          "NAudio": {
+            "target": "Package",
+            "version": "[2.1.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

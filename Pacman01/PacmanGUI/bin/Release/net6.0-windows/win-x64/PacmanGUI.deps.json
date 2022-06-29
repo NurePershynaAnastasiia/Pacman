@@ -10,6 +10,7 @@
       "PacmanGUI/1.0.0": {
         "dependencies": {
           "CodeBase": "1.0.0",
+          "NAudio": "2.1.0",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "6.0.2",
           "runtimepack.Microsoft.WindowsDesktop.App.Runtime.win-x64": "6.0.2"
         },
