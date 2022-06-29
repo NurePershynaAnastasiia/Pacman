@@ -40,7 +40,7 @@ namespace CodeBase.Elements
         public override void Action(Game game)
         {
             game.CurrentLevel.Field.Scared = true;
-
+            game.CurrentLevel.Field.ScaredTime += 10;
         }
         public override string Name()
         {

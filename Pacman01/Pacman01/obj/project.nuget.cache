@@ -1,8 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "qecL3dskx24gNk2TBzeBV4ngBXzAhcuk611i7ClOoefv/Pk7AFIHB8CLeWAPznRFrTWs9sYohRPiHk3JXUMysA==",
+  "dgSpecHash": "I/5DHG67RIIY4UdAmXDAAbXpahEamxHIy4jf1mPy3lQd6po5IKaBLmXQ+aUJOyrOyS+AWy5M7ZlaFJJ4Cu856w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Anastasiia\\Documents\\GitHub\\Pacman\\Pacman01\\Pacman01\\PacmanConsole.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\Pacman\\Pacman01\\Pacman01\\PacmanConsole.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Anastasiia\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\Anastasiia\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\Anastasiia\\.nuget\\packages\\naudio\\2.1.0\\naudio.2.1.0.nupkg.sha512",
+    "C:\\Users\\Anastasiia\\.nuget\\packages\\naudio.asio\\2.1.0\\naudio.asio.2.1.0.nupkg.sha512",
+    "C:\\Users\\Anastasiia\\.nuget\\packages\\naudio.core\\2.1.0\\naudio.core.2.1.0.nupkg.sha512",
+    "C:\\Users\\Anastasiia\\.nuget\\packages\\naudio.midi\\2.1.0\\naudio.midi.2.1.0.nupkg.sha512",
+    "C:\\Users\\Anastasiia\\.nuget\\packages\\naudio.wasapi\\2.1.0\\naudio.wasapi.2.1.0.nupkg.sha512",
+    "C:\\Users\\Anastasiia\\.nuget\\packages\\naudio.winmm\\2.1.0\\naudio.winmm.2.1.0.nupkg.sha512",
+    "C:\\Users\\Anastasiia\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\Anastasiia\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }

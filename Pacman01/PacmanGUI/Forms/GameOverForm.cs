@@ -16,7 +16,7 @@ namespace PacmanGUI
         {
             InitializeComponent();
             this.Size = new Size(800, 870);
-            GeneralScoreTextBox.Text = "General Score: " + generalScore.ToString();
+            generalScoreLabel.Text = "General Score: " + generalScore.ToString();
         }
 
         private void ExitBtn_Click(object sender, EventArgs e)

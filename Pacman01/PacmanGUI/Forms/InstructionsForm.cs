@@ -30,6 +30,5 @@ namespace PacmanGUI
             MenuForm menuForm = new MenuForm(game);
             menuForm.Show();
         }
-
     }
 }

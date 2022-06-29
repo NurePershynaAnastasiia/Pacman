@@ -27,6 +27,7 @@ namespace PacmanGUI
             this.Size = new Size(1300, 870);
             this.lvl = lvl;
             this.game = game;
+            pauseLabel.Hide();
             resetGame();
         }
         private void resetGame()
@@ -68,9 +69,10 @@ namespace PacmanGUI
         public void DrawStats(Game game)
         {
             CurrentLevel currentLevel = game.CurrentLevel;
-            scoreTextBox.Text = "Score: " + (currentLevel.Field.Score).ToString();
-            generalScoreTextBox.Text = "General score: " + game.GeneralScore.ToString();
+            scoreLabel.Text = "Score: " + (currentLevel.Field.Score).ToString();
+            generalScoreLabel.Text = "General score: " + game.GeneralScore.ToString();
         }
+
         public void GameForm_KeyDown(object sender, KeyEventArgs e)
         {
             GuiEngine.GetDirection(e);

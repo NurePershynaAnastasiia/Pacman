@@ -31,8 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.pictureBoxField = new System.Windows.Forms.PictureBox();
             this.timerGame = new System.Windows.Forms.Timer(this.components);
-            this.scoreTextBox = new System.Windows.Forms.TextBox();
-            this.generalScoreTextBox = new System.Windows.Forms.TextBox();
+            this.scoreLabel = new System.Windows.Forms.Label();
+            this.generalScoreLabel = new System.Windows.Forms.Label();
+            this.pauseLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxField)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,42 +54,52 @@
             this.timerGame.Interval = 400;
             this.timerGame.Tick += new System.EventHandler(this.MainGameTimer);
             // 
-            // scoreTextBox
+            // scoreLabel
             // 
-            this.scoreTextBox.BackColor = System.Drawing.SystemColors.InfoText;
-            this.scoreTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.scoreTextBox.Enabled = false;
-            this.scoreTextBox.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.scoreTextBox.ForeColor = System.Drawing.SystemColors.Window;
-            this.scoreTextBox.Location = new System.Drawing.Point(48, 599);
-            this.scoreTextBox.Name = "scoreTextBox";
-            this.scoreTextBox.ReadOnly = true;
-            this.scoreTextBox.Size = new System.Drawing.Size(227, 64);
-            this.scoreTextBox.TabIndex = 1;
-            this.scoreTextBox.Text = "Score: 0\r\n";
+            this.scoreLabel.AutoSize = true;
+            this.scoreLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.scoreLabel.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.scoreLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.scoreLabel.Location = new System.Drawing.Point(48, 613);
+            this.scoreLabel.Name = "scoreLabel";
+            this.scoreLabel.Size = new System.Drawing.Size(178, 65);
+            this.scoreLabel.TabIndex = 3;
+            this.scoreLabel.Text = "Score: ";
             // 
-            // generalScoreTextBox
+            // generalScoreLabel
             // 
-            this.generalScoreTextBox.BackColor = System.Drawing.SystemColors.InfoText;
-            this.generalScoreTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.generalScoreTextBox.Enabled = false;
-            this.generalScoreTextBox.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.generalScoreTextBox.ForeColor = System.Drawing.SystemColors.Window;
-            this.generalScoreTextBox.Location = new System.Drawing.Point(48, 680);
-            this.generalScoreTextBox.Name = "generalScoreTextBox";
-            this.generalScoreTextBox.ReadOnly = true;
-            this.generalScoreTextBox.Size = new System.Drawing.Size(404, 64);
-            this.generalScoreTextBox.TabIndex = 2;
-            this.generalScoreTextBox.Text = "General score: ";
+            this.generalScoreLabel.AutoSize = true;
+            this.generalScoreLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.generalScoreLabel.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.generalScoreLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.generalScoreLabel.Location = new System.Drawing.Point(48, 689);
+            this.generalScoreLabel.Name = "generalScoreLabel";
+            this.generalScoreLabel.Size = new System.Drawing.Size(359, 65);
+            this.generalScoreLabel.TabIndex = 4;
+            this.generalScoreLabel.Text = "General score: ";
+            // 
+            // pauseLabel
+            // 
+            this.pauseLabel.AutoSize = true;
+            this.pauseLabel.BackColor = System.Drawing.Color.Transparent;
+            this.pauseLabel.Font = new System.Drawing.Font("Lucida Console", 200.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.pauseLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pauseLabel.Location = new System.Drawing.Point(161, 314);
+            this.pauseLabel.Name = "pauseLabel";
+            this.pauseLabel.Size = new System.Drawing.Size(922, 267);
+            this.pauseLabel.TabIndex = 5;
+            this.pauseLabel.Text = "Pause";
+            this.pauseLabel.Parent = pictureBoxField;
             // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PacmanGUI.Resources.backgroundGame;
-            this.ClientSize = new System.Drawing.Size(1281, 831);
-            this.Controls.Add(this.generalScoreTextBox);
-            this.Controls.Add(this.scoreTextBox);
+            this.ClientSize = new System.Drawing.Size(1300, 870);
+            this.Controls.Add(this.pauseLabel);
+            this.Controls.Add(this.generalScoreLabel);
+            this.Controls.Add(this.scoreLabel);
             this.Controls.Add(this.pictureBoxField);
             this.DoubleBuffered = true;
             this.Name = "GameForm";
@@ -98,13 +109,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxField)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+            this.Size = new Size(1300, 870);
 
         }
         #endregion
 
         public PictureBox pictureBoxField;
         private System.Windows.Forms.Timer timerGame;
-        public TextBox scoreTextBox;
-        public TextBox generalScoreTextBox;
+        private Label scoreLabel;
+        private Label generalScoreLabel;
+        public Label pauseLabel;
     }
 }

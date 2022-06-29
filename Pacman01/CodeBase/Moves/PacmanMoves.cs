@@ -14,11 +14,11 @@ namespace CodeBase.Moves
         public static void FieldScared(Field field)
         {
             if (field.Scared)
-                field.ScaredTime++;
-            if (field.ScaredTime == 10)
+                field.ScaredTime--;
+            if (field.ScaredTime == 0)
             {
                 field.Scared = false;
-                field.ScaredTime = 0;
+                field.ScaredTime = 10;
             }
         }
         public static void Step(Game game, char dir, GameFunctions.Draw draw, GameFunctions.DrawStats drawStats)

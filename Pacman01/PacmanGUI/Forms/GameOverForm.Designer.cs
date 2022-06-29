@@ -32,7 +32,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.ExitBtn = new System.Windows.Forms.Button();
-            this.GeneralScoreTextBox = new System.Windows.Forms.TextBox();
+            this.generalScoreLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -89,28 +89,25 @@
             this.ExitBtn.UseVisualStyleBackColor = false;
             this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
-            // GeneralScoreTextBox
+            // generalScoreLabel
             // 
-            this.GeneralScoreTextBox.BackColor = System.Drawing.SystemColors.InfoText;
-            this.GeneralScoreTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.GeneralScoreTextBox.Enabled = false;
-            this.GeneralScoreTextBox.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.GeneralScoreTextBox.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.GeneralScoreTextBox.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.GeneralScoreTextBox.Location = new System.Drawing.Point(40, 592);
-            this.GeneralScoreTextBox.Name = "GeneralScoreTextBox";
-            this.GeneralScoreTextBox.ReadOnly = true;
-            this.GeneralScoreTextBox.Size = new System.Drawing.Size(607, 64);
-            this.GeneralScoreTextBox.TabIndex = 13;
-            this.GeneralScoreTextBox.Text = "General Score: ";
+            this.generalScoreLabel.AutoSize = true;
+            this.generalScoreLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.generalScoreLabel.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.generalScoreLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.generalScoreLabel.Location = new System.Drawing.Point(40, 606);
+            this.generalScoreLabel.Name = "generalScoreLabel";
+            this.generalScoreLabel.Size = new System.Drawing.Size(359, 65);
+            this.generalScoreLabel.TabIndex = 14;
+            this.generalScoreLabel.Text = "General score: ";
             // 
             // GameOverForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PacmanGUI.Resources.bg;
-            this.ClientSize = new System.Drawing.Size(800, 840);
-            this.Controls.Add(this.GeneralScoreTextBox);
+            this.ClientSize = new System.Drawing.Size(800, 870);
+            this.Controls.Add(this.generalScoreLabel);
             this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -124,6 +121,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+            this.Size = new Size(800, 870);
 
         }
 
@@ -133,6 +131,6 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
         private Button ExitBtn;
-        public TextBox GeneralScoreTextBox;
+        private Label generalScoreLabel;
     }
 }

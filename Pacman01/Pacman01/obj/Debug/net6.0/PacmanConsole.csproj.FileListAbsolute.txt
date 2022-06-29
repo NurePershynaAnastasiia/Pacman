@@ -23,3 +23,9 @@ C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\Pacman01\bin\Debug\net6.0\P
 C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\Pacman01\bin\Debug\net6.0\Resources\lvl1.txt
 C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\Pacman01\bin\Debug\net6.0\Resources\lvl2.txt
 C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\Pacman01\bin\Debug\net6.0\Resources\lvl3.txt
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\Pacman01\bin\Debug\net6.0\NAudio.dll
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\Pacman01\bin\Debug\net6.0\NAudio.Asio.dll
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\Pacman01\bin\Debug\net6.0\NAudio.Core.dll
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\Pacman01\bin\Debug\net6.0\NAudio.Midi.dll
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\Pacman01\bin\Debug\net6.0\NAudio.Wasapi.dll
+C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\Pacman01\bin\Debug\net6.0\NAudio.WinMM.dll

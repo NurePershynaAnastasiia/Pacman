@@ -5,18 +5,18 @@
                        █  █   ██      █     █     █    █   █    █  █         █     █  █   █  █   ██      █
                        █  █    █  ████      █     █     █  ██████  █████     █     █  █████  █    █  ████
 
-The player controls PacMan, who must eat all the dots inside an enclosed maze while avoiding four colored ghosts. 
+The player controls PacMan, who must eat all the dots inside an enclosed maze while avoiding ghosts. 
 Eating energizers causes the ghosts to temporarily turn scared, allowing PacMan to eat them and neutralize them for some time.
 
 Symbols:
 
-o - PacMan (player)
+o - PacMan (player) controlled with WASD keys
 
-A - Ghost (enemy)    V - Scared Ghost
+A - Ghost (enemy)    V - Scared Ghost (harmless enemy)
 
 @ - Energizer
 
-. - Coin
+. - Coin, which PacMan has to eat to earn Points
 
 ═ ║ - Walls
 

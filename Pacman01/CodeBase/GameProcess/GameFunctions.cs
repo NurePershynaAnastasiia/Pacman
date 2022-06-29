@@ -7,6 +7,9 @@ using CodeBase.Elements;
 using CodeBase.Utilities;
 using CodeBase.Moves;
 using CodeBase.GameProcess;
+using CodeBase.Properties;
+using System.IO;
+using System.Reflection;
 
 namespace CodeBase.GameProcess
 {
@@ -23,7 +26,10 @@ namespace CodeBase.GameProcess
             Pacman pacman = new Pacman(0, 0, 0);
             int i = 0;
             //filling Field
-            using (StreamReader reader = new StreamReader(Utility.LevelInfo(lvl).path))
+            var assembly = Assembly.GetExecutingAssembly();
+
+            using (Stream stream = assembly.GetManifestResourceStream("CodeBase.Resources." + Utility.LevelInfo(lvl).path))
+            using (StreamReader reader = new StreamReader(stream))
             {
                 string line = reader.ReadLine();
                 field.Width = line.Length;

@@ -13,7 +13,7 @@ namespace CodeBase.Elements
     public class Field
     {
         public Element[,] map = new Element[50, 50];
-        private int scaredTime = 0, height, width;
+        private int scaredTime = 10, height, width;
 
         public Field(int height, int width)
         {

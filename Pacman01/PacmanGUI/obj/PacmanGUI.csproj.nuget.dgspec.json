@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Anastasiia\\Documents\\GitHub\\Pacman\\Pacman01\\PacmanGUI\\PacmanGUI.csproj": {}
+    "D:\\Pacman\\Pacman01\\PacmanGUI\\PacmanGUI.csproj": {}
   },
   "projects": {
     "C:\\Users\\Anastasiia\\Documents\\GitHub\\Pacman\\Pacman01\\CodeBase\\CodeBase.csproj": {
@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "NAudio": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -58,14 +64,14 @@
         }
       }
     },
-    "C:\\Users\\Anastasiia\\Documents\\GitHub\\Pacman\\Pacman01\\PacmanGUI\\PacmanGUI.csproj": {
+    "D:\\Pacman\\Pacman01\\PacmanGUI\\PacmanGUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Anastasiia\\Documents\\GitHub\\Pacman\\Pacman01\\PacmanGUI\\PacmanGUI.csproj",
+        "projectUniqueName": "D:\\Pacman\\Pacman01\\PacmanGUI\\PacmanGUI.csproj",
         "projectName": "PacmanGUI",
-        "projectPath": "C:\\Users\\Anastasiia\\Documents\\GitHub\\Pacman\\Pacman01\\PacmanGUI\\PacmanGUI.csproj",
+        "projectPath": "D:\\Pacman\\Pacman01\\PacmanGUI\\PacmanGUI.csproj",
         "packagesPath": "C:\\Users\\Anastasiia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Anastasiia\\Documents\\GitHub\\Pacman\\Pacman01\\PacmanGUI\\obj\\",
+        "outputPath": "D:\\Pacman\\Pacman01\\PacmanGUI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Anastasiia\\AppData\\Roaming\\NuGet\\NuGet.Config",

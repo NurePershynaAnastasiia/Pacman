@@ -17,11 +17,17 @@ namespace PacmanGUI
         public static void Playing(Game game, GameFunctions.Draw draw, GameFunctions.DrawStats drawStats, GameForm gameForm)
         {
             CurrentLevel currentLevel = game.CurrentLevel;
-            //keyPressed = Pause(keyPressed, game.CurrentLevel.Field); //checking if "P" is pressed => game on Pause
-
-            PacmanMoves.Step(game, GuiEngine.direction, draw, drawStats);//pacman makes its step
-            foreach (Enemy enemy in currentLevel.Enemies) //all the enemies make their step
-                EnemyMoves.Step(game, enemy, draw);
+            currentLevel.Pacman.Design = game.Design;
+            char keyPressed = GuiEngine.direction;
+            if (keyPressed == 'p')
+                gameForm.pauseLabel.Show();
+            else
+            {
+                gameForm.pauseLabel.Hide();
+                PacmanMoves.Step(game, keyPressed, draw, drawStats);//pacman makes its step
+                foreach (Enemy enemy in currentLevel.Enemies) //all the enemies make their step
+                    EnemyMoves.Step(game, enemy, draw);
+            }
 
             if (game.Finished)
             {
@@ -29,7 +35,7 @@ namespace PacmanGUI
                 GameOverForm gameOverForm = new GameOverForm(game.GeneralScore);
                 gameOverForm.Show();
             }
-            if (currentLevel.Field.Score == 20/*currentLevel.Points*/)
+            if (currentLevel.Field.Score == currentLevel.Points)
             {
                 gameForm.Close();
                 VictoryForm victoryForm = new VictoryForm(game);
@@ -90,6 +96,8 @@ namespace PacmanGUI
 
             switch (pacman.Design)
             {
+                case 1: currentObj = Resources.pacman1; break;
+                case 2: currentObj = Resources.pacman2; break;
                 default: currentObj = Resources.pacman0; break;
             }
 
