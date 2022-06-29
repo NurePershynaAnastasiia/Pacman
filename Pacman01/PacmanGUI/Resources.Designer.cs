@@ -93,6 +93,26 @@ namespace PacmanGUI {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bgGame {
+            get {
+                object obj = ResourceManager.GetObject("bgGame", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bgGameGif {
+            get {
+                object obj = ResourceManager.GetObject("bgGameGif", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cell {
             get {
                 object obj = ResourceManager.GetObject("cell", resourceCulture);

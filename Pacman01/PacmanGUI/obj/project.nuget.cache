@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "o+uiNlO8qltw/laJ4AltX0dvCRT4uZmQrsiKx2ZdmM/FY7ScVu9jGQEbC0eV7Ml47HFbSd6knVhH1zXqlpWxhw==",
+  "dgSpecHash": "7uosOTD8PS5TegLFoI/jagLTGeL6tLwP+R2Fn0Wl3pMQK/2NFd0Kx8r+OjV9LYFbggrisSzhB+36LUKKaNjrsA==",
   "success": true,
-  "projectFilePath": "D:\\Pacman\\Pacman01\\PacmanGUI\\PacmanGUI.csproj",
+  "projectFilePath": "D:\\CourseProject\\Pacman\\Pacman01\\PacmanGUI\\PacmanGUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Anastasiia\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Anastasiia\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

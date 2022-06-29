@@ -40,6 +40,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pictureBox1.Image = global::PacmanGUI.Resources.gameOverGif;
             this.pictureBox1.Location = new System.Drawing.Point(40, 114);
@@ -51,6 +52,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pictureBox2.Image = global::PacmanGUI.Resources.GameOver;
             this.pictureBox2.Location = new System.Drawing.Point(139, 202);
@@ -62,6 +64,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pictureBox3.Image = global::PacmanGUI.Resources.sadFace;
             this.pictureBox3.Location = new System.Drawing.Point(301, 334);
@@ -73,6 +76,7 @@
             // 
             // ExitBtn
             // 
+            this.ExitBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ExitBtn.BackColor = System.Drawing.Color.Teal;
             this.ExitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ExitBtn.FlatAppearance.BorderColor = System.Drawing.Color.Brown;
@@ -91,6 +95,7 @@
             // 
             // generalScoreLabel
             // 
+            this.generalScoreLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.generalScoreLabel.AutoSize = true;
             this.generalScoreLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.generalScoreLabel.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -106,7 +111,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PacmanGUI.Resources.bg;
-            this.ClientSize = new System.Drawing.Size(800, 870);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(784, 831);
             this.Controls.Add(this.generalScoreLabel);
             this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.pictureBox3);
@@ -121,7 +127,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-            this.Size = new Size(800, 870);
 
         }
 

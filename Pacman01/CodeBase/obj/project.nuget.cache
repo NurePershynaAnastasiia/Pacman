@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/ZJ1i/HW7DBNGkKlaZV0EnMBm97zEO3Yyp2Ue7AMretYgL428tOEoGMzglh5oKnRHdin5GiyziTz4QH4HLEx+g==",
+  "dgSpecHash": "gcY2H+JuV25CuWWyJNTmkWRUKgbX3pW07VU/4iSJUzUjagJzKv7XyulhqOUfWJkm2OuY+RFt8NXVU9iLmRnLMg==",
   "success": true,
-  "projectFilePath": "D:\\Pacman\\Pacman01\\CodeBase\\CodeBase.csproj",
+  "projectFilePath": "D:\\CourseProject\\Pacman\\Pacman01\\CodeBase\\CodeBase.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Anastasiia\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Anastasiia\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

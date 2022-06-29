@@ -414,11 +414,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Pacman\\Pacman01\\CodeBase\\CodeBase.csproj",
+      "projectUniqueName": "D:\\CourseProject\\Pacman\\Pacman01\\CodeBase\\CodeBase.csproj",
       "projectName": "CodeBase",
-      "projectPath": "D:\\Pacman\\Pacman01\\CodeBase\\CodeBase.csproj",
+      "projectPath": "D:\\CourseProject\\Pacman\\Pacman01\\CodeBase\\CodeBase.csproj",
       "packagesPath": "C:\\Users\\Anastasiia\\.nuget\\packages\\",
-      "outputPath": "D:\\Pacman\\Pacman01\\CodeBase\\obj\\",
+      "outputPath": "D:\\CourseProject\\Pacman\\Pacman01\\CodeBase\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Anastasiia\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -34,13 +34,18 @@
             this.scoreLabel = new System.Windows.Forms.Label();
             this.generalScoreLabel = new System.Windows.Forms.Label();
             this.pauseLabel = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxField)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxField
             // 
+            this.pictureBoxField.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxField.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBoxField.Location = new System.Drawing.Point(48, 185);
+            this.pictureBoxField.Location = new System.Drawing.Point(48, 180);
             this.pictureBoxField.Name = "pictureBoxField";
             this.pictureBoxField.Size = new System.Drawing.Size(1197, 396);
             this.pictureBoxField.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -56,6 +61,7 @@
             // 
             // scoreLabel
             // 
+            this.scoreLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.scoreLabel.AutoSize = true;
             this.scoreLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.scoreLabel.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -68,6 +74,7 @@
             // 
             // generalScoreLabel
             // 
+            this.generalScoreLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.generalScoreLabel.AutoSize = true;
             this.generalScoreLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.generalScoreLabel.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -80,36 +87,63 @@
             // 
             // pauseLabel
             // 
+            this.pauseLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pauseLabel.AutoSize = true;
             this.pauseLabel.BackColor = System.Drawing.Color.Transparent;
             this.pauseLabel.Font = new System.Drawing.Font("Lucida Console", 200.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.pauseLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pauseLabel.Location = new System.Drawing.Point(161, 314);
+            this.pauseLabel.Location = new System.Drawing.Point(140, 277);
             this.pauseLabel.Name = "pauseLabel";
             this.pauseLabel.Size = new System.Drawing.Size(922, 267);
             this.pauseLabel.TabIndex = 5;
             this.pauseLabel.Text = "Pause";
-            this.pauseLabel.Parent = pictureBoxField;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::PacmanGUI.Resources.bgGameGif;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1284, 831);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox2.Location = new System.Drawing.Point(1220, 786);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(52, 45);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
             // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PacmanGUI.Resources.backgroundGame;
-            this.ClientSize = new System.Drawing.Size(1300, 870);
+            this.BackgroundImage = global::PacmanGUI.Resources.bgGameGif;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1284, 831);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pauseLabel);
             this.Controls.Add(this.generalScoreLabel);
             this.Controls.Add(this.scoreLabel);
             this.Controls.Add(this.pictureBoxField);
+            this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.Name = "GameForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GameForm";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GameForm_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxField)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-            this.Size = new Size(1300, 870);
 
         }
         #endregion
@@ -119,5 +153,7 @@
         private Label scoreLabel;
         private Label generalScoreLabel;
         public Label pauseLabel;
+        private PictureBox pictureBox1;
+        public PictureBox pictureBox2;
     }
 }

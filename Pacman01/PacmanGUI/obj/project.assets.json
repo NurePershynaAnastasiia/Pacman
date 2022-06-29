@@ -447,8 +447,8 @@
     },
     "CodeBase/1.0.0": {
       "type": "project",
-      "path": "C:\\Users\\Anastasiia\\Documents\\GitHub\\Pacman\\Pacman01\\CodeBase\\CodeBase.csproj",
-      "msbuildProject": "C:\\Users\\Anastasiia\\Documents\\GitHub\\Pacman\\Pacman01\\CodeBase\\CodeBase.csproj"
+      "path": "../CodeBase/CodeBase.csproj",
+      "msbuildProject": "../CodeBase/CodeBase.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -462,11 +462,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Pacman\\Pacman01\\PacmanGUI\\PacmanGUI.csproj",
+      "projectUniqueName": "D:\\CourseProject\\Pacman\\Pacman01\\PacmanGUI\\PacmanGUI.csproj",
       "projectName": "PacmanGUI",
-      "projectPath": "D:\\Pacman\\Pacman01\\PacmanGUI\\PacmanGUI.csproj",
+      "projectPath": "D:\\CourseProject\\Pacman\\Pacman01\\PacmanGUI\\PacmanGUI.csproj",
       "packagesPath": "C:\\Users\\Anastasiia\\.nuget\\packages\\",
-      "outputPath": "D:\\Pacman\\Pacman01\\PacmanGUI\\obj\\",
+      "outputPath": "D:\\CourseProject\\Pacman\\Pacman01\\PacmanGUI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Anastasiia\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -483,8 +483,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\Anastasiia\\Documents\\GitHub\\Pacman\\Pacman01\\CodeBase\\CodeBase.csproj": {
-              "projectPath": "C:\\Users\\Anastasiia\\Documents\\GitHub\\Pacman\\Pacman01\\CodeBase\\CodeBase.csproj"
+            "D:\\CourseProject\\Pacman\\Pacman01\\CodeBase\\CodeBase.csproj": {
+              "projectPath": "D:\\CourseProject\\Pacman\\Pacman01\\CodeBase\\CodeBase.csproj"
             }
           }
         }

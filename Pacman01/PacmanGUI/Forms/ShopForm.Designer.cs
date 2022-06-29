@@ -51,6 +51,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackgroundImage = global::PacmanGUI.Resources.textShop;
             this.pictureBox1.Location = new System.Drawing.Point(213, 45);
             this.pictureBox1.Name = "pictureBox1";
@@ -60,6 +61,7 @@
             // 
             // BackBtn
             // 
+            this.BackBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BackBtn.BackColor = System.Drawing.Color.Teal;
             this.BackBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BackBtn.FlatAppearance.BorderColor = System.Drawing.Color.Brown;
@@ -68,7 +70,7 @@
             this.BackBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.BackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackBtn.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BackBtn.Location = new System.Drawing.Point(35, 735);
+            this.BackBtn.Location = new System.Drawing.Point(35, 723);
             this.BackBtn.Name = "BackBtn";
             this.BackBtn.Size = new System.Drawing.Size(268, 62);
             this.BackBtn.TabIndex = 10;
@@ -89,6 +91,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox3.Image = global::PacmanGUI.Resources.pacman2;
             this.pictureBox3.Location = new System.Drawing.Point(35, 366);
             this.pictureBox3.Name = "pictureBox3";
@@ -99,6 +102,7 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox4.Image = global::PacmanGUI.Resources.pacman3;
             this.pictureBox4.Location = new System.Drawing.Point(35, 543);
             this.pictureBox4.Name = "pictureBox4";
@@ -109,6 +113,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Font = new System.Drawing.Font("Lucida Console", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -121,6 +126,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Font = new System.Drawing.Font("Lucida Console", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -133,6 +139,7 @@
             // 
             // Buy1Btn
             // 
+            this.Buy1Btn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Buy1Btn.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.Buy1Btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Buy1Btn.FlatAppearance.BorderColor = System.Drawing.Color.Brown;
@@ -151,6 +158,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Font = new System.Drawing.Font("Lucida Console", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -163,6 +171,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Font = new System.Drawing.Font("Lucida Console", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -175,6 +184,7 @@
             // 
             // Buy2Btn
             // 
+            this.Buy2Btn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Buy2Btn.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.Buy2Btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Buy2Btn.FlatAppearance.BorderColor = System.Drawing.Color.Brown;
@@ -193,6 +203,7 @@
             // 
             // Buy3Btn
             // 
+            this.Buy3Btn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Buy3Btn.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.Buy3Btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Buy3Btn.FlatAppearance.BorderColor = System.Drawing.Color.Brown;
@@ -211,6 +222,7 @@
             // 
             // pointsLabel
             // 
+            this.pointsLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pointsLabel.AutoSize = true;
             this.pointsLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pointsLabel.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -223,6 +235,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label5.Font = new System.Drawing.Font("Lucida Console", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -235,6 +248,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label6.Font = new System.Drawing.Font("Lucida Console", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);

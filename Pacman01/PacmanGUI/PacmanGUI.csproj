@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="C:\Users\Anastasiia\Documents\GitHub\Pacman\Pacman01\CodeBase\CodeBase.csproj" />
+    <ProjectReference Include="..\CodeBase\CodeBase.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -54,6 +54,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackgroundImage = global::PacmanGUI.Resources.textInstructions;
             this.pictureBox1.Location = new System.Drawing.Point(60, 57);
             this.pictureBox1.Name = "pictureBox1";
@@ -63,6 +64,7 @@
             // 
             // BackBtn
             // 
+            this.BackBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BackBtn.BackColor = System.Drawing.Color.Teal;
             this.BackBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BackBtn.FlatAppearance.BorderColor = System.Drawing.Color.Brown;
@@ -71,7 +73,7 @@
             this.BackBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.BackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackBtn.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BackBtn.Location = new System.Drawing.Point(27, 742);
+            this.BackBtn.Location = new System.Drawing.Point(27, 728);
             this.BackBtn.Name = "BackBtn";
             this.BackBtn.Size = new System.Drawing.Size(268, 62);
             this.BackBtn.TabIndex = 9;
@@ -80,6 +82,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Font = new System.Drawing.Font("Lucida Console", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -92,6 +95,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = global::PacmanGUI.Resources.pacman0;
             this.pictureBox2.Location = new System.Drawing.Point(45, 164);
             this.pictureBox2.Name = "pictureBox2";
@@ -102,6 +106,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox3.Image = global::PacmanGUI.Resources.enemy_right;
             this.pictureBox3.Location = new System.Drawing.Point(45, 291);
             this.pictureBox3.Name = "pictureBox3";
@@ -112,6 +117,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Font = new System.Drawing.Font("Lucida Console", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -124,6 +130,7 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox4.Image = global::PacmanGUI.Resources.enemy_scared;
             this.pictureBox4.Location = new System.Drawing.Point(405, 291);
             this.pictureBox4.Name = "pictureBox4";
@@ -134,6 +141,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Font = new System.Drawing.Font("Lucida Console", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -146,6 +154,7 @@
             // 
             // pictureBox5
             // 
+            this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox5.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pictureBox5.Image = global::PacmanGUI.Resources.energizer;
             this.pictureBox5.Location = new System.Drawing.Point(45, 427);
@@ -157,6 +166,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Font = new System.Drawing.Font("Lucida Console", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -169,6 +179,7 @@
             // 
             // pictureBox6
             // 
+            this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pictureBox6.Image = global::PacmanGUI.Resources.coin;
             this.pictureBox6.Location = new System.Drawing.Point(45, 587);
@@ -180,6 +191,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label5.Font = new System.Drawing.Font("Lucida Console", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -192,6 +204,7 @@
             // 
             // pictureBox7
             // 
+            this.pictureBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox7.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pictureBox7.Image = global::PacmanGUI.Resources.wall;
             this.pictureBox7.Location = new System.Drawing.Point(450, 576);
@@ -203,6 +216,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label6.Font = new System.Drawing.Font("Lucida Console", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -215,6 +229,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label7.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);

@@ -40,6 +40,7 @@
             // 
             // BackBtn
             // 
+            this.BackBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BackBtn.BackColor = System.Drawing.Color.Teal;
             this.BackBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BackBtn.FlatAppearance.BorderColor = System.Drawing.Color.Brown;
@@ -48,7 +49,7 @@
             this.BackBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.BackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackBtn.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BackBtn.Location = new System.Drawing.Point(36, 625);
+            this.BackBtn.Location = new System.Drawing.Point(34, 710);
             this.BackBtn.Name = "BackBtn";
             this.BackBtn.Size = new System.Drawing.Size(268, 62);
             this.BackBtn.TabIndex = 10;
@@ -58,6 +59,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackgroundImage = global::PacmanGUI.Resources.chooseLevel;
             this.pictureBox1.Location = new System.Drawing.Point(107, 65);
             this.pictureBox1.Name = "pictureBox1";
@@ -67,6 +69,7 @@
             // 
             // Lvl1Btn
             // 
+            this.Lvl1Btn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Lvl1Btn.BackColor = System.Drawing.Color.Tomato;
             this.Lvl1Btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Lvl1Btn.FlatAppearance.BorderColor = System.Drawing.Color.Maroon;
@@ -87,6 +90,7 @@
             // 
             // Lvl2Btn
             // 
+            this.Lvl2Btn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Lvl2Btn.BackColor = System.Drawing.Color.Tomato;
             this.Lvl2Btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Lvl2Btn.FlatAppearance.BorderColor = System.Drawing.Color.Maroon;
@@ -107,6 +111,7 @@
             // 
             // Lvl3Btn
             // 
+            this.Lvl3Btn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Lvl3Btn.BackColor = System.Drawing.Color.Tomato;
             this.Lvl3Btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Lvl3Btn.FlatAppearance.BorderColor = System.Drawing.Color.Maroon;
@@ -127,6 +132,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pictureBox2.Location = new System.Drawing.Point(50, 339);
             this.pictureBox2.Name = "pictureBox2";
@@ -140,7 +146,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PacmanGUI.Resources.bg;
-            this.ClientSize = new System.Drawing.Size(800, 870);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(784, 831);
             this.Controls.Add(this.Lvl3Btn);
             this.Controls.Add(this.Lvl2Btn);
             this.Controls.Add(this.Lvl1Btn);
@@ -155,7 +162,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-            this.Size = new Size(800, 870);
 
         }
 

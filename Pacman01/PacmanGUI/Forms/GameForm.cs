@@ -72,7 +72,6 @@ namespace PacmanGUI
             scoreLabel.Text = "Score: " + (currentLevel.Field.Score).ToString();
             generalScoreLabel.Text = "General score: " + game.GeneralScore.ToString();
         }
-
         public void GameForm_KeyDown(object sender, KeyEventArgs e)
         {
             GuiEngine.GetDirection(e);

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Pacman\\Pacman01\\Pacman01\\PacmanConsole.csproj": {}
+    "D:\\CourseProject\\Pacman\\Pacman01\\Pacman01\\PacmanConsole.csproj": {}
   },
   "projects": {
-    "D:\\Pacman\\Pacman01\\CodeBase\\CodeBase.csproj": {
+    "D:\\CourseProject\\Pacman\\Pacman01\\CodeBase\\CodeBase.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pacman\\Pacman01\\CodeBase\\CodeBase.csproj",
+        "projectUniqueName": "D:\\CourseProject\\Pacman\\Pacman01\\CodeBase\\CodeBase.csproj",
         "projectName": "CodeBase",
-        "projectPath": "D:\\Pacman\\Pacman01\\CodeBase\\CodeBase.csproj",
+        "projectPath": "D:\\CourseProject\\Pacman\\Pacman01\\CodeBase\\CodeBase.csproj",
         "packagesPath": "C:\\Users\\Anastasiia\\.nuget\\packages\\",
-        "outputPath": "D:\\Pacman\\Pacman01\\CodeBase\\obj\\",
+        "outputPath": "D:\\CourseProject\\Pacman\\Pacman01\\CodeBase\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Anastasiia\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -64,14 +64,14 @@
         }
       }
     },
-    "D:\\Pacman\\Pacman01\\Pacman01\\PacmanConsole.csproj": {
+    "D:\\CourseProject\\Pacman\\Pacman01\\Pacman01\\PacmanConsole.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pacman\\Pacman01\\Pacman01\\PacmanConsole.csproj",
+        "projectUniqueName": "D:\\CourseProject\\Pacman\\Pacman01\\Pacman01\\PacmanConsole.csproj",
         "projectName": "PacmanConsole",
-        "projectPath": "D:\\Pacman\\Pacman01\\Pacman01\\PacmanConsole.csproj",
+        "projectPath": "D:\\CourseProject\\Pacman\\Pacman01\\Pacman01\\PacmanConsole.csproj",
         "packagesPath": "C:\\Users\\Anastasiia\\.nuget\\packages\\",
-        "outputPath": "D:\\Pacman\\Pacman01\\Pacman01\\obj\\",
+        "outputPath": "D:\\CourseProject\\Pacman\\Pacman01\\Pacman01\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Anastasiia\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -88,8 +88,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Pacman\\Pacman01\\CodeBase\\CodeBase.csproj": {
-                "projectPath": "D:\\Pacman\\Pacman01\\CodeBase\\CodeBase.csproj"
+              "D:\\CourseProject\\Pacman\\Pacman01\\CodeBase\\CodeBase.csproj": {
+                "projectPath": "D:\\CourseProject\\Pacman\\Pacman01\\CodeBase\\CodeBase.csproj"
               }
             }
           }
