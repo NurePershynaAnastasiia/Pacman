@@ -35,10 +35,8 @@
             this.generalScoreLabel = new System.Windows.Forms.Label();
             this.pauseLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxField)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxField
@@ -110,17 +108,6 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox2.Location = new System.Drawing.Point(1220, 786);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(52, 45);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
-            // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -128,7 +115,6 @@
             this.BackgroundImage = global::PacmanGUI.Resources.bgGameGif;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1284, 831);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pauseLabel);
             this.Controls.Add(this.generalScoreLabel);
             this.Controls.Add(this.scoreLabel);
@@ -141,7 +127,6 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GameForm_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxField)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,6 +139,5 @@
         private Label generalScoreLabel;
         public Label pauseLabel;
         private PictureBox pictureBox1;
-        public PictureBox pictureBox2;
     }
 }
