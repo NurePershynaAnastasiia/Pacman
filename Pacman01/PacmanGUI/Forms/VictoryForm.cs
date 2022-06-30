@@ -27,7 +27,7 @@ namespace PacmanGUI
 
         private void BackToMenuBtn_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             MenuForm menuForm = new MenuForm(game);
             menuForm.Show();
         }
