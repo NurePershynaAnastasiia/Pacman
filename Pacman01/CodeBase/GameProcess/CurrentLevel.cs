@@ -21,12 +21,19 @@ namespace CodeBase.GameProcess
             Level = level;
             Points = points;
         }
+
         public CurrentLevel() { }
+
         public Field Field { get; set; }
+
         public Field FieldEnemies { get; set; }
+
         public List<Enemy> Enemies { get; set; }
+
         public Pacman Pacman { get; set; }
+
         public int Level { get; set; }
+
         public int Points { get; set; }
     }
 }

@@ -32,6 +32,7 @@ namespace PacmanConsole
             else
                 Interface.GameOver();
         }
+
         public static char GetDirection(ConsoleKeyInfo keyPressed)
         {
             char dir = 'r'; //direction pacman
@@ -47,6 +48,7 @@ namespace PacmanConsole
                 dir = 'p';
             return dir;
         }
+
         public static void ShopPurchase(Game game)
         {
             bool done = false;
@@ -92,6 +94,7 @@ namespace PacmanConsole
 
             game.Design = chosenDesign;
         }
+
         public static void VictoryAction(Game game)
         {
             Interface.Victory(game.GeneralScore);
@@ -106,6 +109,7 @@ namespace PacmanConsole
             else if (keyPressed1.Key == ConsoleKey.S)//shop
                 ShopPurchase(game);
         }
+
         public static ConsoleKeyInfo Pause(ConsoleKeyInfo keyPressed, Field field)
         {
             while (keyPressed.Key == ConsoleKey.P)

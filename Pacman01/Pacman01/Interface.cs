@@ -15,6 +15,7 @@ namespace PacmanConsole
             Console.WriteLine("Score: 0   coins");
             Console.WriteLine("General score: " + generalScore + "   coins");
         }
+
         public static void GameOver()
         {
             FileReader("game_over.txt");
@@ -31,11 +32,13 @@ namespace PacmanConsole
             FileReader("intro3.txt");
             Thread.Sleep(1000);
         }
+
         public static void Instructions()
         {
             FileReader("instructions.txt");
             Console.ReadKey();
         }
+
         public static void Victory(int generalScore)
         {
             FileReader("victory.txt");
@@ -61,7 +64,6 @@ namespace PacmanConsole
             if (keyPressed.Key == ConsoleKey.D3)
                 return 3;
             return 1;
-
         }
 
         public static void FileReader(string path)

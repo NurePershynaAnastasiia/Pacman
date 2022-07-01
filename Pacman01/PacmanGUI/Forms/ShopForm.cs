@@ -17,6 +17,7 @@ namespace PacmanGUI
     public partial class ShopForm : Form
     {
         public Game game { get; set; }
+
         public ShopForm(Game game)
         {
             InitializeComponent();
@@ -38,6 +39,7 @@ namespace PacmanGUI
             MenuForm menuForm = new MenuForm(game);
             menuForm.Show();
         }
+
         public void NotEnoughPointsAction(Button Btn)
         {
             Btn.Enabled = false;
@@ -45,6 +47,7 @@ namespace PacmanGUI
             Btn.Text = "Not enough points";
             Btn.BackColor = Color.IndianRed;
         }
+
         public void EnoughPointsAction(Button Btn, int design)
         {
             Btn.Enabled = false;
@@ -54,6 +57,7 @@ namespace PacmanGUI
             game.GeneralScore -= Utility.DesignInfo(design).price;
             pointsLabel.Text = "Points: " + game.GeneralScore.ToString();
         }
+
         public void AlreadyBoughtAction(Button Btn)
         {
             Btn.Enabled = false;

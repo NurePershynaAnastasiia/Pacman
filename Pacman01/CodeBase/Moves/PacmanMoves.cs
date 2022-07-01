@@ -21,6 +21,7 @@ namespace CodeBase.Moves
                 field.ScaredTime = 10;
             }
         }
+
         public static void Step(Game game, char dir, GameFunctions.Draw draw, GameFunctions.DrawStats drawStats)
         {
             CurrentLevel currentLevel = game.CurrentLevel;

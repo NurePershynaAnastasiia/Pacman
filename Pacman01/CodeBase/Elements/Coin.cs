@@ -20,31 +20,32 @@ namespace CodeBase.Elements
             this.X = x;
             this.Y = y;
         }
+        public override int X { get; set; }
+
+        public override int Y { get; set; }
+
+        public override char Direction { get; set; }
+
         public void Clear()
         {
             Console.Write("");
         }
+
         public override void Draw()
         {
             Console.Write('.');
         }
+
         public override bool isObstacle()
         {
             return false;
         }
+
         public override bool isEaten()
         {
             return false;
         }
-        public override int X
-        {
-            get; set;
-        }
-        public override int Y
-        {
-            get; set;
-        }
-        public override char Direction { get; set; }
+
         public override void Action(Game game)
         {
             game.CurrentLevel.Field.Score++;
@@ -52,6 +53,7 @@ namespace CodeBase.Elements
 
             AudioPlaybackEngine.Instance.PlaySound(new CachedSound("pacman_chomp.wav"));
         }
+
         public override string Name()
         {
             return "coin";

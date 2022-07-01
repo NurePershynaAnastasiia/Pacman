@@ -17,28 +17,29 @@ namespace CodeBase.Elements
             this.X = x;
             this.Y = y;
         }
+        public override int X { get; set; }
+
+        public override int Y { get; set; }
+
         public override void Draw()
         {
             Console.Write(' ');
         }
+
         public override bool isObstacle()
         {
             return false;
         }
+
         public override bool isEaten()
         {
             return false;
         }
-        public override int X
-        {
-            get; set;
-        }
-        public override int Y
-        {
-            get; set;
-        }
+
         public override char Direction { get; set; }
+
         public override void Action(Game game) { }
+
         public override string Name()
         {
             return "cell";

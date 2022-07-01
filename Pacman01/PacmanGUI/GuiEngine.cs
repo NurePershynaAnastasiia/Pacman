@@ -48,6 +48,7 @@ namespace PacmanGUI
             }
 
         }
+
         public static char GetDirection (KeyEventArgs e)
         {
             switch (e.KeyCode)
@@ -61,6 +62,7 @@ namespace PacmanGUI
             }
             return GuiEngine.direction;
         }
+
         public static Bitmap DefineTexture (Element element)
         {
             Bitmap currentObj;
@@ -76,6 +78,7 @@ namespace PacmanGUI
             }
             return currentObj;
         }
+
         public static Bitmap DefineTextureEnemy(Element element)
         {
             Bitmap currentObj;
@@ -94,6 +97,7 @@ namespace PacmanGUI
                 currentObj = Resources.enemy_scared2;
             return currentObj;
         }
+
         public static Bitmap DefineTexturePacman(Element element)
         {
             Bitmap currentObj;

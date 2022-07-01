@@ -21,6 +21,5 @@ namespace CodeBase.Moves
             if (element.X == field.Height - 1)
                 element.X = 1;
         }
-
     }
 }

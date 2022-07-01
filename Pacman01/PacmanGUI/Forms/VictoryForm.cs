@@ -17,6 +17,7 @@ namespace PacmanGUI
     public partial class VictoryForm : Form
     {
         public Game game { get; set; }
+
         public VictoryForm(Game game)
         {
             InitializeComponent();

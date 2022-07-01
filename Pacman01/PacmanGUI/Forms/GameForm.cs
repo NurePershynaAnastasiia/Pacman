@@ -30,6 +30,7 @@ namespace PacmanGUI
             pauseLabel.Hide();
             resetGame();
         }
+
         private void resetGame()
         {
             CurrentLevel currentLevel = GameFunctions.Initialize(lvl);
@@ -39,10 +40,12 @@ namespace PacmanGUI
 
             timerGame.Start();
         }
+
         private void MainGameTimer(object sender, EventArgs e)
         {
             GuiEngine.Playing(game, Draw, DrawStats, this);
         }
+
         public void pictureBoxField_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
@@ -61,12 +64,14 @@ namespace PacmanGUI
                 }
             }
         }
+
         public void Draw(Element element)
         {
             Graphics g = pictureBoxField.CreateGraphics();
             int cellSize = Utility.BiggerCells(game.CurrentLevel.Level);
             g.DrawImage(GuiEngine.DefineTexture(element), new Rectangle(element.Y * cellSize, element.X * cellSize, cellSize, cellSize));
         }
+
         public void DrawStats(Game game)
         {
             CurrentLevel currentLevel = game.CurrentLevel;

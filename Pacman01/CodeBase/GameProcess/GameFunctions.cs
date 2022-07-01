@@ -24,10 +24,10 @@ namespace CodeBase.GameProcess
             Field fieldEnemies = new Field(40, 40);
             List<Enemy> enemies = new List<Enemy>();
             Pacman pacman = new Pacman(0, 0, 0);
-            int i = 0;
-            //filling Field
-            var assembly = Assembly.GetExecutingAssembly();
 
+            //filling Field
+            int i = 0;
+            var assembly = Assembly.GetExecutingAssembly();
             using (Stream stream = assembly.GetManifestResourceStream("CodeBase.Resources." + Utility.LevelInfo(lvl).path))
             using (StreamReader reader = new StreamReader(stream))
             {

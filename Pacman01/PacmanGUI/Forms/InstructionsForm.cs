@@ -17,6 +17,7 @@ namespace PacmanGUI
     public partial class InstructionsForm : Form
     {
         public Game game { get; set; }
+
         public InstructionsForm(Game game)
         {
             InitializeComponent();
@@ -24,6 +25,7 @@ namespace PacmanGUI
             this.game = game;
             BackBtn.Click += new EventHandler(BackBtn_Click);
         }
+
         private void BackBtn_Click(object sender, EventArgs e)
         {
             this.Hide();

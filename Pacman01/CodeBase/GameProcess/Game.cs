@@ -18,9 +18,13 @@ namespace CodeBase.GameProcess
             this.GeneralScore = GeneralScore;
             this.Design = Design;
         }
+
         public CurrentLevel CurrentLevel { get; set; }
+
         public int GeneralScore { get; set; }
+
         public int Design { get; set; }
+
         public bool Finished { get; set; }
 
     }

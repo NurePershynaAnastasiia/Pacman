@@ -14,15 +14,8 @@ namespace CodeBase.Utilities
             this.path = path;
             this.pathOutput = pathOutput;
         }
-        public string path
-        {
-            get; set;
-        }
-        public string pathOutput
-        {
-            get; set;
-        }
-
+        public string path { get; set; }
+      
+        public string pathOutput { get; set; }
     }
-
 }

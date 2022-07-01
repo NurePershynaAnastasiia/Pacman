@@ -18,9 +18,13 @@ namespace CodeBase.Elements
             this.Y = y;
             this.Design = design;
         }
+
         public int Design { get; set; }
+
         public override int X { get; set; }
+
         public override int Y { get; set; }
+
         public override void Draw()
         {
             Console.ForegroundColor = ConsoleColor.DarkYellow;
@@ -43,21 +47,25 @@ namespace CodeBase.Elements
                     break;
             };
             Console.ResetColor();
-
         }
+
         public override bool isObstacle()
         {
             return false;
         }
+
         public override bool isEaten()
         {
             return false;
         }
+
         public override void Action(Game game) { }
+
         public override string Name()
         {
             return "pacman";
         }
+
         public override char Direction { get; set; }
     }
 }

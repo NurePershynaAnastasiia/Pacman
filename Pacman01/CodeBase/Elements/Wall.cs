@@ -12,31 +12,32 @@ namespace CodeBase.Elements
 {
     public class Wall : Element
     {
+        public override int X { get; set; }
+
+        public override int Y { get; set; }
+
         public override void Draw()
         {
             Console.Write('#');
         }
+
         public override bool isObstacle()
         {
             return true;
         }
+
         public override bool isEaten()
         {
             return false;
         }
-        public override int X
-        {
-            get; set;
-        }
-        public override int Y
-        {
-            get; set;
-        }
+
         public override void Action(Game game) { }
+
         public override string Name()
         {
             return "wall";
         }
+
         public override char Direction { get; set; }
     }
 }

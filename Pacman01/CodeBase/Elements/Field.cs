@@ -20,34 +20,33 @@ namespace CodeBase.Elements
             this.width = width;
             this.height = height;
         }
+
         public Element this[int i, int j]
         {
             get => map[i, j];
             set => map[i, j] = value;
         }
+
         public int Height
         {
             get { return height; }
             set { height = value; }
         }
+
         public int Width
         {
             get { return width; }
             set { width = value; }
         }
-        public bool Scared
-        {
-            get; set;
-        }
+
+        public bool Scared { get; set; }
+
         public int ScaredTime
         {
             get { return scaredTime; }
             set { scaredTime = value; }
         }
-        public int Score
-        {
-            get; set;
-        }
-       
+
+        public int Score { get; set; }
     }
 }

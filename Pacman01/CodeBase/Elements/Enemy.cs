@@ -13,36 +13,29 @@ namespace CodeBase.Elements
     public class Enemy : Element
     {
         private char prev = 'u';
+
         public Enemy(int x, int y)
         {
             this.X = x;
             this.Y = y;
         }
-        public char Prev
+
+        public char Prev 
         {
             get { return prev; }
             set { prev = value; }
         }
-        public int TimeEaten
-        {
-            get; set;
-        }
-        public override int X
-        {
-            get; set;
-        }
-        public override int Y
-        {
-            get; set;
-        }
-        public bool Eaten
-        {
-            get; set;
-        }
-        public bool Scared
-        {
-            get; set;
-        }
+
+        public int TimeEaten { get; set; }
+
+        public override int X { get; set; }
+
+        public override int Y { get; set; }
+
+        public bool Eaten { get; set; }
+
+        public bool Scared { get; set; }
+
         public override void Draw()
         {
             Console.ForegroundColor = ConsoleColor.Red;
@@ -52,6 +45,7 @@ namespace CodeBase.Elements
                 Console.Write('A');
             Console.ResetColor();
         }
+
         public override bool isObstacle()
         {
             return false;
@@ -63,6 +57,7 @@ namespace CodeBase.Elements
                 return true;
             return false;
         }
+
         public override void Action(Game game)
         {
             if (!game.CurrentLevel.Field.Scared && !this.Eaten)
@@ -70,10 +65,12 @@ namespace CodeBase.Elements
             else
                 this.Eaten = true;
         }
+
         public override string Name()
         {
             return "enemy";
         }
+
         public override char Direction { get; set; }
     }
 }
