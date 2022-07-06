@@ -25,10 +25,12 @@ namespace CodeBase.Moves
             char direction = 'u';
             Random rnd = new Random();
             int dir = rnd.Next();
+            int attempts = 0;
 
             while (field[enemy.X + Utility.CoordsUpdate(direction).x, enemy.Y + Utility.CoordsUpdate(direction).y].isObstacle() || !CycleCheck(direction, enemy.Prev))
             {
-                dir++;
+                dir += attempts;
+                attempts++;
                 switch (dir % 4)
                 {
                     case 0:
@@ -44,7 +46,8 @@ namespace CodeBase.Moves
                         direction = 'l';
                         break;
                 }
-
+                if (attempts >= 4 && !field[enemy.X + Utility.CoordsUpdate(direction).x, enemy.Y + Utility.CoordsUpdate(direction).y].isObstacle())
+                    break;
             }
             enemy.Prev = direction;
             enemy.Direction = direction;
