@@ -30,22 +30,20 @@ namespace PacmanGUI
             }
 
             if (game.Finished)
-            {
-                AudioPlaybackEngine.Instance.PlaySound(new CachedSound("pacman_death.wav"));
-                gameForm.timerGame.Stop();
-                gameForm.Hide();
-                GameOverForm gameOverForm = new GameOverForm(game.GeneralScore);
-                gameOverForm.Show();
-            }
+                LevelFinished(game, gameForm, "pacman_death.wav", true);
             if (currentLevel.Field.Score == currentLevel.Points)
-            {
-                AudioPlaybackEngine.Instance.PlaySound(new CachedSound("pacman_victory.wav"));
-                gameForm.timerGame.Stop();
-                gameForm.Hide();
-                VictoryForm victoryForm = new VictoryForm(game);
-                victoryForm.Show();
-            }
+                LevelFinished(game, gameForm, "pacman_victory.wav", false);
+        }
 
+        public static void LevelFinished(Game game, GameForm gameForm, string soundName, bool lost)
+        {
+            AudioPlaybackEngine.Instance.PlaySound(new CachedSound(soundName));
+            gameForm.timerGame.Stop();
+            gameForm.Hide();
+            if (lost)
+                new GameOverForm(game).Show();
+            else
+                new VictoryForm(game).Show();
         }
 
         public static void DrawField(PaintEventArgs e, Game game)
