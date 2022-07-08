@@ -13,6 +13,7 @@ namespace PacmanGUI
     public class GuiEngine
     {
         public static char direction = ' ';
+        public Game game { get; set; }
 
         public static void Playing(Game game, GameFunctions.Draw draw, GameFunctions.DrawStats drawStats, GameForm gameForm)
         {

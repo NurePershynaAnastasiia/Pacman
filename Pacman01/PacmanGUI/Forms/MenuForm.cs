@@ -34,22 +34,19 @@ namespace PacmanGUI
         private void PlayBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ChooseLevelForm chooseLevelForm = new ChooseLevelForm(game);
-            chooseLevelForm.Show();
+            new ChooseLevelForm(game).Show();
         }
 
         private void InstructionsBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            InstructionsForm instructionsForm = new InstructionsForm(game);
-            instructionsForm.Show();
+            new InstructionsForm(game).Show();
         }
 
         private void ShopBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ShopForm shopForm = new ShopForm(game);
-            shopForm.Show();
+            new ShopForm(game).Show();
         }
 
         private void MenuForm_FormClosed(object sender, FormClosedEventArgs e)

@@ -27,8 +27,7 @@ namespace PacmanGUI
         public void BackBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            MenuForm menuForm = new MenuForm(game);
-            menuForm.Show();
+            new MenuForm(game).Show();
         }
 
         private void LvlBtn_Click(object sender, EventArgs e)
@@ -36,8 +35,7 @@ namespace PacmanGUI
             this.Hide();
             Button Btn = (Button)sender;
             int lvl = Int32.Parse(Btn.Tag.ToString());
-            GameForm gameForm = new GameForm(game, lvl);
-            gameForm.Show();
+            new GameForm(game, lvl).Show();
         }
 
         private void LvlBtn_MouseHover(object sender, EventArgs e)
