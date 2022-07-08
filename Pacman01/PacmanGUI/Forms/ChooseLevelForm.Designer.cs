@@ -174,11 +174,11 @@
 
         #endregion
 
-        private Button BackBtn;
-        private PictureBox pictureBox1;
-        private Button Lvl1Btn;
-        private Button Lvl2Btn;
-        private Button Lvl3Btn;
-        private PictureBox pictureBox2;
+        public Button BackBtn;
+        public PictureBox pictureBox1;
+        public Button Lvl1Btn;
+        public Button Lvl2Btn;
+        public Button Lvl3Btn;
+        public PictureBox pictureBox2;
     }
 }

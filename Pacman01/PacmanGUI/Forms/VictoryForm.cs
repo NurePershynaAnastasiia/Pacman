@@ -20,8 +20,10 @@ namespace PacmanGUI
         public VictoryForm(Game game)
         {
             InitializeComponent();
+            LanguageChanger.Victory(this, game.Language);
+            generalScoreLabel.Text += game.GeneralScore.ToString();
             this.Size = new Size(800, 870);
-            generalScoreLabel.Text = "General Score: " + game.GeneralScore.ToString();
+            generalScoreLabel.Text += game.GeneralScore.ToString();
             this.game = game;
         }
 

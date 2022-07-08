@@ -20,9 +20,10 @@ namespace PacmanGUI
 
         public MenuForm(Game game)
         {
-            InitializeComponent();
             this.Size = new Size(800, 870);
             this.game = game;
+            InitializeComponent();
+            LanguageChanger.Menu(this, game.Language);
         }
 
         private void ExitBtn_Click(object sender, EventArgs e)
@@ -52,6 +53,18 @@ namespace PacmanGUI
         private void MenuForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void EngBtn_Click(object sender, EventArgs e)
+        {
+            game.Language = "eng";
+            LanguageChanger.Menu(this, "eng");
+        }
+
+        private void UkrBtn_Click(object sender, EventArgs e)
+        {
+            game.Language = "ukr";
+            LanguageChanger.Menu(this, "ukr");
         }
     }
 }

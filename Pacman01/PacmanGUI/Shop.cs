@@ -16,29 +16,39 @@ namespace PacmanGUI
             return false;
         }
 
-        public static void NotEnoughPointsProcess(Button Btn)
+        public static void NotEnoughPointsProcess(Button Btn, string lang)
         {
             Btn.Enabled = false;
             Btn.Font = new Font("Lucida Console", 12);
-            Btn.Text = "Not enough points";
+            if (lang == "eng")
+                Btn.Text = "Not enough points";
+            if (lang == "ukr")
+                Btn.Text = "Недостатньо монет";
             Btn.BackColor = Color.IndianRed;
         }
 
-        public static void EnoughPointsProcess(Button Btn, int design, Game game, Label pointsLabel)
+        public static void EnoughPointsProcess(Button Btn, int design, Game game, Label pointsLabel, string lang)
         {
             Btn.Enabled = false;
-            Btn.Text = "Bought";
+            if (lang == "eng")
+                Btn.Text = "Bought";
+            if (lang == "ukr")
+                Btn.Text = "Куплено";
             Btn.BackColor = Color.DarkSlateBlue;
             game.Design = design;
             game.GeneralScore -= GameFunctions.DesignInfo(design).price;
-            pointsLabel.Text = "Points: " + game.GeneralScore.ToString();
+            pointsLabel.Text = game.GeneralScore.ToString();
         }
 
-        public static void AlreadyBoughtProcess(Button Btn)
+        public static void AlreadyBoughtProcess(Button Btn, string lang)
         {
             Btn.Enabled = false;
             Btn.Font = new Font("Lucida Console", 14);
-            Btn.Text = "Already Bought";
+            if (lang == "eng")
+                Btn.Text = "Already Bought";
+            if (lang == "ukr")
+                Btn.Text = "Вже Куплено";
+            
             Btn.BackColor = Color.DarkSlateBlue;
         }
 

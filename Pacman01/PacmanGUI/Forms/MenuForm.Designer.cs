@@ -34,6 +34,8 @@
             this.ShopBtn = new System.Windows.Forms.Button();
             this.InstructionsBtn = new System.Windows.Forms.Button();
             this.ExitBtn = new System.Windows.Forms.Button();
+            this.EngBtn = new System.Windows.Forms.Button();
+            this.UkrBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +51,7 @@
             this.PlayBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.PlayBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PlayBtn.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.PlayBtn.Location = new System.Drawing.Point(384, 294);
+            this.PlayBtn.Location = new System.Drawing.Point(263, 294);
             this.PlayBtn.MinimumSize = new System.Drawing.Size(100, 50);
             this.PlayBtn.Name = "PlayBtn";
             this.PlayBtn.Size = new System.Drawing.Size(268, 64);
@@ -63,7 +65,7 @@
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.BackgroundImage = global::PacmanGUI.Resources.pacmanName;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(146, 67);
+            this.pictureBox1.Location = new System.Drawing.Point(37, 61);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(715, 190);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -81,7 +83,7 @@
             this.ShopBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ShopBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ShopBtn.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ShopBtn.Location = new System.Drawing.Point(384, 391);
+            this.ShopBtn.Location = new System.Drawing.Point(263, 391);
             this.ShopBtn.Name = "ShopBtn";
             this.ShopBtn.Size = new System.Drawing.Size(268, 62);
             this.ShopBtn.TabIndex = 6;
@@ -100,7 +102,7 @@
             this.InstructionsBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.InstructionsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.InstructionsBtn.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.InstructionsBtn.Location = new System.Drawing.Point(384, 480);
+            this.InstructionsBtn.Location = new System.Drawing.Point(263, 480);
             this.InstructionsBtn.Name = "InstructionsBtn";
             this.InstructionsBtn.Size = new System.Drawing.Size(268, 62);
             this.InstructionsBtn.TabIndex = 7;
@@ -119,13 +121,53 @@
             this.ExitBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitBtn.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ExitBtn.Location = new System.Drawing.Point(384, 569);
+            this.ExitBtn.Location = new System.Drawing.Point(263, 569);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(268, 62);
             this.ExitBtn.TabIndex = 8;
             this.ExitBtn.Text = "Exit";
             this.ExitBtn.UseVisualStyleBackColor = false;
             this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
+            // 
+            // EngBtn
+            // 
+            this.EngBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.EngBtn.BackColor = System.Drawing.Color.Tomato;
+            this.EngBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EngBtn.FlatAppearance.BorderColor = System.Drawing.Color.Maroon;
+            this.EngBtn.FlatAppearance.BorderSize = 3;
+            this.EngBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Firebrick;
+            this.EngBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Salmon;
+            this.EngBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EngBtn.Font = new System.Drawing.Font("Lucida Console", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.EngBtn.Location = new System.Drawing.Point(87, 667);
+            this.EngBtn.Name = "EngBtn";
+            this.EngBtn.Size = new System.Drawing.Size(133, 44);
+            this.EngBtn.TabIndex = 13;
+            this.EngBtn.Tag = "eng";
+            this.EngBtn.Text = "Eng";
+            this.EngBtn.UseVisualStyleBackColor = false;
+            this.EngBtn.Click += new System.EventHandler(this.EngBtn_Click);
+            // 
+            // UkrBtn
+            // 
+            this.UkrBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.UkrBtn.BackColor = System.Drawing.Color.Tomato;
+            this.UkrBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.UkrBtn.FlatAppearance.BorderColor = System.Drawing.Color.Maroon;
+            this.UkrBtn.FlatAppearance.BorderSize = 3;
+            this.UkrBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Firebrick;
+            this.UkrBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Salmon;
+            this.UkrBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UkrBtn.Font = new System.Drawing.Font("Lucida Console", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.UkrBtn.Location = new System.Drawing.Point(87, 717);
+            this.UkrBtn.Name = "UkrBtn";
+            this.UkrBtn.Size = new System.Drawing.Size(133, 44);
+            this.UkrBtn.TabIndex = 14;
+            this.UkrBtn.Tag = "ukr";
+            this.UkrBtn.Text = "Ukr";
+            this.UkrBtn.UseVisualStyleBackColor = false;
+            this.UkrBtn.Click += new System.EventHandler(this.UkrBtn_Click);
             // 
             // MenuForm
             // 
@@ -134,7 +176,9 @@
             this.AutoSize = true;
             this.BackgroundImage = global::PacmanGUI.Resources.bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1004, 800);
+            this.ClientSize = new System.Drawing.Size(800, 870);
+            this.Controls.Add(this.UkrBtn);
+            this.Controls.Add(this.EngBtn);
             this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.InstructionsBtn);
             this.Controls.Add(this.ShopBtn);
@@ -153,10 +197,12 @@
         }
 
         #endregion
-        private Button PlayBtn;
-        private PictureBox pictureBox1;
-        private Button ShopBtn;
-        private Button InstructionsBtn;
-        private Button ExitBtn;
+        public Button PlayBtn;
+        public PictureBox pictureBox1;
+        public Button ShopBtn;
+        public Button InstructionsBtn;
+        public Button ExitBtn;
+        public Button EngBtn;
+        public Button UkrBtn;
     }
 }

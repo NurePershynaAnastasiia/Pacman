@@ -34,16 +34,17 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.Hipster1Label = new System.Windows.Forms.Label();
+            this.Hipster2Label = new System.Windows.Forms.Label();
             this.Buy1Btn = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.Sombrero1Label = new System.Windows.Forms.Label();
+            this.Sombrero2Label = new System.Windows.Forms.Label();
             this.Buy2Btn = new System.Windows.Forms.Button();
             this.Buy3Btn = new System.Windows.Forms.Button();
             this.pointsLabel = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.Satan1Label = new System.Windows.Forms.Label();
+            this.Satan2Label = new System.Windows.Forms.Label();
+            this.PointsNumberLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -113,31 +114,31 @@
             this.pictureBox4.TabIndex = 13;
             this.pictureBox4.TabStop = false;
             // 
-            // label1
+            // Hipster1Label
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(193, 168);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(294, 32);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Hipster Pacman";
+            this.Hipster1Label.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Hipster1Label.AutoSize = true;
+            this.Hipster1Label.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Hipster1Label.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Hipster1Label.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Hipster1Label.Location = new System.Drawing.Point(193, 168);
+            this.Hipster1Label.Name = "Hipster1Label";
+            this.Hipster1Label.Size = new System.Drawing.Size(294, 32);
+            this.Hipster1Label.TabIndex = 14;
+            this.Hipster1Label.Text = "Hipster Pacman";
             // 
-            // label2
+            // Hipster2Label
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(193, 208);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(388, 84);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Good-looking young hipster \r\nguy in a red beanie\r\n\r\nPrice: 20 points";
+            this.Hipster2Label.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Hipster2Label.AutoSize = true;
+            this.Hipster2Label.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Hipster2Label.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Hipster2Label.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Hipster2Label.Location = new System.Drawing.Point(193, 208);
+            this.Hipster2Label.Name = "Hipster2Label";
+            this.Hipster2Label.Size = new System.Drawing.Size(388, 84);
+            this.Hipster2Label.TabIndex = 15;
+            this.Hipster2Label.Text = "Good-looking young hipster \r\nguy in a red beanie\r\n\r\nPrice: 20 points";
             // 
             // Buy1Btn
             // 
@@ -159,31 +160,31 @@
             this.Buy1Btn.UseVisualStyleBackColor = false;
             this.Buy1Btn.Click += new System.EventHandler(this.BuyBtn_Click);
             // 
-            // label3
+            // Sombrero1Label
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(193, 319);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(374, 32);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Pacman in Sombrero";
+            this.Sombrero1Label.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Sombrero1Label.AutoSize = true;
+            this.Sombrero1Label.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Sombrero1Label.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Sombrero1Label.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Sombrero1Label.Location = new System.Drawing.Point(193, 319);
+            this.Sombrero1Label.Name = "Sombrero1Label";
+            this.Sombrero1Label.Size = new System.Drawing.Size(374, 32);
+            this.Sombrero1Label.TabIndex = 17;
+            this.Sombrero1Label.Text = "Pacman in Sombrero";
             // 
-            // label4
+            // Sombrero2Label
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(193, 359);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(416, 84);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "He just likes nachos too much\r\n\r\n\r\nPrice: 50 points";
+            this.Sombrero2Label.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Sombrero2Label.AutoSize = true;
+            this.Sombrero2Label.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Sombrero2Label.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Sombrero2Label.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Sombrero2Label.Location = new System.Drawing.Point(193, 359);
+            this.Sombrero2Label.Name = "Sombrero2Label";
+            this.Sombrero2Label.Size = new System.Drawing.Size(416, 84);
+            this.Sombrero2Label.TabIndex = 18;
+            this.Sombrero2Label.Text = "He just likes nachos too much\r\n\r\n\r\nPrice: 50 points";
             // 
             // Buy2Btn
             // 
@@ -232,37 +233,49 @@
             this.pointsLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pointsLabel.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.pointsLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.pointsLabel.Location = new System.Drawing.Point(373, 662);
+            this.pointsLabel.Location = new System.Drawing.Point(373, 682);
             this.pointsLabel.Name = "pointsLabel";
             this.pointsLabel.Size = new System.Drawing.Size(194, 65);
             this.pointsLabel.TabIndex = 21;
             this.pointsLabel.Text = "Points: ";
             // 
-            // label5
+            // Satan1Label
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(193, 471);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(294, 32);
-            this.label5.TabIndex = 22;
-            this.label5.Text = "Satanic Pacman";
+            this.Satan1Label.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Satan1Label.AutoSize = true;
+            this.Satan1Label.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Satan1Label.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Satan1Label.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Satan1Label.Location = new System.Drawing.Point(193, 471);
+            this.Satan1Label.Name = "Satan1Label";
+            this.Satan1Label.Size = new System.Drawing.Size(294, 32);
+            this.Satan1Label.TabIndex = 22;
+            this.Satan1Label.Text = "Satanic Pacman";
             // 
-            // label6
+            // Satan2Label
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(193, 518);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(416, 84);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "Even satan himself is scared \r\nof ghosts\r\n\r\nPrice: 100 points";
+            this.Satan2Label.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Satan2Label.AutoSize = true;
+            this.Satan2Label.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Satan2Label.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Satan2Label.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Satan2Label.Location = new System.Drawing.Point(193, 518);
+            this.Satan2Label.Name = "Satan2Label";
+            this.Satan2Label.Size = new System.Drawing.Size(416, 84);
+            this.Satan2Label.TabIndex = 23;
+            this.Satan2Label.Text = "Even satan himself is scared \r\nof ghosts\r\n\r\nPrice: 100 points";
+            // 
+            // PointsNumberLabel
+            // 
+            this.PointsNumberLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.PointsNumberLabel.AutoSize = true;
+            this.PointsNumberLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.PointsNumberLabel.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.PointsNumberLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.PointsNumberLabel.Location = new System.Drawing.Point(595, 682);
+            this.PointsNumberLabel.Name = "PointsNumberLabel";
+            this.PointsNumberLabel.Size = new System.Drawing.Size(0, 65);
+            this.PointsNumberLabel.TabIndex = 24;
             // 
             // ShopForm
             // 
@@ -271,16 +284,17 @@
             this.BackgroundImage = global::PacmanGUI.Resources.bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 831);
+            this.Controls.Add(this.PointsNumberLabel);
             this.Controls.Add(this.Buy3Btn);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.Satan2Label);
+            this.Controls.Add(this.Satan1Label);
             this.Controls.Add(this.pointsLabel);
             this.Controls.Add(this.Buy2Btn);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.Sombrero2Label);
+            this.Controls.Add(this.Sombrero1Label);
             this.Controls.Add(this.Buy1Btn);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Hipster2Label);
+            this.Controls.Add(this.Hipster1Label);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -303,20 +317,21 @@
 
         #endregion
 
-        private PictureBox pictureBox1;
-        private Button BackBtn;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox4;
-        private Label label1;
-        private Label label2;
+        public PictureBox pictureBox1;
+        public Button BackBtn;
+        public PictureBox pictureBox2;
+        public PictureBox pictureBox3;
+        public PictureBox pictureBox4;
+        public Label Hipster1Label;
+        public Label Hipster2Label;
         public Button Buy1Btn;
-        private Label label3;
-        private Label label4;
+        public Label Sombrero1Label;
+        public Label Sombrero2Label;
         public Button Buy2Btn;
         public Button Buy3Btn;
         public Label pointsLabel;
-        private Label label5;
-        private Label label6;
+        public Label Satan1Label;
+        public Label Satan2Label;
+        public Label PointsNumberLabel;
     }
 }

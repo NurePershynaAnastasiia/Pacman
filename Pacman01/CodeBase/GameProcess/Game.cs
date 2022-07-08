@@ -11,11 +11,12 @@ namespace CodeBase.GameProcess
 {
     public class Game
     {
-        public Game(Level CurrentLevel, int GeneralScore, int Design)
+        public Game(Level CurrentLevel, int GeneralScore, int Design, string Language)
         {
             this.CurrentLevel = CurrentLevel;
             this.GeneralScore = GeneralScore;
             this.Design = Design;
+            this.Language = Language;
         }
 
         public Level CurrentLevel { get; set; }
@@ -25,6 +26,8 @@ namespace CodeBase.GameProcess
         public int Design { get; set; }
 
         public bool Finished { get; set; }
+
+        public string Language { get; set; }
 
     }
 }

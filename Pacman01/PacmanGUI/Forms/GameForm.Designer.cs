@@ -35,7 +35,9 @@
             this.scoreLabel = new System.Windows.Forms.Label();
             this.generalScoreLabel = new System.Windows.Forms.Label();
             this.pauseLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.PressPauseLabel = new System.Windows.Forms.Label();
+            this.scoreNumberLabel = new System.Windows.Forms.Label();
+            this.generalScoreNumberLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxField)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,18 +98,44 @@
             this.pauseLabel.TabIndex = 5;
             this.pauseLabel.Text = "Pause";
             // 
-            // label1
+            // PressPauseLabel
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(828, 590);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(390, 65);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Press P to Pause";
+            this.PressPauseLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.PressPauseLabel.AutoSize = true;
+            this.PressPauseLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.PressPauseLabel.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.PressPauseLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.PressPauseLabel.Location = new System.Drawing.Point(695, 593);
+            this.PressPauseLabel.Name = "PressPauseLabel";
+            this.PressPauseLabel.Size = new System.Drawing.Size(287, 47);
+            this.PressPauseLabel.TabIndex = 6;
+            this.PressPauseLabel.Text = "Press P to Pause";
+            // 
+            // scoreNumberLabel
+            // 
+            this.scoreNumberLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.scoreNumberLabel.AutoSize = true;
+            this.scoreNumberLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.scoreNumberLabel.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.scoreNumberLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.scoreNumberLabel.Location = new System.Drawing.Point(329, 579);
+            this.scoreNumberLabel.Name = "scoreNumberLabel";
+            this.scoreNumberLabel.Size = new System.Drawing.Size(56, 65);
+            this.scoreNumberLabel.TabIndex = 7;
+            this.scoreNumberLabel.Text = "0";
+            // 
+            // generalScoreNumberLabel
+            // 
+            this.generalScoreNumberLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.generalScoreNumberLabel.AutoSize = true;
+            this.generalScoreNumberLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.generalScoreNumberLabel.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.generalScoreNumberLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.generalScoreNumberLabel.Location = new System.Drawing.Point(535, 658);
+            this.generalScoreNumberLabel.Name = "generalScoreNumberLabel";
+            this.generalScoreNumberLabel.Size = new System.Drawing.Size(56, 65);
+            this.generalScoreNumberLabel.TabIndex = 8;
+            this.generalScoreNumberLabel.Text = "0";
             // 
             // GameForm
             // 
@@ -116,7 +144,9 @@
             this.BackgroundImage = global::PacmanGUI.Resources.bgGameGif;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1284, 831);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.generalScoreNumberLabel);
+            this.Controls.Add(this.scoreNumberLabel);
+            this.Controls.Add(this.PressPauseLabel);
             this.Controls.Add(this.pauseLabel);
             this.Controls.Add(this.generalScoreLabel);
             this.Controls.Add(this.scoreLabel);
@@ -140,6 +170,8 @@
         public Label scoreLabel;
         public Label generalScoreLabel;
         public Label pauseLabel;
-        private Label label1;
+        public Label PressPauseLabel;
+        public Label scoreNumberLabel;
+        public Label generalScoreNumberLabel;
     }
 }

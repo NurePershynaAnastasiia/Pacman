@@ -19,10 +19,11 @@ namespace PacmanGUI
 
         public ShopForm(Game game)
         {
-            InitializeComponent();
             this.Size = new Size(800, 870);
             this.game = game;
-            pointsLabel.Text = "Points: " + game.GeneralScore.ToString();
+            InitializeComponent();
+            PointsNumberLabel.Text = game.GeneralScore.ToString();
+            LanguageChanger.Shop(this, game.Language);
         }
 
         private void BuyBtn_Click(object sender, EventArgs e)
@@ -32,12 +33,12 @@ namespace PacmanGUI
             if (Shop.EnoughPointsCheck(design, game.GeneralScore))
             {
                 if (game.Design == design)
-                    Shop.AlreadyBoughtProcess(Btn);
+                    Shop.AlreadyBoughtProcess(Btn, game.Language);
                 else
-                    Shop.EnoughPointsProcess(Btn, design, game, this.pointsLabel);
+                    Shop.EnoughPointsProcess(Btn, design, game, this.PointsNumberLabel, game.Language);
             }
             else
-                Shop.NotEnoughPointsProcess(Btn);
+                Shop.NotEnoughPointsProcess(Btn, game.Language);
         }
 
         private void BackBtn_Click(object sender, EventArgs e)

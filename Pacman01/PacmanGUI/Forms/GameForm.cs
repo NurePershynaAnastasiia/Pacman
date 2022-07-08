@@ -22,11 +22,12 @@ namespace PacmanGUI
 
         public GameForm(Game game, int lvl)
         {
-            InitializeComponent();
             this.Size = new Size(1300, 870);
             this.lvl = lvl;
             this.game = game;
+            InitializeComponent();
             pauseLabel.Hide();
+            LanguageChanger.Game(this, game.Language);
             resetGame();
         }
 
@@ -50,8 +51,8 @@ namespace PacmanGUI
         public void DrawStats(Game game)
         {
             Level currentLevel = game.CurrentLevel;
-            scoreLabel.Text = "Score: " + (currentLevel.Field.Score).ToString();
-            generalScoreLabel.Text = "General score: " + game.GeneralScore.ToString();
+            scoreNumberLabel.Text = currentLevel.Field.Score.ToString();
+            generalScoreNumberLabel.Text = game.GeneralScore.ToString();
         }
 
         public void pictureBoxField_Paint(object sender, PaintEventArgs e)

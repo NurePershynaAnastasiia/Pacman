@@ -19,10 +19,10 @@ namespace PacmanGUI
 
         public InstructionsForm(Game game)
         {
-            InitializeComponent();
             this.Size = new Size(800, 870);
             this.game = game;
-            BackBtn.Click += new EventHandler(BackBtn_Click);
+            InitializeComponent();
+            LanguageChanger.Instructions(this, game.Language);
         }
 
         private void BackBtn_Click(object sender, EventArgs e)

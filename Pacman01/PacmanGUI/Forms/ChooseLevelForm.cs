@@ -19,9 +19,10 @@ namespace PacmanGUI
 
         public ChooseLevelForm(Game game)
         {
-            InitializeComponent();
             this.Size = new Size(800, 870);
             this.game = game;
+            InitializeComponent();
+            LanguageChanger.ChooseLevel(this, game.Language);
         }
 
         public void BackBtn_Click(object sender, EventArgs e)

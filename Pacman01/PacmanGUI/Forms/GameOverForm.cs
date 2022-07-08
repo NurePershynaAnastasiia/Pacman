@@ -15,9 +15,10 @@ namespace PacmanGUI
     {
         public GameOverForm(Game game)
         {
-            InitializeComponent();
             this.Size = new Size(800, 870);
-            generalScoreLabel.Text = "General Score: " + game.GeneralScore.ToString();
+            InitializeComponent();
+            LanguageChanger.GameOver(this, game.Language);
+            generalScoreLabel.Text += game.GeneralScore.ToString();
         }
 
         private void ExitBtn_Click(object sender, EventArgs e)
