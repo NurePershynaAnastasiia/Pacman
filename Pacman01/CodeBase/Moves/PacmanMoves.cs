@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CodeBase.Elements;
-using CodeBase.Utilities;
 using CodeBase.GameProcess;
 
 namespace CodeBase.Moves
@@ -33,11 +32,11 @@ namespace CodeBase.Moves
             currentLevel.Field[pacman.X, pacman.Y] = new Cell(pacman.X, pacman.Y);
             draw(currentLevel.Field[pacman.X, pacman.Y]);
             
-            if (!currentLevel.Field[pacman.X + Utility.CoordsUpdate(dir).x, pacman.Y + Utility.CoordsUpdate(dir).y].isObstacle())
+            if (!currentLevel.Field[pacman.X + CommonMoves.CoordsUpdate(dir).x, pacman.Y + CommonMoves.CoordsUpdate(dir).y].isObstacle())
             {
-                pacman.X += Utility.CoordsUpdate(dir).x;
-                pacman.Y += Utility.CoordsUpdate(dir).y;
-                ThorMap.Step(currentLevel.Field, pacman);
+                pacman.X += CommonMoves.CoordsUpdate(dir).x;
+                pacman.Y += CommonMoves.CoordsUpdate(dir).y;
+                CommonMoves.ThorMapStep(currentLevel.Field, pacman);
             }
             currentLevel.FieldEnemies[pacman.X, pacman.Y].Action(game);
             if (game.Finished)

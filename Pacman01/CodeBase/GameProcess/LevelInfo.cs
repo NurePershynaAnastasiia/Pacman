@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace CodeBase.Utilities
+namespace CodeBase.GameProcess
 {
     public class LevelInfo
     {

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CodeBase.Utilities;
 using CodeBase.Elements;
 using CodeBase.Moves;
 using CodeBase.GameProcess;
@@ -14,6 +13,7 @@ namespace PacmanGUI
     public class GuiEngine
     {
         public static char direction = ' ';
+
 
         public static void Playing(Game game, GameFunctions.Draw draw, GameFunctions.DrawStats drawStats, GameForm gameForm)
         {
@@ -119,6 +119,12 @@ namespace PacmanGUI
             }
      
             return currentObj;
+        }
+        public static int BiggerCells(int lvl)
+        {
+            if (lvl == 1) return 50;
+            if (lvl == 2) return 40;
+            return 30;
         }
 
     }

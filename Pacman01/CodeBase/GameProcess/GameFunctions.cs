@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CodeBase.Elements;
-using CodeBase.Utilities;
 using CodeBase.Moves;
 using CodeBase.GameProcess;
 using CodeBase.Properties;
@@ -55,7 +54,7 @@ namespace CodeBase.GameProcess
             //filling Field
             int i = 0;
             var assembly = Assembly.GetExecutingAssembly();
-            using (Stream stream = assembly.GetManifestResourceStream("CodeBase.Resources." + Utility.LevelInfo(lvl).path))
+            using (Stream stream = assembly.GetManifestResourceStream("CodeBase.Resources." + LevelInfo(lvl).path))
             using (StreamReader reader = new StreamReader(stream))
             {
                 string line = reader.ReadLine();
@@ -105,6 +104,17 @@ namespace CodeBase.GameProcess
                 field.Height = i;
             }
             return new Level(lvl, field, fieldEnemies, pacman, enemies, currentLevel.Points);
+        }
+
+        public static LevelInfo LevelInfo(int lvl)
+        {
+            Dictionary<int, LevelInfo> levelInfo = new Dictionary<int, LevelInfo>();
+            levelInfo.Add(1, new LevelInfo(path: "lvl1.txt", pathOutput: "lvl1Output.txt"));
+            levelInfo.Add(2, new LevelInfo(path: "lvl2.txt", pathOutput: "lvl2Output.txt"));
+            levelInfo.Add(3, new LevelInfo(path: "lvl3.txt", pathOutput: "lvl3Output.txt"));
+            //levelInfo.Add(4, new Level(path: "RandomLevel.txt", pathOutput: "RandomLevel.txt"));
+
+            return levelInfo[lvl];
         }
     }
 }

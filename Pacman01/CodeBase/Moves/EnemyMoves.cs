@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CodeBase.Elements;
-using CodeBase.Utilities;
 using CodeBase.GameProcess;
 
 namespace CodeBase.Moves
@@ -27,7 +26,7 @@ namespace CodeBase.Moves
             int dir = rnd.Next();
             int attempts = 0;
 
-            while (field[enemy.X + Utility.CoordsUpdate(direction).x, enemy.Y + Utility.CoordsUpdate(direction).y].isObstacle() || !CycleCheck(direction, enemy.Prev))
+            while (field[enemy.X + CommonMoves.CoordsUpdate(direction).x, enemy.Y + CommonMoves.CoordsUpdate(direction).y].isObstacle() || !CycleCheck(direction, enemy.Prev))
             {
                 dir += attempts;
                 attempts++;
@@ -46,7 +45,7 @@ namespace CodeBase.Moves
                         direction = 'l';
                         break;
                 }
-                if (attempts >= 4 && !field[enemy.X + Utility.CoordsUpdate(direction).x, enemy.Y + Utility.CoordsUpdate(direction).y].isObstacle())
+                if (attempts >= 4 && !field[enemy.X + CommonMoves.CoordsUpdate(direction).x, enemy.Y + CommonMoves.CoordsUpdate(direction).y].isObstacle())
                     break;
             }
             enemy.Prev = direction;
@@ -85,9 +84,9 @@ namespace CodeBase.Moves
                 currentLevel.FieldEnemies[enemy.X, enemy.Y] = new Cell(enemy.X, enemy.Y);
                 draw(currentLevel.Field[enemy.X, enemy.Y]);
 
-                enemy.X += Utility.CoordsUpdate(enemy.Direction).x;
-                enemy.Y += Utility.CoordsUpdate(enemy.Direction).y;
-                ThorMap.Step(currentLevel.Field, enemy);
+                enemy.X += CommonMoves.CoordsUpdate(enemy.Direction).x;
+                enemy.Y += CommonMoves.CoordsUpdate(enemy.Direction).y;
+                CommonMoves.ThorMapStep(currentLevel.Field, enemy);
 
                 draw(enemy);
 
