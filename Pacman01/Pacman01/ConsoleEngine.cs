@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CodeBase.Utilities;
 using CodeBase.Elements;
 using CodeBase.Moves;
 using CodeBase.GameProcess;
@@ -52,7 +51,7 @@ namespace PacmanConsole
         public static void ShopPurchase(Game game)
         {
             bool done = false;
-            Interface.ShopPrint(game.GeneralScore, DesignInfo(game.Design).appearance);
+            Interface.ShopPrint(game.GeneralScore, GameFunctions.DesignInfo(game.Design).appearance);
             int chosenDesign = game.Design;
 
             ConsoleKeyInfo keyPressed;
@@ -72,21 +71,21 @@ namespace PacmanConsole
                         break;
                     case ConsoleKey.D9: //пасхалка на добавление монет
                         game.GeneralScore += 10;
-                        Interface.ShopPrint(game.GeneralScore, DesignInfo(game.Design).appearance);
+                        Interface.ShopPrint(game.GeneralScore, GameFunctions.DesignInfo(game.Design).appearance);
                         continue;
                 }
 
-                if (game.GeneralScore >= DesignInfo(chosenDesign).price)
+                if (game.GeneralScore >= GameFunctions.DesignInfo(chosenDesign).price)
                 {
                     done = true;
-                    game.GeneralScore -= DesignInfo(chosenDesign).price;
-                    Interface.ShopPrint(game.GeneralScore, DesignInfo(chosenDesign).appearance);
+                    game.GeneralScore -= GameFunctions.DesignInfo(chosenDesign).price;
+                    Interface.ShopPrint(game.GeneralScore, GameFunctions.DesignInfo(chosenDesign).appearance);
                     Console.WriteLine("Purchase was successfully made. Returning to the game...");
                     Thread.Sleep(3000);
                 }
                 else
                 {
-                    Interface.ShopPrint(game.GeneralScore, DesignInfo(game.Design).appearance);
+                    Interface.ShopPrint(game.GeneralScore, GameFunctions.DesignInfo(game.Design).appearance);
                     Console.WriteLine("You do not have enough money for this purchase :(");
                 }
 
@@ -120,17 +119,6 @@ namespace PacmanConsole
                 Console.Write("      ");
             }
             return keyPressed;
-        }
-
-        public static Design DesignInfo(int key)
-        {
-            Dictionary<int, Design> designInfo = new Dictionary<int, Design>();
-            designInfo.Add(0, new Design(appearace: 'o', price: 0));
-            designInfo.Add(1, new Design(appearace: 'O', price: 20));
-            designInfo.Add(2, new Design(appearace: 'Q', price: 50));
-            designInfo.Add(3, new Design(appearace: 'G', price: 100));
-
-            return designInfo[key];
         }
     }
 }

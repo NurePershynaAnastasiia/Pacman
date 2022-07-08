@@ -137,8 +137,8 @@
 
         public PictureBox pictureBoxField;
         public System.Windows.Forms.Timer timerGame;
-        private Label scoreLabel;
-        private Label generalScoreLabel;
+        public Label scoreLabel;
+        public Label generalScoreLabel;
         public Label pauseLabel;
         private Label label1;
     }

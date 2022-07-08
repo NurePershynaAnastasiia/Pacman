@@ -14,12 +14,11 @@ namespace PacmanGUI
     {
         public static char direction = ' ';
 
-
         public static void Playing(Game game, GameFunctions.Draw draw, GameFunctions.DrawStats drawStats, GameForm gameForm)
         {
             Level currentLevel = game.CurrentLevel;
             currentLevel.Pacman.Design = game.Design;
-            char keyPressed = GuiEngine.direction;
+            char keyPressed = direction;
             if (keyPressed == 'p')
                 gameForm.pauseLabel.Show();
             else
@@ -49,7 +48,28 @@ namespace PacmanGUI
 
         }
 
-        public static char GetDirection (KeyEventArgs e)
+        public static void DrawField(PaintEventArgs e, Game game)
+        {
+            Field field = game.CurrentLevel.Field;
+            Field fieldEnemies = game.CurrentLevel.FieldEnemies;
+            Graphics g = e.Graphics;
+            int cellSize = BiggerCells(game.CurrentLevel.Number);
+            for (int i = 0; i < field.Height; i++)
+            {
+                for (int j = 0; j < field.Width; j++)
+                {
+                    Bitmap currentObj;
+                    if (fieldEnemies[i, j].Name() == "enemy")
+                        currentObj = Resources.enemy_left;
+                    else
+                        currentObj = DefineTexture(field[i, j]);
+
+                    g.DrawImage(currentObj, new Rectangle(j * cellSize, i * cellSize, cellSize, cellSize));
+                }
+            }
+        }
+
+        public static void GetDirection (KeyEventArgs e)
         {
             Dictionary<Keys, char> keyInfo = new Dictionary<Keys, char>();
             keyInfo.Add(Keys.W, 'u');
@@ -58,7 +78,7 @@ namespace PacmanGUI
             keyInfo.Add(Keys.D, 'r');
             keyInfo.Add(Keys.P, 'p');
 
-            return keyInfo[e.KeyCode];
+            direction = keyInfo[e.KeyCode];
         }
 
         public static Bitmap DefineTexture(Element element)
@@ -68,8 +88,10 @@ namespace PacmanGUI
             textureInfo.Add("wall", Resources.wall);
             textureInfo.Add("cell", Resources.cell);
             textureInfo.Add("energizer", Resources.energizer);
-            textureInfo.Add("pacman", DefineTexturePacman(element));
-            textureInfo.Add("enemy", DefineTextureEnemy(element));
+            if (element.Name() == "pacman")
+                textureInfo.Add("pacman", DefineTexturePacman(element));
+            if (element.Name() == "enemy")
+                textureInfo.Add("enemy", DefineTextureEnemy(element));
 
             return textureInfo[element.Name()];
         }
@@ -102,6 +124,7 @@ namespace PacmanGUI
             {
                 case 1: currentObj = Resources.pacman1; break;
                 case 2: currentObj = Resources.pacman2; break;
+                case 3: currentObj = Resources.pacman3; break;
                 default: currentObj = Resources.pacman0; break;
             }
 
@@ -115,6 +138,7 @@ namespace PacmanGUI
      
             return currentObj;
         }
+
         public static int BiggerCells(int lvl)
         {
             if (lvl == 1) return 50;

@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CodeBase.Utilities;
 using CodeBase.Elements;
 using CodeBase.Moves;
 using CodeBase.GameProcess;
@@ -28,7 +27,7 @@ namespace PacmanGUI
 
         public bool EnoughPointsCheck (int design, int points)
         {
-            if (Utility.DesignInfo(design).price <= points)
+            if (GameFunctions.DesignInfo(design).price <= points)
                 return true;
             return false;
         }
@@ -54,7 +53,7 @@ namespace PacmanGUI
             Btn.Text = "Bought";
             Btn.BackColor = Color.DarkSlateBlue;
             game.Design = design;
-            game.GeneralScore -= Utility.DesignInfo(design).price;
+            game.GeneralScore -= GameFunctions.DesignInfo(design).price;
             pointsLabel.Text = "Points: " + game.GeneralScore.ToString();
         }
 

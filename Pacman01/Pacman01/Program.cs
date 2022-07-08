@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
-using CodeBase.Utilities;
 using CodeBase.Elements;
 using CodeBase.Moves;
 using CodeBase.GameProcess;

@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using CodeBase.Elements;
 using CodeBase.Moves;
-using CodeBase.GameProcess;
 using CodeBase.Properties;
 using System.IO;
 using System.Reflection;
+using CodeBase.GameProces;
 
 namespace CodeBase.GameProcess
 {
@@ -115,6 +115,17 @@ namespace CodeBase.GameProcess
             //levelInfo.Add(4, new Level(path: "RandomLevel.txt", pathOutput: "RandomLevel.txt"));
 
             return levelInfo[lvl];
+        }
+
+        public static Design DesignInfo(int key)
+        {
+            Dictionary<int, Design> designInfo = new Dictionary<int, Design>();
+            designInfo.Add(0, new Design(appearace: 'o', price: 0));
+            designInfo.Add(1, new Design(appearace: 'O', price: 20));
+            designInfo.Add(2, new Design(appearace: 'Q', price: 50));
+            designInfo.Add(3, new Design(appearace: 'G', price: 100));
+
+            return designInfo[key];
         }
     }
 }

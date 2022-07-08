@@ -16,8 +16,8 @@ namespace PacmanGUI
 {
     public partial class GameForm : Form
     {
-        public Field field, fieldEnemies;
-        int lvl = 1;
+        public int lvl { get; set; }
+
         public Game game { get; set; }
 
         public GameForm(Game game, int lvl)
@@ -33,8 +33,6 @@ namespace PacmanGUI
         public void resetGame()
         {
             Level currentLevel = GameFunctions.Initialize(lvl);
-            field = currentLevel.Field;
-            fieldEnemies = currentLevel.FieldEnemies;
             game = new Game(currentLevel, game.GeneralScore, game.Design);//Game = CurrentLevel + Design + GeneralScore + Finished
 
             timerGame.Start();
@@ -44,30 +42,10 @@ namespace PacmanGUI
         {
             GuiEngine.Playing(game, Draw, DrawStats, this);
         }
-
-        public void pictureBoxField_Paint(object sender, PaintEventArgs e)
-        {
-            Graphics g = e.Graphics;
-            int cellSize = GuiEngine.BiggerCells(game.CurrentLevel.Number);
-            for (int i = 0; i < field.Height; i++)
-            {
-                for (int j = 0; j < field.Width; j++)
-                {
-                    Bitmap currentObj;
-                    if (fieldEnemies[i, j].Name() == "enemy" && !field.Scared)
-                        currentObj = Resources.enemy_left;
-                    else
-                        currentObj = GuiEngine.DefineTexture(field[i, j]);
-                    
-                    g.DrawImage(currentObj, new Rectangle(j * cellSize, i * cellSize, cellSize, cellSize));
-                }
-            }
-        }
-
         public void Draw(Element element)
         {
             Graphics g = pictureBoxField.CreateGraphics();
-            int cellSize = GuiEngine.BiggerCells(game.CurrentLevel.Number);
+            int cellSize = GuiEngine.BiggerCells(lvl);
             g.DrawImage(GuiEngine.DefineTexture(element), new Rectangle(element.Y * cellSize, element.X * cellSize, cellSize, cellSize));
         }
 
@@ -76,6 +54,11 @@ namespace PacmanGUI
             Level currentLevel = game.CurrentLevel;
             scoreLabel.Text = "Score: " + (currentLevel.Field.Score).ToString();
             generalScoreLabel.Text = "General score: " + game.GeneralScore.ToString();
+        }
+
+        public void pictureBoxField_Paint(object sender, PaintEventArgs e)
+        {
+            GuiEngine.DrawField(e, game);
         }
 
         private void GameForm_FormClosed(object sender, FormClosedEventArgs e)
