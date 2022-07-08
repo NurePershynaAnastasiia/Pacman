@@ -25,36 +25,7 @@ namespace CodeBase.Elements
 
         public override int Y { get; set; }
 
-        public override void Draw()
-        {
-            Console.ForegroundColor = ConsoleColor.DarkYellow;
-            switch (Design)
-            {
-                case 0:
-                    Console.Write('o');
-                    break;
-                case 1:
-                    Console.Write('O');
-                    break;
-                case 2:
-                    Console.Write('Q');
-                    break;
-                case 3:
-                    Console.Write('G');
-                    break;
-                default:
-                    Console.Write('o');
-                    break;
-            };
-            Console.ResetColor();
-        }
-
         public override bool isObstacle()
-        {
-            return false;
-        }
-
-        public override bool isEaten()
         {
             return false;
         }

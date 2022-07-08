@@ -31,17 +31,7 @@ namespace CodeBase.Elements
             Console.Write("");
         }
 
-        public override void Draw()
-        {
-            Console.Write('.');
-        }
-
         public override bool isObstacle()
-        {
-            return false;
-        }
-
-        public override bool isEaten()
         {
             return false;
         }

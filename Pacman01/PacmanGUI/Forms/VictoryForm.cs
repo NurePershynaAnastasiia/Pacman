@@ -36,7 +36,6 @@ namespace PacmanGUI
         private void ExitBtn_Click(object sender, EventArgs e)
         {
             this.Close();
-            Application.Exit();
         }
 
         private void VictoryForm_FormClosed(object sender, FormClosedEventArgs e)

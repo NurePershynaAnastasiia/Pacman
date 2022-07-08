@@ -23,17 +23,7 @@ namespace CodeBase.Elements
 
         public override int Y { get; set; }
 
-        public override void Draw()
-        {
-            Console.Write('@');
-        }
-
         public override bool isObstacle()
-        {
-            return false;
-        }
-
-        public override bool isEaten()
         {
             return false;
         }

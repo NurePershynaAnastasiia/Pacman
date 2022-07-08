@@ -45,13 +45,14 @@ namespace CodeBase.Utilities
             return designInfo[key];
         }
 
-        public static Level LevelInfo(int lvl)
+        public static LevelInfo LevelInfo(int lvl)
         {
-            Dictionary<int, Level> levelInfo = new Dictionary<int, Level>();
-            levelInfo.Add(1, new Level(path: "lvl1.txt", pathOutput: "lvl1Output.txt"));
-            levelInfo.Add(2, new Level(path: "lvl2.txt", pathOutput: "lvl2Output.txt"));
-            levelInfo.Add(3, new Level(path: "lvl3.txt", pathOutput: "lvl3Output.txt"));
-            
+            Dictionary<int, LevelInfo> levelInfo = new Dictionary<int, LevelInfo>();
+            levelInfo.Add(1, new LevelInfo(path: "lvl1.txt", pathOutput: "lvl1Output.txt"));
+            levelInfo.Add(2, new LevelInfo(path: "lvl2.txt", pathOutput: "lvl2Output.txt"));
+            levelInfo.Add(3, new LevelInfo(path: "lvl3.txt", pathOutput: "lvl3Output.txt"));
+            //levelInfo.Add(4, new Level(path: "RandomLevel.txt", pathOutput: "RandomLevel.txt"));
+
             return levelInfo[lvl];
         }
 

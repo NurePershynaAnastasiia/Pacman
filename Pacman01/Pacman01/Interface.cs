@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CodeBase.GameProcess;
+using CodeBase.Elements;
 
 namespace PacmanConsole
 {
@@ -63,6 +64,8 @@ namespace PacmanConsole
                 return 2;
             if (keyPressed.Key == ConsoleKey.D3)
                 return 3;
+            if (keyPressed.Key == ConsoleKey.D4)
+                return 4;
             return 1;
         }
 

@@ -32,38 +32,21 @@ namespace CodeBase.Elements
 
         public override int Y { get; set; }
 
-        public bool Eaten { get; set; }
+        public bool isEaten { get; set; }
 
-        public bool Scared { get; set; }
-
-        public override void Draw()
-        {
-            Console.ForegroundColor = ConsoleColor.Red;
-            if (this.Eaten || this.Scared)
-                Console.Write('V');
-            else
-                Console.Write('A');
-            Console.ResetColor();
-        }
+        public bool isScared { get; set; }
 
         public override bool isObstacle()
         {
             return false;
         }
 
-        public override bool isEaten()
-        {
-            if (this.Eaten)
-                return true;
-            return false;
-        }
-
         public override void Action(Game game)
         {
-            if (!game.CurrentLevel.Field.Scared && !this.Eaten)
+            if (!game.CurrentLevel.Field.Scared && !this.isEaten)
                 game.Finished = true;
             else
-                this.Eaten = true;
+                this.isEaten = true;
         }
 
         public override string Name()

@@ -12,14 +12,14 @@ namespace CodeBase.GameProcess
 {
     public class Game
     {
-        public Game(CurrentLevel CurrentLevel, int GeneralScore, int Design)
+        public Game(Level CurrentLevel, int GeneralScore, int Design)
         {
             this.CurrentLevel = CurrentLevel;
             this.GeneralScore = GeneralScore;
             this.Design = Design;
         }
 
-        public CurrentLevel CurrentLevel { get; set; }
+        public Level CurrentLevel { get; set; }
 
         public int GeneralScore { get; set; }
 

@@ -138,5 +138,14 @@ namespace CodeBase.Properties {
                 return ResourceManager.GetStream("pacman_eatghost", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string RandomLevel {
+            get {
+                return ResourceManager.GetString("RandomLevel", resourceCulture);
+            }
+        }
     }
 }

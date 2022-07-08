@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace CodeBase.Utilities
 {
-    public class Level
+    public class LevelInfo
     {
-        public Level(string path, string pathOutput)
+        public LevelInfo(string path, string pathOutput)
         {
             this.path = path;
             this.pathOutput = pathOutput;

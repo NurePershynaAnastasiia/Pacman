@@ -16,7 +16,7 @@ namespace PacmanConsole
         public static void Playing(Game game, GameFunctions.Draw draw, GameFunctions.DrawStats drawStats)
         {
             ConsoleKeyInfo keyPressed = Console.ReadKey(true);
-            CurrentLevel currentLevel = game.CurrentLevel;
+            Level currentLevel = game.CurrentLevel;
             while (!game.Finished && currentLevel.Field.Score != currentLevel.Points)
             {
                 keyPressed = Console.KeyAvailable == false ? keyPressed : Console.ReadKey(true);//checking if new key is pressed, if not - use the old one (inertia)

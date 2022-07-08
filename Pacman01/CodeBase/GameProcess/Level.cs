@@ -10,19 +10,19 @@ using CodeBase.GameProcess;
 
 namespace CodeBase.GameProcess
 {
-    public class CurrentLevel
+    public class Level
     {
-        public CurrentLevel(int level, Field field, Field fieldEnemies, Pacman pacman, List<Enemy> enemies, int points)
+        public Level(int number, Field field, Field fieldEnemies, Pacman pacman, List<Enemy> enemies, int points)
         {
             Pacman = pacman;
             Field = field;
             FieldEnemies = fieldEnemies;
             Enemies = enemies;
-            Level = level;
+            Number = number;
             Points = points;
         }
 
-        public CurrentLevel() { }
+        public Level() { }
 
         public Field Field { get; set; }
 
@@ -32,7 +32,7 @@ namespace CodeBase.GameProcess
 
         public Pacman Pacman { get; set; }
 
-        public int Level { get; set; }
+        public int Number { get; set; }
 
         public int Points { get; set; }
     }

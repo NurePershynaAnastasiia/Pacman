@@ -33,7 +33,7 @@ namespace PacmanGUI
 
         private void resetGame()
         {
-            CurrentLevel currentLevel = GameFunctions.Initialize(lvl);
+            Level currentLevel = GameFunctions.Initialize(lvl);
             field = currentLevel.Field;
             fieldEnemies = currentLevel.FieldEnemies;
             game = new Game(currentLevel, game.GeneralScore, game.Design);//Game = CurrentLevel + Design + GeneralScore + Finished
@@ -49,7 +49,7 @@ namespace PacmanGUI
         public void pictureBoxField_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            int cellSize = Utility.BiggerCells(game.CurrentLevel.Level);
+            int cellSize = Utility.BiggerCells(game.CurrentLevel.Number);
             for (int i = 0; i < field.Height; i++)
             {
                 for (int j = 0; j < field.Width; j++)
@@ -68,13 +68,13 @@ namespace PacmanGUI
         public void Draw(Element element)
         {
             Graphics g = pictureBoxField.CreateGraphics();
-            int cellSize = Utility.BiggerCells(game.CurrentLevel.Level);
+            int cellSize = Utility.BiggerCells(game.CurrentLevel.Number);
             g.DrawImage(GuiEngine.DefineTexture(element), new Rectangle(element.Y * cellSize, element.X * cellSize, cellSize, cellSize));
         }
 
         public void DrawStats(Game game)
         {
-            CurrentLevel currentLevel = game.CurrentLevel;
+            Level currentLevel = game.CurrentLevel;
             scoreLabel.Text = "Score: " + (currentLevel.Field.Score).ToString();
             generalScoreLabel.Text = "General score: " + game.GeneralScore.ToString();
         }

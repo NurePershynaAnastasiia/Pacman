@@ -55,32 +55,32 @@ namespace CodeBase.Moves
 
         public static void EnemyStatus(Enemy enemy, Field field)
         {
-            if (enemy.Eaten)
+            if (enemy.isEaten)
                 enemy.TimeEaten++;
             if (enemy.TimeEaten == 20)
             {
-                enemy.Eaten = false;
+                enemy.isEaten = false;
                 enemy.TimeEaten = 0;
             }
 
             if (field.Scared)
-                enemy.Scared = true;
+                enemy.isScared = true;
             else
-                enemy.Scared = false;
+                enemy.isScared = false;
 
             if (field[enemy.X, enemy.Y] is Pacman && field.Scared)
-                enemy.Eaten = true;
+                enemy.isEaten = true;
         }
 
         public static void Step(Game game, Enemy enemy, GameFunctions.Draw draw)
         {
             if (game.Finished)
                 return;
-            CurrentLevel currentLevel = game.CurrentLevel;
+            Level currentLevel = game.CurrentLevel;
             EnemyStatus(enemy, currentLevel.Field);
             RandomDir(currentLevel.Field, enemy);
 
-            if (!enemy.Eaten)
+            if (!enemy.isEaten)
             {
                 currentLevel.FieldEnemies[enemy.X, enemy.Y] = new Cell(enemy.X, enemy.Y);
                 draw(currentLevel.Field[enemy.X, enemy.Y]);
@@ -94,12 +94,15 @@ namespace CodeBase.Moves
                 if (currentLevel.Field[enemy.X, enemy.Y] is Pacman && !currentLevel.Field.Scared)
                     game.Finished = true;
                 if (currentLevel.Field[enemy.X, enemy.Y] is Pacman && currentLevel.Field.Scared)
-                    enemy.Eaten = true;
+                    enemy.isEaten = true;
 
                 currentLevel.FieldEnemies[enemy.X, enemy.Y] = enemy;
             }
-            else if (!(currentLevel.Field[enemy.X, enemy.Y] is Pacman))
-                draw(enemy);
+            else
+            {
+                if (!(currentLevel.Field[enemy.X, enemy.Y] is Pacman) || !currentLevel.Field.Scared)
+                    draw(enemy);
+            }
         }
     }
 }

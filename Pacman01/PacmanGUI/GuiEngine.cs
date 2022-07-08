@@ -17,7 +17,7 @@ namespace PacmanGUI
 
         public static void Playing(Game game, GameFunctions.Draw draw, GameFunctions.DrawStats drawStats, GameForm gameForm)
         {
-            CurrentLevel currentLevel = game.CurrentLevel;
+            Level currentLevel = game.CurrentLevel;
             currentLevel.Pacman.Design = game.Design;
             char keyPressed = GuiEngine.direction;
             if (keyPressed == 'p')
@@ -91,7 +91,7 @@ namespace PacmanGUI
                 case 'd': currentObj = Resources.enemy_down; break;
                 default: currentObj = Resources.enemy_left; break;
             }
-            if (enemy.Scared || enemy.Eaten)
+            if (enemy.isScared || enemy.isEaten)
                 currentObj = Resources.enemy_scared;
             if (enemy.TimeEaten == 18 || enemy.TimeEaten == 19)
                 currentObj = Resources.enemy_scared2;
