@@ -84,11 +84,12 @@
             this.Lvl1Btn.Name = "Lvl1Btn";
             this.Lvl1Btn.Size = new System.Drawing.Size(306, 61);
             this.Lvl1Btn.TabIndex = 12;
+            this.Lvl1Btn.Tag = "1";
             this.Lvl1Btn.Text = "Level 1\r\n";
             this.Lvl1Btn.UseVisualStyleBackColor = false;
-            this.Lvl1Btn.Click += new System.EventHandler(this.Lvl1Btn_Click);
+            this.Lvl1Btn.Click += new System.EventHandler(this.LvlBtn_Click);
             this.Lvl1Btn.MouseLeave += new System.EventHandler(this.LvlBtn_MouseLeave);
-            this.Lvl1Btn.MouseHover += new System.EventHandler(this.Lvl1Btn_MouseHover);
+            this.Lvl1Btn.MouseHover += new System.EventHandler(this.LvlBtn_MouseHover);
             // 
             // Lvl2Btn
             // 
@@ -105,11 +106,12 @@
             this.Lvl2Btn.Name = "Lvl2Btn";
             this.Lvl2Btn.Size = new System.Drawing.Size(306, 61);
             this.Lvl2Btn.TabIndex = 13;
+            this.Lvl2Btn.Tag = "2";
             this.Lvl2Btn.Text = "Level 2\r\n";
             this.Lvl2Btn.UseVisualStyleBackColor = false;
-            this.Lvl2Btn.Click += new System.EventHandler(this.Lvl2Btn_Click);
+            this.Lvl2Btn.Click += new System.EventHandler(this.LvlBtn_Click);
             this.Lvl2Btn.MouseLeave += new System.EventHandler(this.LvlBtn_MouseLeave);
-            this.Lvl2Btn.MouseHover += new System.EventHandler(this.Lvl2Btn_MouseHover);
+            this.Lvl2Btn.MouseHover += new System.EventHandler(this.LvlBtn_MouseHover);
             // 
             // Lvl3Btn
             // 
@@ -126,11 +128,12 @@
             this.Lvl3Btn.Name = "Lvl3Btn";
             this.Lvl3Btn.Size = new System.Drawing.Size(306, 61);
             this.Lvl3Btn.TabIndex = 14;
+            this.Lvl3Btn.Tag = "3";
             this.Lvl3Btn.Text = "Level 3";
             this.Lvl3Btn.UseVisualStyleBackColor = false;
-            this.Lvl3Btn.Click += new System.EventHandler(this.Lvl3Btn_Click);
+            this.Lvl3Btn.Click += new System.EventHandler(this.LvlBtn_Click);
             this.Lvl3Btn.MouseLeave += new System.EventHandler(this.LvlBtn_MouseLeave);
-            this.Lvl3Btn.MouseHover += new System.EventHandler(this.Lvl3Btn_MouseHover);
+            this.Lvl3Btn.MouseHover += new System.EventHandler(this.LvlBtn_MouseHover);
             // 
             // pictureBox2
             // 

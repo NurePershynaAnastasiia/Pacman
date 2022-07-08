@@ -31,40 +31,25 @@ namespace PacmanGUI
             menuForm.Show();
         }
 
-        private void Lvl1Btn_MouseHover(object sender, EventArgs e)
-        {
-            this.pictureBox2.Image = Resources.Lvl1Background;
-        }
-
-        private void Lvl1Btn_Click(object sender, EventArgs e)
+        private void LvlBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            GameForm gameForm = new GameForm(game, 1);
+            Button Btn = (Button)sender;
+            int lvl = Int32.Parse(Btn.Tag.ToString());
+            GameForm gameForm = new GameForm(game, lvl);
             gameForm.Show();
         }
 
-        private void Lvl2Btn_MouseHover(object sender, EventArgs e)
+        private void LvlBtn_MouseHover(object sender, EventArgs e)
         {
-            this.pictureBox2.Image = Resources.Lvl2Background;
-        }
+            Button Btn = (Button)sender;
+            int lvl = Int32.Parse(Btn.Tag.ToString());
 
-        private void Lvl2Btn_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            GameForm gameForm = new GameForm(game, 2);
-            gameForm.Show();
-        }
-
-        private void Lvl3Btn_MouseHover(object sender, EventArgs e)
-        {
-            this.pictureBox2.Image = Resources.Lvl3Background;
-        }
-
-        private void Lvl3Btn_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            GameForm gameForm = new GameForm(game, 3);
-            gameForm.Show();
+            Dictionary <int, Bitmap> backgroundInfo = new Dictionary<int, Bitmap>();
+            backgroundInfo.Add(1, Resources.Lvl1Background);
+            backgroundInfo.Add(2, Resources.Lvl2Background);
+            backgroundInfo.Add(3, Resources.Lvl3Background);
+            this.pictureBox2.Image = backgroundInfo[lvl];
         }
 
         private void LvlBtn_MouseLeave(object sender, EventArgs e)
