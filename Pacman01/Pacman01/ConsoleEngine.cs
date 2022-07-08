@@ -29,25 +29,24 @@ namespace PacmanConsole
                     EnemyMoves.Step(game, enemy, draw);
             }
             if (currentLevel.Field.Score == currentLevel.Points)
-                VictoryAction(game);
+            {
+                Interface.VictoryPrint(game.GeneralScore);
+                ProcessVictory(game);
+            }
             else
                 Interface.GameOverPrint();
         }
 
         public static char GetDirection(ConsoleKeyInfo keyPressed)
         {
-            char dir = 'r'; //direction pacman
-            if (keyPressed.Key == ConsoleKey.W)
-                dir = 'u';
-            if (keyPressed.Key == ConsoleKey.S)
-                dir = 'd';
-            if (keyPressed.Key == ConsoleKey.A)
-                dir = 'l';
-            if (keyPressed.Key == ConsoleKey.D)
-                dir = 'r';
-            if (keyPressed.Key == ConsoleKey.P)
-                dir = 'p';
-            return dir;
+            Dictionary<ConsoleKey, char> directionInfo = new Dictionary<ConsoleKey, char>();
+            directionInfo.Add(ConsoleKey.W, 'u');
+            directionInfo.Add(ConsoleKey.S, 'd');
+            directionInfo.Add(ConsoleKey.A, 'l');
+            directionInfo.Add(ConsoleKey.D, 'r');
+            directionInfo.Add(ConsoleKey.P, 'p');
+
+            return directionInfo[keyPressed.Key];
         }
 
         public static void ShopPurchase(Game game)
@@ -96,9 +95,8 @@ namespace PacmanConsole
             game.Design = chosenDesign;
         }
 
-        public static void VictoryAction(Game game)
+        public static void ProcessVictory(Game game)
         {
-            Interface.VictoryPrint(game.GeneralScore);
             ConsoleKeyInfo keyPressed1 = Console.ReadKey();
             if (keyPressed1.Key == ConsoleKey.N)
             {

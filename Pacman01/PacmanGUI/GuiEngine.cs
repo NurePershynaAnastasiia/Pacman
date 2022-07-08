@@ -51,46 +51,41 @@ namespace PacmanGUI
 
         public static char GetDirection (KeyEventArgs e)
         {
-            switch (e.KeyCode)
-            {
-                case Keys.W: GuiEngine.direction = 'u'; break;
-                case Keys.S: GuiEngine.direction = 'd'; break;
-                case Keys.A: GuiEngine.direction = 'l'; break;
-                case Keys.D: GuiEngine.direction = 'r'; break;
-                case Keys.P: GuiEngine.direction = 'p'; break;
-                default: direction = ' '; break;
-            }
-            return GuiEngine.direction;
+            Dictionary<Keys, char> keyInfo = new Dictionary<Keys, char>();
+            keyInfo.Add(Keys.W, 'u');
+            keyInfo.Add(Keys.S, 'd');
+            keyInfo.Add(Keys.A, 'l');
+            keyInfo.Add(Keys.D, 'r');
+            keyInfo.Add(Keys.P, 'p');
+
+            return keyInfo[e.KeyCode];
         }
 
-        public static Bitmap DefineTexture (Element element)
+        public static Bitmap DefineTexture(Element element)
         {
-            Bitmap currentObj;
-            switch (element.Name())
-            {
-                case "coin": currentObj = Resources.coin; break;
-                case "wall": currentObj = Resources.wall; break;
-                case "pacman": currentObj = DefineTexturePacman(element); break;
-                case "enemy": currentObj = DefineTextureEnemy(element); break;
-                case "cell": currentObj = Resources.cell; break;
-                case "energizer": currentObj = Resources.energizer; break;
-                default: currentObj = Resources.cell; break;
-            }
-            return currentObj;
+            Dictionary<string, Bitmap> textureInfo = new Dictionary<string, Bitmap>();
+            textureInfo.Add("coin", Resources.coin);
+            textureInfo.Add("wall", Resources.wall);
+            textureInfo.Add("cell", Resources.cell);
+            textureInfo.Add("energizer", Resources.energizer);
+            textureInfo.Add("pacman", DefineTexturePacman(element));
+            textureInfo.Add("enemy", DefineTextureEnemy(element));
+
+            return textureInfo[element.Name()];
         }
 
         public static Bitmap DefineTextureEnemy(Element element)
         {
             Bitmap currentObj;
             Enemy enemy = (Enemy)element;
-            switch (element.Direction)
-            {
-                case 'r': currentObj = Resources.enemy_right; break;
-                case 'l': currentObj = Resources.enemy_left; break;
-                case 'u': currentObj = Resources.enemy_up; break;
-                case 'd': currentObj = Resources.enemy_down; break;
-                default: currentObj = Resources.enemy_left; break;
-            }
+
+            Dictionary<char, Bitmap> textureEnemyInfo = new Dictionary<char, Bitmap>();
+            textureEnemyInfo.Add('r', Resources.enemy_right);
+            textureEnemyInfo.Add('l', Resources.enemy_left);
+            textureEnemyInfo.Add('u', Resources.enemy_up); 
+            textureEnemyInfo.Add('d', Resources.enemy_down);
+
+            currentObj = textureEnemyInfo[enemy.Direction];
             if (enemy.isScared || enemy.isEaten)
                 currentObj = Resources.enemy_scared;
             if (enemy.TimeEaten == 18 || enemy.TimeEaten == 19)
