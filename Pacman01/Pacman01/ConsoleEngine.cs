@@ -20,7 +20,8 @@ namespace PacmanConsole
             while (!game.Finished && currentLevel.Field.Score != currentLevel.Points)
             {
                 keyPressed = Console.KeyAvailable == false ? keyPressed : Console.ReadKey(true);//checking if new key is pressed, if not - use the old one (inertia)
-                keyPressed = Pause(keyPressed, game.CurrentLevel.Field); //checking if "P" is pressed => game on Pause
+                if (keyPressed.Key == ConsoleKey.P)
+                    keyPressed = SetPause(keyPressed, game.CurrentLevel.Field); //checking if "P" is pressed => game on Pause
 
                 PacmanMoves.Step(game, GetDirection(keyPressed), draw, drawStats);//pacman makes its step
                 Thread.Sleep(400);
@@ -110,7 +111,7 @@ namespace PacmanConsole
                 ShopPurchase(game);
         }
 
-        public static ConsoleKeyInfo Pause(ConsoleKeyInfo keyPressed, Field field)
+        public static ConsoleKeyInfo SetPause(ConsoleKeyInfo keyPressed, Field field)
         {
             while (keyPressed.Key == ConsoleKey.P)
             {
