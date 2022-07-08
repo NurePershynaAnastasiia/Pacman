@@ -12,51 +12,51 @@ namespace PacmanConsole
     {
         public static void DrawField(string path, int generalScore)
         {
-            FileReader(path);
+            FileReaderPrint(path);
             Console.WriteLine("Score: 0   coins");
             Console.WriteLine("General score: " + generalScore + "   coins");
         }
 
-        public static void GameOver()
+        public static void GameOverPrint()
         {
-            FileReader("game_over.txt");
+            FileReaderPrint("game_over.txt");
         }
 
-        public static void Intro()
+        public static void IntroPrint()
         {
-            FileReader("intro.txt");
+            FileReaderPrint("intro.txt");
             Thread.Sleep(500);
-            FileReader("intro1.txt");
+            FileReaderPrint("intro1.txt");
             Thread.Sleep(1500);
-            FileReader("intro2.txt");
+            FileReaderPrint("intro2.txt");
             Thread.Sleep(1500);
-            FileReader("intro3.txt");
+            FileReaderPrint("intro3.txt");
             Thread.Sleep(1000);
         }
 
-        public static void Instructions()
+        public static void InstructionsPrint()
         {
-            FileReader("instructions.txt");
+            FileReaderPrint("instructions.txt");
             Console.ReadKey();
         }
 
-        public static void Victory(int generalScore)
+        public static void VictoryPrint(int generalScore)
         {
-            FileReader("victory.txt");
+            FileReaderPrint("victory.txt");
             Console.WriteLine("General score: " + generalScore + " coins");
             Thread.Sleep(3000);
         }
 
-        public static void Shop(int generalScore, char design)
+        public static void ShopPrint(int generalScore, char design)
         {
-            FileReader("shop.txt");
+            FileReaderPrint("shop.txt");
             Console.WriteLine("Your money: " + generalScore + " coins");
             Console.WriteLine("Pacman design now: " + design);
         }
 
-        public static int ChooseLevel()
+        public static int ChooseLevelPrint()
         {
-            FileReader("choose_level.txt");
+            FileReaderPrint("choose_level.txt");
             ConsoleKeyInfo keyPressed = Console.ReadKey(true);
             if (keyPressed.Key == ConsoleKey.D1)
                 return 1;
@@ -69,7 +69,7 @@ namespace PacmanConsole
             return 1;
         }
 
-        public static void FileReader(string path)
+        public static void FileReaderPrint(string path)
         {
             Console.Clear();
             using (StreamReader reader = new StreamReader(path))

@@ -13,14 +13,14 @@ namespace PacmanConsole
         {
             Console.CursorVisible = false;
             Game game = new Game(new Level(), 0, 0);//Game = CurrentLevel + Design + GeneralScore + Finished
-            Interface.Intro();
-            Interface.Instructions();
+            Interface.IntroPrint();
+            Interface.InstructionsPrint();
 
             //CodeBase.GameProces.RandomMapGenerator.GenerateMap();
 
             while (!game.Finished)
             {
-                int lvl = Interface.ChooseLevel();
+                int lvl = Interface.ChooseLevelPrint();
                 Console.Clear();
                 game.CurrentLevel = GameFunctions.Initialize(lvl);
                 Interface.DrawField(GameFunctions.LevelInfo(lvl).pathOutput, game.GeneralScore);

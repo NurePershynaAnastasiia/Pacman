@@ -30,7 +30,7 @@ namespace PacmanConsole
             if (currentLevel.Field.Score == currentLevel.Points)
                 VictoryAction(game);
             else
-                Interface.GameOver();
+                Interface.GameOverPrint();
         }
 
         public static char GetDirection(ConsoleKeyInfo keyPressed)
@@ -52,7 +52,7 @@ namespace PacmanConsole
         public static void ShopPurchase(Game game)
         {
             bool done = false;
-            Interface.Shop(game.GeneralScore, DesignInfo(game.Design).appearance);
+            Interface.ShopPrint(game.GeneralScore, DesignInfo(game.Design).appearance);
             int chosenDesign = game.Design;
 
             ConsoleKeyInfo keyPressed;
@@ -72,7 +72,7 @@ namespace PacmanConsole
                         break;
                     case ConsoleKey.D9: //пасхалка на добавление монет
                         game.GeneralScore += 10;
-                        Interface.Shop(game.GeneralScore, DesignInfo(game.Design).appearance);
+                        Interface.ShopPrint(game.GeneralScore, DesignInfo(game.Design).appearance);
                         continue;
                 }
 
@@ -80,13 +80,13 @@ namespace PacmanConsole
                 {
                     done = true;
                     game.GeneralScore -= DesignInfo(chosenDesign).price;
-                    Interface.Shop(game.GeneralScore, DesignInfo(chosenDesign).appearance);
+                    Interface.ShopPrint(game.GeneralScore, DesignInfo(chosenDesign).appearance);
                     Console.WriteLine("Purchase was successfully made. Returning to the game...");
                     Thread.Sleep(3000);
                 }
                 else
                 {
-                    Interface.Shop(game.GeneralScore, DesignInfo(game.Design).appearance);
+                    Interface.ShopPrint(game.GeneralScore, DesignInfo(game.Design).appearance);
                     Console.WriteLine("You do not have enough money for this purchase :(");
                 }
 
@@ -97,7 +97,7 @@ namespace PacmanConsole
 
         public static void VictoryAction(Game game)
         {
-            Interface.Victory(game.GeneralScore);
+            Interface.VictoryPrint(game.GeneralScore);
             ConsoleKeyInfo keyPressed1 = Console.ReadKey();
             if (keyPressed1.Key == ConsoleKey.N)
             {
