@@ -154,9 +154,10 @@
             this.Buy1Btn.Name = "Buy1Btn";
             this.Buy1Btn.Size = new System.Drawing.Size(193, 47);
             this.Buy1Btn.TabIndex = 16;
+            this.Buy1Btn.Tag = "1";
             this.Buy1Btn.Text = "Buy";
             this.Buy1Btn.UseVisualStyleBackColor = false;
-            this.Buy1Btn.Click += new System.EventHandler(this.Buy1Btn_Click);
+            this.Buy1Btn.Click += new System.EventHandler(this.BuyBtn_Click);
             // 
             // label3
             // 
@@ -199,9 +200,10 @@
             this.Buy2Btn.Name = "Buy2Btn";
             this.Buy2Btn.Size = new System.Drawing.Size(193, 47);
             this.Buy2Btn.TabIndex = 19;
+            this.Buy2Btn.Tag = "2";
             this.Buy2Btn.Text = "Buy";
             this.Buy2Btn.UseVisualStyleBackColor = false;
-            this.Buy2Btn.Click += new System.EventHandler(this.Buy2Btn_Click);
+            this.Buy2Btn.Click += new System.EventHandler(this.BuyBtn_Click);
             // 
             // Buy3Btn
             // 
@@ -218,9 +220,10 @@
             this.Buy3Btn.Name = "Buy3Btn";
             this.Buy3Btn.Size = new System.Drawing.Size(193, 47);
             this.Buy3Btn.TabIndex = 20;
+            this.Buy3Btn.Tag = "3";
             this.Buy3Btn.Text = "Buy";
             this.Buy3Btn.UseVisualStyleBackColor = false;
-            this.Buy3Btn.Click += new System.EventHandler(this.Buy3Btn_Click);
+            this.Buy3Btn.Click += new System.EventHandler(this.BuyBtn_Click);
             // 
             // pointsLabel
             // 
@@ -312,7 +315,7 @@
         private Label label4;
         public Button Buy2Btn;
         public Button Buy3Btn;
-        private Label pointsLabel;
+        public Label pointsLabel;
         private Label label5;
         private Label label6;
     }

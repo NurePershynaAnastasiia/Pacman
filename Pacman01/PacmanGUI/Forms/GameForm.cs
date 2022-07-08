@@ -32,9 +32,7 @@ namespace PacmanGUI
 
         public void resetGame()
         {
-            Level currentLevel = GameFunctions.Initialize(lvl);
-            game = new Game(currentLevel, game.GeneralScore, game.Design);//Game = CurrentLevel + Design + GeneralScore + Finished
-
+            game.CurrentLevel = GameFunctions.Initialize(lvl);//Game = CurrentLevel + Design + GeneralScore + Finished
             timerGame.Start();
         }
 
