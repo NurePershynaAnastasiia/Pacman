@@ -21,7 +21,6 @@ namespace PacmanGUI
         {
             InitializeComponent();
             LanguageChanger.Victory(this, game.Language);
-            generalScoreLabel.Text += game.GeneralScore.ToString();
             this.Size = new Size(800, 870);
             generalScoreLabel.Text += game.GeneralScore.ToString();
             this.game = game;

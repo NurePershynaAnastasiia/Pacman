@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InstructionsForm));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.titlePictureBox = new System.Windows.Forms.PictureBox();
             this.BackBtn = new System.Windows.Forms.Button();
             this.labelPacman = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -44,7 +44,7 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.labelWall = new System.Windows.Forms.Label();
             this.labelEnergizer2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.titlePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -53,16 +53,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // titlePictureBox
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.BackgroundImage = global::PacmanGUI.Resources.textInstructions;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(60, 57);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(664, 89);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.titlePictureBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.titlePictureBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.titlePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.titlePictureBox.Location = new System.Drawing.Point(60, 57);
+            this.titlePictureBox.Name = "titlePictureBox";
+            this.titlePictureBox.Size = new System.Drawing.Size(664, 89);
+            this.titlePictureBox.TabIndex = 5;
+            this.titlePictureBox.TabStop = false;
             // 
             // BackBtn
             // 
@@ -80,8 +80,8 @@
             this.BackBtn.Size = new System.Drawing.Size(245, 57);
             this.BackBtn.TabIndex = 9;
             this.BackBtn.Text = "Back";
-            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             this.BackBtn.UseVisualStyleBackColor = false;
+            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
             // labelPacman
             // 
@@ -92,7 +92,7 @@
             this.labelPacman.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelPacman.Location = new System.Drawing.Point(170, 178);
             this.labelPacman.Name = "labelPacman";
-            this.labelPacman.Size = new System.Drawing.Size(388, 42);
+            this.labelPacman.Size = new System.Drawing.Size(360, 40);
             this.labelPacman.TabIndex = 10;
             this.labelPacman.Text = "PacMan (player) controlled \r\nwith WASD keys";
             // 
@@ -127,7 +127,7 @@
             this.labelGhost.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelGhost.Location = new System.Drawing.Point(170, 274);
             this.labelGhost.Name = "labelGhost";
-            this.labelGhost.Size = new System.Drawing.Size(192, 63);
+            this.labelGhost.Size = new System.Drawing.Size(178, 60);
             this.labelGhost.TabIndex = 13;
             this.labelGhost.Text = "Ghost (enemy)\r\nwhich PacMan \r\nhas to avoid";
             // 
@@ -151,7 +151,7 @@
             this.labelGhostScared.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelGhostScared.Location = new System.Drawing.Point(530, 274);
             this.labelGhostScared.Name = "labelGhostScared";
-            this.labelGhostScared.Size = new System.Drawing.Size(178, 63);
+            this.labelGhostScared.Size = new System.Drawing.Size(165, 60);
             this.labelGhostScared.TabIndex = 15;
             this.labelGhostScared.Text = "Scared Ghost\r\n(harmless\r\nenemy)";
             // 
@@ -176,7 +176,7 @@
             this.labelEnergizer1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelEnergizer1.Location = new System.Drawing.Point(170, 382);
             this.labelEnergizer1.Name = "labelEnergizer1";
-            this.labelEnergizer1.Size = new System.Drawing.Size(486, 42);
+            this.labelEnergizer1.Size = new System.Drawing.Size(451, 40);
             this.labelEnergizer1.TabIndex = 17;
             this.labelEnergizer1.Text = "Energizer which PacMan can eat to \r\nturn Ghosts into Scared mode\r\n";
             // 
@@ -201,7 +201,7 @@
             this.labelCoin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelCoin.Location = new System.Drawing.Point(170, 526);
             this.labelCoin.Name = "labelCoin";
-            this.labelCoin.Size = new System.Drawing.Size(206, 84);
+            this.labelCoin.Size = new System.Drawing.Size(191, 80);
             this.labelCoin.TabIndex = 19;
             this.labelCoin.Text = "Coin, which \r\nPacMan has to \r\neat to \r\nearn Points";
             // 
@@ -226,7 +226,7 @@
             this.labelWall.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelWall.Location = new System.Drawing.Point(516, 509);
             this.labelWall.Name = "labelWall";
-            this.labelWall.Size = new System.Drawing.Size(192, 105);
+            this.labelWall.Size = new System.Drawing.Size(178, 100);
             this.labelWall.TabIndex = 21;
             this.labelWall.Text = "Wall\r\n(impenetrable\r\nobstacle for\r\nPacMan and\r\nEnemies)";
             // 
@@ -264,7 +264,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.labelPacman);
             this.Controls.Add(this.BackBtn);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.titlePictureBox);
             this.Controls.Add(this.pictureBox6);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -272,7 +272,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InstructionsForm";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.InstructionsForm_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.titlePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -285,7 +285,7 @@
         }
 
         #endregion
-        public PictureBox pictureBox1;
+        public PictureBox titlePictureBox;
         public Button BackBtn;
         public Label labelPacman;
         public PictureBox pictureBox2;

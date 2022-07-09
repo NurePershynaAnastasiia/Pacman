@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShopForm));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.titlePictureBox = new System.Windows.Forms.PictureBox();
             this.BackBtn = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -45,22 +45,22 @@
             this.Satan1Label = new System.Windows.Forms.Label();
             this.Satan2Label = new System.Windows.Forms.Label();
             this.PointsNumberLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.titlePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // titlePictureBox
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.BackgroundImage = global::PacmanGUI.Resources.textShop;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(213, 45);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(332, 101);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.titlePictureBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.titlePictureBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.titlePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.titlePictureBox.Location = new System.Drawing.Point(193, 38);
+            this.titlePictureBox.Name = "titlePictureBox";
+            this.titlePictureBox.Size = new System.Drawing.Size(329, 98);
+            this.titlePictureBox.TabIndex = 0;
+            this.titlePictureBox.TabStop = false;
             // 
             // BackBtn
             // 
@@ -299,14 +299,14 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.BackBtn);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.titlePictureBox);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ShopForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ShopForm";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ShopForm_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.titlePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -317,7 +317,7 @@
 
         #endregion
 
-        public PictureBox pictureBox1;
+        public PictureBox titlePictureBox;
         public Button BackBtn;
         public PictureBox pictureBox2;
         public PictureBox pictureBox3;

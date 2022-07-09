@@ -132,8 +132,9 @@
             // EngBtn
             // 
             this.EngBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.EngBtn.BackColor = System.Drawing.Color.Tomato;
+            this.EngBtn.BackColor = System.Drawing.Color.Firebrick;
             this.EngBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EngBtn.Enabled = false;
             this.EngBtn.FlatAppearance.BorderColor = System.Drawing.Color.Maroon;
             this.EngBtn.FlatAppearance.BorderSize = 3;
             this.EngBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Firebrick;

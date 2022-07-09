@@ -123,16 +123,6 @@ namespace PacmanGUI {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap chooseLevel {
-            get {
-                object obj = ResourceManager.GetObject("chooseLevel", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap coin {
             get {
                 object obj = ResourceManager.GetObject("coin", resourceCulture);
@@ -206,16 +196,6 @@ namespace PacmanGUI {
         internal static System.Drawing.Bitmap energizer {
             get {
                 object obj = ResourceManager.GetObject("energizer", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap GameOver {
-            get {
-                object obj = ResourceManager.GetObject("GameOver", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -333,9 +313,9 @@ namespace PacmanGUI {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap textInstructions {
+        internal static System.Drawing.Bitmap textChooseLevelEng {
             get {
-                object obj = ResourceManager.GetObject("textInstructions", resourceCulture);
+                object obj = ResourceManager.GetObject("textChooseLevelEng", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -343,9 +323,9 @@ namespace PacmanGUI {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap textPacman {
+        internal static System.Drawing.Bitmap textChooseLevelUkr {
             get {
-                object obj = ResourceManager.GetObject("textPacman", resourceCulture);
+                object obj = ResourceManager.GetObject("textChooseLevelUkr", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -353,9 +333,9 @@ namespace PacmanGUI {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap textShop {
+        internal static System.Drawing.Bitmap textGameOverEng {
             get {
-                object obj = ResourceManager.GetObject("textShop", resourceCulture);
+                object obj = ResourceManager.GetObject("textGameOverEng", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -363,9 +343,69 @@ namespace PacmanGUI {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Victory {
+        internal static System.Drawing.Bitmap textGameOverUkr {
             get {
-                object obj = ResourceManager.GetObject("Victory", resourceCulture);
+                object obj = ResourceManager.GetObject("textGameOverUkr", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap textInstructionsEng {
+            get {
+                object obj = ResourceManager.GetObject("textInstructionsEng", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap textInstructionsUkr {
+            get {
+                object obj = ResourceManager.GetObject("textInstructionsUkr", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap textShopEng {
+            get {
+                object obj = ResourceManager.GetObject("textShopEng", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap textShopUkr {
+            get {
+                object obj = ResourceManager.GetObject("textShopUkr", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap textVictoryEng {
+            get {
+                object obj = ResourceManager.GetObject("textVictoryEng", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap textVictoryUkr {
+            get {
+                object obj = ResourceManager.GetObject("textVictoryUkr", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

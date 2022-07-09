@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VictoryForm));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.titlePictureBox = new System.Windows.Forms.PictureBox();
             this.ExitBtn = new System.Windows.Forms.Button();
             this.BackToMenuBtn = new System.Windows.Forms.Button();
             this.generalScoreLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.titlePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -50,17 +50,17 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox2
+            // titlePictureBox
             // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox2.Image = global::PacmanGUI.Resources.Victory;
-            this.pictureBox2.Location = new System.Drawing.Point(187, 238);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(433, 126);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.titlePictureBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.titlePictureBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.titlePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.titlePictureBox.Location = new System.Drawing.Point(187, 238);
+            this.titlePictureBox.Name = "titlePictureBox";
+            this.titlePictureBox.Size = new System.Drawing.Size(433, 126);
+            this.titlePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.titlePictureBox.TabIndex = 1;
+            this.titlePictureBox.TabStop = false;
             // 
             // ExitBtn
             // 
@@ -123,7 +123,7 @@
             this.Controls.Add(this.generalScoreLabel);
             this.Controls.Add(this.BackToMenuBtn);
             this.Controls.Add(this.ExitBtn);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.titlePictureBox);
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -132,7 +132,7 @@
             this.Text = "Victory";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.VictoryForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.titlePictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,10 +140,10 @@
 
         #endregion
 
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
-        private Button ExitBtn;
-        private Button BackToMenuBtn;
-        private Label generalScoreLabel;
+        public PictureBox pictureBox1;
+        public PictureBox titlePictureBox;
+        public Button ExitBtn;
+        public Button BackToMenuBtn;
+        public Label generalScoreLabel;
     }
 }

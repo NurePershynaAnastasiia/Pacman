@@ -59,12 +59,20 @@ namespace PacmanGUI
         {
             game.Language = "eng";
             LanguageChanger.Menu(this, "eng");
+            EngBtn.Enabled = false;
+            EngBtn.BackColor = Color.Firebrick;
+            UkrBtn.BackColor = Color.Tomato;
+            UkrBtn.Enabled = true;
         }
 
         private void UkrBtn_Click(object sender, EventArgs e)
         {
             game.Language = "ukr";
             LanguageChanger.Menu(this, "ukr");
+            EngBtn.Enabled = true;
+            UkrBtn.BackColor = Color.Firebrick;
+            EngBtn.BackColor = Color.Tomato;
+            UkrBtn.Enabled = false;
         }
     }
 }

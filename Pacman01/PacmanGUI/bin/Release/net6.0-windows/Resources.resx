@@ -136,9 +136,6 @@
   <data name="cell" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\cell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="chooseLevel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\chooseLevel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="coin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\coin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -162,9 +159,6 @@
   </data>
   <data name="energizer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\energizer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="GameOver" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\GameOver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gameOverGif" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\ezgif.com-gif-maker (4).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,17 +193,35 @@
   <data name="sadFace" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\ezgif.com-gif-maker (3).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="textInstructions" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\textInstructions.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="textChooseLevelEng" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\textChooseLevelEng.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="textPacman" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\textPacman.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="textChooseLevelUkr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\textChooseLevelUkr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="textShop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\textShop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="textGameOverEng" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\textGameOverEng.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Victory" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\Victory.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="textGameOverUkr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\textGameOverUkr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="textInstructionsEng" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\textInstructionsEng.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="textInstructionsUkr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\textInstructionsUkr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="textShopEng" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\textShopEng.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="textShopUkr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\textShopUkr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="textVictoryEng" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\textVictoryEng.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="textVictoryUkr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\textVictoryUkr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="victoryGif" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\ezgif.com-gif-maker (2).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
