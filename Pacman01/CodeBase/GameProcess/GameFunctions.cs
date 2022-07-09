@@ -127,5 +127,20 @@ namespace CodeBase.GameProcess
 
             return designInfo[key];
         }
+
+        public static void SpawnBonus (Field field, Draw Draw)
+        {
+            Random rnd = new Random();
+            if (rnd.Next() % 5 != 0)
+                return;
+            int y = rnd.Next(1, field.Height);
+            int x = rnd.Next(1, field.Width);
+
+            if (field[y, x].Name() == "cell")
+            {
+                field[y, x] = new Bonus(y, x);
+                Draw(new Bonus(y, x));
+            }
+        }
     }
 }

@@ -44,6 +44,7 @@ namespace PacmanConsole
                 textureInfo.Add("coin", '.');
                 textureInfo.Add("wall", '#');
                 textureInfo.Add("energizer", '@');
+                textureInfo.Add("bonus", '0');
 
                 Console.Write(textureInfo[name]);
             }

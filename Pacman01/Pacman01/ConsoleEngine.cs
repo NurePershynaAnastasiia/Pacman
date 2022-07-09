@@ -22,6 +22,7 @@ namespace PacmanConsole
                 if (keyPressed.Key == ConsoleKey.P)
                     keyPressed = SetPause(keyPressed, game.CurrentLevel.Field); //checking if "P" is pressed => game on Pause
 
+                GameFunctions.SpawnBonus(currentLevel.Field, draw);
                 PacmanMoves.Step(game, GetDirection(keyPressed), draw, drawStats);//pacman makes its step
                 Thread.Sleep(400);
                 foreach (Enemy enemy in currentLevel.Enemies) //all the enemies make their step

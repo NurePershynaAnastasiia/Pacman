@@ -25,6 +25,7 @@ namespace PacmanGUI
             else
             {
                 gameForm.pauseLabel.Hide();
+                GameFunctions.SpawnBonus(currentLevel.Field, draw);
                 PacmanMoves.Step(game, keyPressed, draw, drawStats);//pacman makes its step
                 foreach (Enemy enemy in currentLevel.Enemies) //all the enemies make their step
                     EnemyMoves.Step(game, enemy, draw);
@@ -87,6 +88,7 @@ namespace PacmanGUI
             textureInfo.Add("wall", Resources.wall);
             textureInfo.Add("cell", Resources.cell);
             textureInfo.Add("energizer", Resources.energizer);
+            textureInfo.Add("bonus", Resources.bonus);
             if (element.Name() == "pacman")
                 textureInfo.Add("pacman", DefineTexturePacman(element));
             if (element.Name() == "enemy")
