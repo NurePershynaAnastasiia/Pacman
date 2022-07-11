@@ -34,6 +34,7 @@ namespace PacmanGUI
         public void resetGame()
         {
             game.CurrentLevel = GameFunctions.Initialize(lvl);//Game = CurrentLevel + Design + GeneralScore + Finished
+            game.CurrentLevel.Pacman.Design = game.Design;
             timerGame.Start();
         }
 
