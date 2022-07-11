@@ -17,32 +17,6 @@ namespace CodeBase.GameProcess
         public delegate void Draw(Element element);
         public delegate void DrawStats(Game game);
 
-       /* 
-        public static char[,] GetArray(int lvl)
-        {
-            char[,] Map = new char[40, 40];
-            int i = 0;
-            var assembly = Assembly.GetExecutingAssembly();
-            using (Stream stream = assembly.GetManifestResourceStream("CodeBase.Resources." + Utility.LevelInfo(lvl).path))
-            using (StreamReader reader = new StreamReader(stream))
-            {
-                string line = reader.ReadLine();
-                //width = line.Length;
-                while (line != null)
-                {
-                    for (int j = 0; j < line.Length; j++)
-                    {
-                        Map[i, j] = line[j];
-                    }
-                    i++;
-                    line = reader.ReadLine();
-                }
-                //height = i;
-            }
-            return Map;
-        }
-       */
-
         public static Level Initialize(int lvl)
         {
             Level currentLevel = new Level();
@@ -65,8 +39,8 @@ namespace CodeBase.GameProcess
                     {
                         if (line[j] == '#')
                         {
-                            field[i, j] = new Wall();
-                            fieldEnemies[i, j] = new Wall();
+                            field[i, j] = new Wall(i, j);
+                            fieldEnemies[i, j] = new Wall(i, j);
                         }
                         if (line[j] == '.')
                         {

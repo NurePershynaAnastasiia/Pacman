@@ -11,6 +11,11 @@ namespace CodeBase.Elements
 {
     public class Wall : Element
     {
+        public Wall (int x, int y)
+        {
+            this.X = x;
+            this.Y = y;
+        }
         public override int X { get; set; }
 
         public override int Y { get; set; }
