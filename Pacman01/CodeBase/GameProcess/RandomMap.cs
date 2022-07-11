@@ -17,8 +17,8 @@ namespace CodeBase.GameProcess
         public static Field GenerateGrid()
         {
             Random rnd = new Random();
-            int height = rnd.Next(10, 20);
-            Field field = new Field(height + 4, height);
+            int height = rnd.Next(10, 15);
+            Field field = new Field(height, height + 10);
 
             for (int i = 0; i < field.Height; i++)
             {
@@ -69,7 +69,7 @@ namespace CodeBase.GameProcess
             return false;
         }
 
-        public static Coords GetDirection(int direction)
+        public static Coords GetDirectionCell(int direction)
         {
             Dictionary<int, Coords> getDirection = new Dictionary<int, Coords>();
             getDirection.Add(1, new Coords(-2, 0));
@@ -99,7 +99,7 @@ namespace CodeBase.GameProcess
             do
             {
                 direction = random.Next(1, 5);
-            } while (IsUnvisited(new Coords(newCell.x + GetDirection(direction).x, newCell.y + GetDirection(direction).y), field, fieldVisited) == false);
+            } while (IsUnvisited(new Coords(newCell.x + GetDirectionCell(direction).x, newCell.y + GetDirectionCell(direction).y), field, fieldVisited) == false);
 
             return direction;
         }
@@ -127,8 +127,8 @@ namespace CodeBase.GameProcess
                     int cellBetweenX = x + GetDirectionWall(direction).x;
                     int cellBetweenY = y + GetDirectionWall(direction).y;
                     field[cellBetweenX, cellBetweenY] = new Cell(cellBetweenX, cellBetweenY);
-                    x += GetDirection(direction).x;
-                    y += GetDirection(direction).y;
+                    x += GetDirectionCell(direction).x;
+                    y += GetDirectionCell(direction).y;
                     unvisitedCells--;
                 }
                 else if (cellStack.Count > 0)
@@ -210,7 +210,7 @@ namespace CodeBase.GameProcess
 
         public static Field GenerateElements(Field field)
         {
-            int enemiesNumber = field.Width / 5 + ((field.Width % 5 == 0) ? 0 : 1), energizersNumber = enemiesNumber + 1;
+            int enemiesNumber = field.Width / 5, energizersNumber = enemiesNumber + 1;
             int currentPacmanNumber = 0, currentEnemiesNumber = 0, currentEnergizersNumber = 0;
             Random random = new Random();
             for (int i = 0; i < field.Height; i++)
@@ -219,18 +219,18 @@ namespace CodeBase.GameProcess
                 {
                     if (field[i, j] is Cell)
                     {
-                        int randomNow = random.Next(1, 100);
+                        int randomNow = random.Next(1, 200);
                         switch (randomNow)
                         {
                             case 1:
-                                if (currentPacmanNumber == 0)
+                                if (currentPacmanNumber == 0 && i < 5)
                                 {
                                     currentPacmanNumber++;
                                     field[i, j] = new Pacman(i, j, 0);
                                 }
                                 break;
                             case 2:
-                                if (currentEnemiesNumber < enemiesNumber)
+                                if (currentEnemiesNumber < enemiesNumber && i > 5)
                                 {
                                     currentEnemiesNumber++;
                                     field[i, j] = new Enemy(i, j);
@@ -247,13 +247,15 @@ namespace CodeBase.GameProcess
                                 field[i, j] = new Coin(i, j);
                                 break;
                         }
+                        if (randomNow > 3)
+                            field[i, j] = new Coin(i, j);
                     }
                 }
             }
             while (currentPacmanNumber < 1)
             {
-                int randomX = random.Next(1, field.Height - 1);
-                int randomY = random.Next(1, field.Width - 1);
+                int randomX = random.Next(1, 5);
+                int randomY = random.Next(1, 5);
                 if (field[randomX, randomY] is Coin)
                 {
                     currentPacmanNumber++;

@@ -39,6 +39,7 @@ namespace PacmanGUI
             Translation.Add("Lvl1Btn", new Languages("Рівень 1", "Level 1"));
             Translation.Add("Lvl2Btn", new Languages("Рівень 2", "Level 2"));
             Translation.Add("Lvl3Btn", new Languages("Рівень 3", "Level 3"));
+            Translation.Add("RandomMapBtn", new Languages("Рандомна мапа", "Random map"));
 
             if (lang == "eng")
                 return Translation[name].EnVer;

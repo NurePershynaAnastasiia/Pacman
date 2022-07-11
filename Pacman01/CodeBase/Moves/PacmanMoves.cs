@@ -23,7 +23,7 @@ namespace CodeBase.Moves
 
         public static void Step(Game game, char dir, GameFunctions.Draw draw, GameFunctions.DrawStats drawStats)
         {
-            GameProcess.Level currentLevel = game.CurrentLevel;
+            Level currentLevel = game.CurrentLevel;
             Pacman pacman = currentLevel.Pacman;
             pacman.Direction = dir;
             FieldScared(currentLevel.Field);

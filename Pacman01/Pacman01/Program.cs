@@ -10,8 +10,6 @@ namespace PacmanConsole
     {
         static void Main(string[] args)
         {
-            RandomMap.GenerateLabyrinth();
-
             Console.CursorVisible = false;
             Game game = new Game(new Level(), 0, 0, "eng");//Game = CurrentLevel + Design + GeneralScore + Finished
             Interface.IntroPrint();

@@ -35,6 +35,7 @@
             this.Lvl2Btn = new System.Windows.Forms.Button();
             this.Lvl3Btn = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.RandomMapBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.titlePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -50,7 +51,7 @@
             this.BackBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.BackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackBtn.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BackBtn.Location = new System.Drawing.Point(212, 559);
+            this.BackBtn.Location = new System.Drawing.Point(195, 598);
             this.BackBtn.Name = "BackBtn";
             this.BackBtn.Size = new System.Drawing.Size(268, 62);
             this.BackBtn.TabIndex = 10;
@@ -147,6 +148,26 @@
             this.pictureBox2.TabIndex = 15;
             this.pictureBox2.TabStop = false;
             // 
+            // RandomMapBtn
+            // 
+            this.RandomMapBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.RandomMapBtn.BackColor = System.Drawing.Color.Tomato;
+            this.RandomMapBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RandomMapBtn.FlatAppearance.BorderColor = System.Drawing.Color.Maroon;
+            this.RandomMapBtn.FlatAppearance.BorderSize = 3;
+            this.RandomMapBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Firebrick;
+            this.RandomMapBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Salmon;
+            this.RandomMapBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RandomMapBtn.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.RandomMapBtn.Location = new System.Drawing.Point(586, 522);
+            this.RandomMapBtn.Name = "RandomMapBtn";
+            this.RandomMapBtn.Size = new System.Drawing.Size(306, 61);
+            this.RandomMapBtn.TabIndex = 16;
+            this.RandomMapBtn.Tag = "4";
+            this.RandomMapBtn.Text = "Random Map";
+            this.RandomMapBtn.UseVisualStyleBackColor = false;
+            this.RandomMapBtn.Click += new System.EventHandler(this.LvlBtn_Click);
+            // 
             // ChooseLevelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -154,6 +175,7 @@
             this.BackgroundImage = global::PacmanGUI.Resources.bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1157, 831);
+            this.Controls.Add(this.RandomMapBtn);
             this.Controls.Add(this.Lvl3Btn);
             this.Controls.Add(this.Lvl2Btn);
             this.Controls.Add(this.Lvl1Btn);
@@ -181,5 +203,6 @@
         public Button Lvl2Btn;
         public Button Lvl3Btn;
         public PictureBox pictureBox2;
+        public Button RandomMapBtn;
     }
 }
