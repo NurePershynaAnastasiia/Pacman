@@ -50,13 +50,14 @@ namespace PacmanGUI
         {
             Dictionary<string, Languages> Translation = new Dictionary<string, Languages>();
             Translation.Add("BackBtn", new Languages("Назад", "Back"));
-            Translation.Add("labelPacman", new Languages("Пакмен (гравець), що\r\nконтролюється кнопками WASD", "PacMan (player) controlled \r\nwith WASD keys"));
+            Translation.Add("labelPacman", new Languages("Пакмен (гравець),\r\nщо контролюється\r\nкнопками WASD", "PacMan (player)\r\ncontrolled with\r\nWASD keys"));
             Translation.Add("labelGhost", new Languages("Привид (ворог),\r\nякого Пакмен\r\nмає уникати", "Ghost (enemy)\r\nwhich PacMan \r\nhas to avoid"));
             Translation.Add("labelGhostScared", new Languages("Наляканий Привид\r\n(нешкідливий\r\nворог)", "Scared Ghost\r\n(harmless\r\nenemy)"));
             Translation.Add("labelEnergizer1", new Languages("Енерджайзер, який Пакман може з'їсти,\r\nщоб Вороги перейшли в Наляканий Режим", "Energizer which PacMan can eat to \r\nturn Ghosts into Scared mode\r\n"));
             Translation.Add("labelEnergizer2", new Languages("Коли Привиди в Наляканому Режимі,\r\nПакмен може \"з'їсти\" іх, щоб\r\nнейтралізувати на деякий час ", "When Ghosts are in Scared mode,\r\nPacMan can \"eat\" them to neutralize\r\nfor some time"));
             Translation.Add("labelCoin", new Languages("Монета, яку\r\nПакмен має з'їсти,\r\nщоб підвищити\r\nрахунок", "Coin, which \r\nPacMan has to \r\neat to \r\nearn Points"));
             Translation.Add("labelWall", new Languages("Стіна\r\n(непроникна\r\nперешкода\r\nдля Пакмена\r\nта Ворогів", "Wall\r\n(impenetrable\r\nobstacle for\r\nPacMan and\r\nEnemies)"));
+            Translation.Add("labelBonus", new Languages("Бонус (якщо з'їсти,\r\nдодає 10 монет\r\nдо Загального\r\nРахунку)", "Bonus (adds \r\n10 points to \r\nGeneral Score\r\nif eaten)"));
 
 
             if (lang == "eng")

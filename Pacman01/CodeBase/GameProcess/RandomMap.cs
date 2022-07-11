@@ -210,7 +210,7 @@ namespace CodeBase.GameProcess
 
         public static Field GenerateElements(Field field)
         {
-            int enemiesNumber = field.Width / 5, energizersNumber = enemiesNumber + 1;
+            int enemiesNumber = field.Width / 6, energizersNumber = enemiesNumber + 1;
             int currentPacmanNumber = 0, currentEnemiesNumber = 0, currentEnergizersNumber = 0;
             Random random = new Random();
             for (int i = 0; i < field.Height; i++)

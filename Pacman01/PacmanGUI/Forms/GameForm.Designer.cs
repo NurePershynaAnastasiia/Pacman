@@ -36,8 +36,6 @@
             this.generalScoreLabel = new System.Windows.Forms.Label();
             this.pauseLabel = new System.Windows.Forms.Label();
             this.PressPauseLabel = new System.Windows.Forms.Label();
-            this.scoreNumberLabel = new System.Windows.Forms.Label();
-            this.generalScoreNumberLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxField)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,32 +109,6 @@
             this.PressPauseLabel.TabIndex = 6;
             this.PressPauseLabel.Text = "Press P to Pause";
             // 
-            // scoreNumberLabel
-            // 
-            this.scoreNumberLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.scoreNumberLabel.AutoSize = true;
-            this.scoreNumberLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.scoreNumberLabel.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.scoreNumberLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.scoreNumberLabel.Location = new System.Drawing.Point(329, 579);
-            this.scoreNumberLabel.Name = "scoreNumberLabel";
-            this.scoreNumberLabel.Size = new System.Drawing.Size(56, 65);
-            this.scoreNumberLabel.TabIndex = 7;
-            this.scoreNumberLabel.Text = "0";
-            // 
-            // generalScoreNumberLabel
-            // 
-            this.generalScoreNumberLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.generalScoreNumberLabel.AutoSize = true;
-            this.generalScoreNumberLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.generalScoreNumberLabel.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.generalScoreNumberLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.generalScoreNumberLabel.Location = new System.Drawing.Point(535, 658);
-            this.generalScoreNumberLabel.Name = "generalScoreNumberLabel";
-            this.generalScoreNumberLabel.Size = new System.Drawing.Size(56, 65);
-            this.generalScoreNumberLabel.TabIndex = 8;
-            this.generalScoreNumberLabel.Text = "0";
-            // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -144,8 +116,6 @@
             this.BackgroundImage = global::PacmanGUI.Resources.bgGameGif;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1284, 831);
-            this.Controls.Add(this.generalScoreNumberLabel);
-            this.Controls.Add(this.scoreNumberLabel);
             this.Controls.Add(this.PressPauseLabel);
             this.Controls.Add(this.pauseLabel);
             this.Controls.Add(this.generalScoreLabel);
@@ -171,7 +141,5 @@
         public Label generalScoreLabel;
         public Label pauseLabel;
         public Label PressPauseLabel;
-        public Label scoreNumberLabel;
-        public Label generalScoreNumberLabel;
     }
 }
