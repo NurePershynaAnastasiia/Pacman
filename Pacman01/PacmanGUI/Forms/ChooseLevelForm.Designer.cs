@@ -82,7 +82,7 @@
             this.Lvl1Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Salmon;
             this.Lvl1Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Lvl1Btn.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Lvl1Btn.Location = new System.Drawing.Point(586, 192);
+            this.Lvl1Btn.Location = new System.Drawing.Point(684, 189);
             this.Lvl1Btn.Name = "Lvl1Btn";
             this.Lvl1Btn.Size = new System.Drawing.Size(306, 61);
             this.Lvl1Btn.TabIndex = 12;
@@ -104,7 +104,7 @@
             this.Lvl2Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Salmon;
             this.Lvl2Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Lvl2Btn.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Lvl2Btn.Location = new System.Drawing.Point(586, 296);
+            this.Lvl2Btn.Location = new System.Drawing.Point(684, 296);
             this.Lvl2Btn.Name = "Lvl2Btn";
             this.Lvl2Btn.Size = new System.Drawing.Size(306, 61);
             this.Lvl2Btn.TabIndex = 13;
@@ -126,7 +126,7 @@
             this.Lvl3Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Salmon;
             this.Lvl3Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Lvl3Btn.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Lvl3Btn.Location = new System.Drawing.Point(586, 416);
+            this.Lvl3Btn.Location = new System.Drawing.Point(684, 414);
             this.Lvl3Btn.Name = "Lvl3Btn";
             this.Lvl3Btn.Size = new System.Drawing.Size(306, 61);
             this.Lvl3Btn.TabIndex = 14;
@@ -159,7 +159,7 @@
             this.RandomMapBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Salmon;
             this.RandomMapBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RandomMapBtn.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.RandomMapBtn.Location = new System.Drawing.Point(586, 522);
+            this.RandomMapBtn.Location = new System.Drawing.Point(684, 516);
             this.RandomMapBtn.Name = "RandomMapBtn";
             this.RandomMapBtn.Size = new System.Drawing.Size(306, 61);
             this.RandomMapBtn.TabIndex = 16;

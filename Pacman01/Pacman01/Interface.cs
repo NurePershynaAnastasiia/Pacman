@@ -5,16 +5,64 @@ using System.Text;
 using System.Threading.Tasks;
 using CodeBase.GameProcess;
 using CodeBase.Elements;
+using static CodeBase.Moves.CommonMoves;
 
 namespace PacmanConsole
 {
     class Interface
     {
-        public static void DrawField(string path, int generalScore)
+        public static void DrawField(Field field, Field fieldEnemies, GameFunctions.Draw Draw, int generalScore)
         {
-            FileReaderPrint(path);
+            for (int i = 0; i < field.Height; i++)
+            {
+                for (int j = 0; j < field.Width; j++)
+                {
+                    if (fieldEnemies[i, j] is Enemy)
+                        Draw(fieldEnemies[i, j]);
+                    else if (field[i, j] is Wall)
+                        DrawWall(field, (Wall)field[i, j]);
+                    else
+                        Draw(field[i, j]);
+                }
+                Console.WriteLine();
+            }
+            //FileReaderPrint(path);
+            Console.WriteLine();
             Console.WriteLine("Score: 0   coins");
             Console.WriteLine("General score: " + generalScore + "   coins");
+        }
+
+        public static void DrawWall(Field field, Wall wall)
+        {
+            string resString = "";
+            if (RandomMap.InBounds(new Coords(wall.X - 1, wall.Y), field) && field[wall.X - 1, wall.Y] is Wall)
+                resString += "1";
+            if (RandomMap.InBounds(new Coords(wall.X + 1, wall.Y), field) && field[wall.X + 1, wall.Y] is Wall)
+                resString += "2";
+            if (RandomMap.InBounds(new Coords(wall.X , wall.Y + 1), field) && field[wall.X, wall.Y + 1] is Wall)
+                resString += "3";
+            if (RandomMap.InBounds(new Coords(wall.X, wall.Y - 1), field) && field[wall.X, wall.Y - 1] is Wall)
+                resString += "4";
+
+            Dictionary<string, char> wallTexture = new Dictionary<string, char>();
+            wallTexture.Add("", '═');
+            wallTexture.Add("1", '║');
+            wallTexture.Add("2", '║');
+            wallTexture.Add("3", '═');
+            wallTexture.Add("4", '═');
+            wallTexture.Add("34", '═');
+            wallTexture.Add("12", '║');
+            wallTexture.Add("23", '╔');
+            wallTexture.Add("24", '╗');
+            wallTexture.Add("13", '╚');
+            wallTexture.Add("14", '╝');
+            wallTexture.Add("134", '╩');
+            wallTexture.Add("123", '╠');
+            wallTexture.Add("124", '╣');
+            wallTexture.Add("234", '╦');
+            wallTexture.Add("1234", '╬');
+
+            Console.Write(wallTexture[resString]);
         }
 
         public static void GameOverPrint()

@@ -150,19 +150,6 @@ namespace CodeBase.GameProcess
             field = RemoveDeadEnds(field);
             field = GenerateElements(field);
 
-            for (int i = 0; i < field.Height; i++)
-            {
-                for (int j = 0; j < field.Width; j++)
-                {
-                    if (field[i, j] is Cell) Console.Write(' ');
-                    if (field[i, j] is Wall) Console.Write('#');
-                    if (field[i, j] is Coin) Console.Write('.');
-                    if (field[i, j] is Enemy) Console.Write('A');
-                    if (field[i, j] is Pacman) Console.Write('o');
-                    if (field[i, j] is Energizer) Console.Write('@');
-                }
-                Console.WriteLine();
-            }
             return field;
         }
 

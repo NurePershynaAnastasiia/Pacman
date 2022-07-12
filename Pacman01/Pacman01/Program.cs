@@ -15,14 +15,12 @@ namespace PacmanConsole
             Interface.IntroPrint();
             Interface.InstructionsPrint();
 
-            //CodeBase.GameProces.RandomMapGenerator.GenerateMap();
-
             while (!game.Finished)
             {
                 int lvl = Interface.ChooseLevelPrint();
                 Console.Clear();
                 game.CurrentLevel = GameFunctions.Initialize(lvl);
-                Interface.DrawField(GameFunctions.LevelInfo(lvl).pathOutput, game.GeneralScore);
+                Interface.DrawField(game.CurrentLevel.Field, game.CurrentLevel.FieldEnemies, Draw, game.GeneralScore);
 
                 ConsoleEngine.Playing(game, Draw, DrawStats);
             }
