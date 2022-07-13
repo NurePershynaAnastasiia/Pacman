@@ -133,9 +133,18 @@ namespace CodeBase.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream pacman_eatghost {
+        public static System.IO.UnmanagedMemoryStream pacman_energizer {
             get {
-                return ResourceManager.GetStream("pacman_eatghost", resourceCulture);
+                return ResourceManager.GetStream("pacman_energizer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream pacman_victory {
+            get {
+                return ResourceManager.GetStream("pacman_victory", resourceCulture);
             }
         }
         

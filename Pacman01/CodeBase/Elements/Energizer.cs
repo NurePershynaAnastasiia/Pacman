@@ -29,7 +29,7 @@ namespace CodeBase.Elements
        
         public override void Action(Game game)
         {
-            game.CurrentLevel.Field.Scared = true;
+            game.CurrentLevel.Field.isScared = true;
             game.CurrentLevel.Field.ScaredTime += 10;
 
             AudioPlaybackEngine.Instance.PlaySound(new CachedSound("pacman_energizer.wav"));

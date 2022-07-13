@@ -62,12 +62,12 @@ namespace CodeBase.Moves
                 enemy.TimeEaten = 0;
             }
 
-            if (field.Scared)
+            if (field.isScared)
                 enemy.isScared = true;
             else
                 enemy.isScared = false;
 
-            if (field[enemy.X, enemy.Y] is Pacman && field.Scared)
+            if (field[enemy.X, enemy.Y] is Pacman && field.isScared)
                 enemy.isEaten = true;
         }
 
@@ -90,16 +90,16 @@ namespace CodeBase.Moves
 
                 draw(enemy);
 
-                if (currentLevel.Field[enemy.X, enemy.Y] is Pacman && !currentLevel.Field.Scared)
+                if (currentLevel.Field[enemy.X, enemy.Y] is Pacman && !currentLevel.Field.isScared)
                     game.Finished = true;
-                if (currentLevel.Field[enemy.X, enemy.Y] is Pacman && currentLevel.Field.Scared)
+                if (currentLevel.Field[enemy.X, enemy.Y] is Pacman && currentLevel.Field.isScared)
                     enemy.isEaten = true;
 
                 currentLevel.FieldEnemies[enemy.X, enemy.Y] = enemy;
             }
             else
             {
-                if (!(currentLevel.Field[enemy.X, enemy.Y] is Pacman) || !currentLevel.Field.Scared)
+                if (!(currentLevel.Field[enemy.X, enemy.Y] is Pacman) || !currentLevel.Field.isScared)
                     draw(enemy);
             }
         }

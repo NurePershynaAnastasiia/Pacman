@@ -24,6 +24,7 @@ namespace PacmanGUI
             Translation.Add("ShopBtn", new Languages("Магазин", "Shop"));
             Translation.Add("InstructionsBtn", new Languages("Інструкції", "Instructions"));
             Translation.Add("ExitBtn", new Languages("Вихід", "Exit"));
+            Translation.Add("LevelEditorBtn", new Languages("Редактор Рівня", "Level Editor"));
             Translation.Add("EngBtn", new Languages("Англ", "Eng"));
             Translation.Add("UkrBtn", new Languages("Укр", "Ukr"));
 

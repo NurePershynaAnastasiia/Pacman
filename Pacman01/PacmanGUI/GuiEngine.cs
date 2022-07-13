@@ -13,7 +13,6 @@ namespace PacmanGUI
     public class GuiEngine
     {
         public static char direction = ' ';
-        public Game game { get; set; }
 
         public static void Playing(Game game, GameFunctions.Draw draw, GameFunctions.DrawStats drawStats, GameForm gameForm)
         {
@@ -53,7 +52,7 @@ namespace PacmanGUI
             Field field = game.CurrentLevel.Field;
             Field fieldEnemies = game.CurrentLevel.FieldEnemies;
             Graphics g = e.Graphics;
-            int cellSize = BiggerCells(game.CurrentLevel.Number);
+            int cellSize = BiggerCells(game.CurrentLevel.Number, game.CurrentLevel.Field);
             for (int i = 0; i < field.Height; i++)
             {
                 for (int j = 0; j < field.Width; j++)
@@ -140,8 +139,10 @@ namespace PacmanGUI
             return currentObj;
         }
 
-        public static int BiggerCells(int lvl)
+        public static int BiggerCells(int lvl, Field field)
         {
+            if (lvl == 5 && field.Height < 10 && field.Width < 10)
+                return 60;
             if (lvl == 1) return 50;
             if (lvl == 2) return 40;
             return 30;

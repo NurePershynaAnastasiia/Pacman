@@ -16,6 +16,9 @@
     <Compile Update="Forms\InstructionsForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\LevelEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\MenuForm.cs">
       <SubType>Form</SubType>
     </Compile>

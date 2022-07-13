@@ -50,6 +50,12 @@ namespace PacmanGUI
             new ShopForm(game).Show();
         }
 
+        private void LevelEditorBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new LevelEditorForm(game).Show();
+        }
+
         private void MenuForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();

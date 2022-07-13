@@ -33,7 +33,7 @@ namespace PacmanGUI
 
         public void resetGame()
         {
-            game.CurrentLevel = GameFunctions.Initialize(lvl);//Game = CurrentLevel + Design + GeneralScore + Finished
+            game.CurrentLevel = GameFunctions.Initialize(lvl, game.CurrentLevel);//Game = CurrentLevel + Design + GeneralScore + Finished
             game.CurrentLevel.Pacman.Design = game.Design;
             timerGame.Start();
         }
@@ -45,7 +45,7 @@ namespace PacmanGUI
         public void Draw(Element element)
         {
             Graphics g = pictureBoxField.CreateGraphics();
-            int cellSize = GuiEngine.BiggerCells(lvl);
+            int cellSize = GuiEngine.BiggerCells(lvl, game.CurrentLevel.Field);
             g.DrawImage(GuiEngine.DefineTexture(element), new Rectangle(element.Y * cellSize, element.X * cellSize, cellSize, cellSize));
         }
 

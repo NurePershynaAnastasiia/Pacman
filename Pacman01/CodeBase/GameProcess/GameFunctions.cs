@@ -17,10 +17,14 @@ namespace CodeBase.GameProcess
         public delegate void Draw(Element element);
         public delegate void DrawStats(Game game);
 
-        public static Level Initialize(int lvl)
+        public static Level Initialize(int lvlNumber, Level level)
         {
             Level currentLevel = new Level();
-            Field field = GetField(lvl);
+            Field field;
+            if (lvlNumber == 5)
+                field = level.Field;
+            else
+                field = GetField(lvlNumber);
             Field fieldEnemies = new Field(field.Height, field.Width);
             List<Enemy> enemies = new List<Enemy>();
             Pacman pacman = new Pacman(0, 0, 0);
@@ -61,7 +65,7 @@ namespace CodeBase.GameProcess
                     }
                 }
             }
-            return new Level(lvl, field, fieldEnemies, pacman, enemies, currentLevel.Points);
+            return new Level(lvlNumber, field, fieldEnemies, pacman, enemies, currentLevel.Points);
         }
 
         public static Field GetField(int lvl)
@@ -129,7 +133,7 @@ namespace CodeBase.GameProcess
         public static void SpawnBonus (Field field, Draw Draw)
         {
             Random rnd = new Random();
-            if (rnd.Next() % 5 != 0)
+            if (rnd.Next() % 20 != 0)
                 return;
             int y = rnd.Next(1, field.Height - 1);
             int x = rnd.Next(1, field.Width - 1);

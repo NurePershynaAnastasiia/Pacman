@@ -12,11 +12,11 @@ namespace CodeBase.Moves
     {
         public static void FieldScared(Field field)
         {
-            if (field.Scared)
+            if (field.isScared)
                 field.ScaredTime--;
             if (field.ScaredTime == 0)
             {
-                field.Scared = false;
+                field.isScared = false;
                 field.ScaredTime = 10;
             }
         }

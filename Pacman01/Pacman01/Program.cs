@@ -19,7 +19,7 @@ namespace PacmanConsole
             {
                 int lvl = Interface.ChooseLevelPrint();
                 Console.Clear();
-                game.CurrentLevel = GameFunctions.Initialize(lvl);
+                game.CurrentLevel = GameFunctions.Initialize(lvl, game.CurrentLevel);
                 Interface.DrawField(game.CurrentLevel.Field, game.CurrentLevel.FieldEnemies, Draw, game.GeneralScore);
 
                 ConsoleEngine.Playing(game, Draw, DrawStats);

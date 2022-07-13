@@ -12,12 +12,12 @@ namespace CodeBase.Elements
     public class Field
     {
         public Element[,] map = new Element[50, 50];
-        private int scaredTime = 10, height, width;
+        private int scaredTime = 10;
 
         public Field(int height, int width)
         {
-            this.width = width;
-            this.height = height;
+            this.Height = width;
+            this.Width = height;
         }
 
         public Element this[int i, int j]
@@ -26,19 +26,11 @@ namespace CodeBase.Elements
             set => map[i, j] = value;
         }
 
-        public int Height
-        {
-            get { return height; }
-            set { height = value; }
-        }
+        public int Height { get; set; }
 
-        public int Width
-        {
-            get { return width; }
-            set { width = value; }
-        }
+        public int Width { get; set; }
 
-        public bool Scared { get; set; }
+        public bool isScared { get; set; }
 
         public int ScaredTime
         {

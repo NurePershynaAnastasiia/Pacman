@@ -42,7 +42,7 @@ namespace CodeBase.Elements
 
         public override void Action(Game game)
         {
-            if (!game.CurrentLevel.Field.Scared && !this.isEaten)
+            if (!game.CurrentLevel.Field.isScared && !this.isEaten)
                 game.Finished = true;
             else
                 this.isEaten = true;

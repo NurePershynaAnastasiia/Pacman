@@ -36,6 +36,7 @@
             this.ExitBtn = new System.Windows.Forms.Button();
             this.EngBtn = new System.Windows.Forms.Button();
             this.UkrBtn = new System.Windows.Forms.Button();
+            this.LevelEditorBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -121,7 +122,7 @@
             this.ExitBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitBtn.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ExitBtn.Location = new System.Drawing.Point(263, 569);
+            this.ExitBtn.Location = new System.Drawing.Point(263, 649);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(268, 62);
             this.ExitBtn.TabIndex = 8;
@@ -170,6 +171,25 @@
             this.UkrBtn.UseVisualStyleBackColor = false;
             this.UkrBtn.Click += new System.EventHandler(this.UkrBtn_Click);
             // 
+            // LevelEditorBtn
+            // 
+            this.LevelEditorBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.LevelEditorBtn.BackColor = System.Drawing.Color.Teal;
+            this.LevelEditorBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LevelEditorBtn.FlatAppearance.BorderColor = System.Drawing.Color.Brown;
+            this.LevelEditorBtn.FlatAppearance.BorderSize = 3;
+            this.LevelEditorBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.LevelEditorBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.LevelEditorBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LevelEditorBtn.Font = new System.Drawing.Font("Lucida Console", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LevelEditorBtn.Location = new System.Drawing.Point(263, 561);
+            this.LevelEditorBtn.Name = "LevelEditorBtn";
+            this.LevelEditorBtn.Size = new System.Drawing.Size(268, 62);
+            this.LevelEditorBtn.TabIndex = 15;
+            this.LevelEditorBtn.Text = "Level  Editor";
+            this.LevelEditorBtn.UseVisualStyleBackColor = false;
+            this.LevelEditorBtn.Click += new System.EventHandler(this.LevelEditorBtn_Click);
+            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -178,6 +198,7 @@
             this.BackgroundImage = global::PacmanGUI.Resources.bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 870);
+            this.Controls.Add(this.LevelEditorBtn);
             this.Controls.Add(this.UkrBtn);
             this.Controls.Add(this.EngBtn);
             this.Controls.Add(this.ExitBtn);
@@ -205,5 +226,6 @@
         public Button ExitBtn;
         public Button EngBtn;
         public Button UkrBtn;
+        public Button LevelEditorBtn;
     }
 }
