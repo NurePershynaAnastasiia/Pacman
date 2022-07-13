@@ -45,8 +45,8 @@ namespace PacmanGUI
         public static Game AddElement(object sender, Game game, string currentElement)
         {
             PictureBox pictureBox = (PictureBox)sender;
-            int x = (pictureBox.Location.X - 80) / 50;
-            int y = (pictureBox.Location.Y - 80) / 50;
+            int x = (pictureBox.Location.Y - 80) / 50;
+            int y = (pictureBox.Location.X - 80) / 50;
             switch (currentElement)
             {
                 case "pacman":

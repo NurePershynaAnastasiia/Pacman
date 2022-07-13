@@ -58,9 +58,14 @@ namespace CodeBase.GameProcess
                     }
                     if (field[i, j] is Enemy)
                     {
-                        currentLevel.Points++;
+                        if (lvlNumber != 5)
+                        {
+                            currentLevel.Points++;
+                            field[i, j] = new Coin(i, j);
+                        }
+                        else
+                            field[i, j] = new Cell(i, j);
                         fieldEnemies[i, j] = new Enemy(i, j);
-                        field[i, j] = new Coin(i, j);
                         enemies.Add(new Enemy(i, j));
                     }
                 }

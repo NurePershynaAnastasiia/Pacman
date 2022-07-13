@@ -141,7 +141,7 @@ namespace PacmanGUI
 
         public static int BiggerCells(int lvl, Field field)
         {
-            if (lvl == 5 && field.Height < 10 && field.Width < 10)
+            if (lvl == 5 && field.Height < 7 && field.Width < 7)
                 return 60;
             if (lvl == 1) return 50;
             if (lvl == 2) return 40;

@@ -16,8 +16,8 @@ namespace CodeBase.Elements
 
         public Field(int height, int width)
         {
-            this.Height = width;
-            this.Width = height;
+            this.Height = height;
+            this.Width = width;
         }
 
         public Element this[int i, int j]
