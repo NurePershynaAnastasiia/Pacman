@@ -28,7 +28,7 @@ namespace CodeBase.Moves
 
             while (field[enemy.X + CommonMoves.CoordsUpdate(direction).x, enemy.Y + CommonMoves.CoordsUpdate(direction).y].isObstacle() || !CycleCheck(direction, enemy.Prev))
             {
-                dir += attempts;
+                dir++;
                 attempts++;
                 switch (dir % 4)
                 {

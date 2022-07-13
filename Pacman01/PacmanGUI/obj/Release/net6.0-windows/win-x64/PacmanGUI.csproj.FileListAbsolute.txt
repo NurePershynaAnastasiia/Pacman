@@ -1596,3 +1596,4 @@ D:\CourseProject\Pacman\Pacman01\PacmanGUI\obj\Release\net6.0-windows\win-x64\re
 D:\CourseProject\Pacman\Pacman01\PacmanGUI\obj\Release\net6.0-windows\win-x64\PacmanGUI.pdb
 D:\CourseProject\Pacman\Pacman01\PacmanGUI\obj\Release\net6.0-windows\win-x64\PacmanGUI.genruntimeconfig.cache
 D:\CourseProject\Pacman\Pacman01\PacmanGUI\obj\Release\net6.0-windows\win-x64\ref\PacmanGUI.dll
+D:\CourseProject\Pacman\Pacman01\PacmanGUI\obj\Release\net6.0-windows\win-x64\PacmanGUI.LevelEditorForm.resources

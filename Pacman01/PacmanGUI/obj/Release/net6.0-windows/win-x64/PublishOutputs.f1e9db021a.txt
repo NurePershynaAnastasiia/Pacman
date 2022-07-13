@@ -1,0 +1,15 @@
+D:\PacmanGUI.pdb
+D:\Properties\Resources.resx
+D:\Resources\lvl1.txt
+D:\Resources\lvl2.txt
+D:\Resources\lvl3.txt
+D:\CodeBase.exe
+D:\Resources.resx
+D:\CodeBase.runtimeconfig.json
+D:\D3DCompiler_47_cor3.dll
+D:\PenImc_cor3.dll
+D:\PresentationNative_cor3.dll
+D:\vcruntime140_cor3.dll
+D:\wpfgfx_cor3.dll
+D:\CodeBase.pdb
+D:\PacmanGUI.exe

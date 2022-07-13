@@ -22,6 +22,7 @@ namespace PacmanGUI
             InitializeComponent();
             this.Size = new Size(1300, 870);
             this.game = game;
+            LanguageChanger.LevelEditor(this, game.Language);
         }
 
         private void PictureBox_Click(object sender, EventArgs e)

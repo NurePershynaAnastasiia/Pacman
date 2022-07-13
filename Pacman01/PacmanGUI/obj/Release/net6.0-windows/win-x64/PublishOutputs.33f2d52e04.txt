@@ -1,0 +1,15 @@
+D:\CourseProject\Pacman\Pacman01\PacmanGUI\bin\Release\net6.0-windows\PacmanGUI.pdb
+D:\CourseProject\Pacman\Pacman01\PacmanGUI\bin\Release\net6.0-windows\Properties\Resources.resx
+D:\CourseProject\Pacman\Pacman01\PacmanGUI\bin\Release\net6.0-windows\Resources\lvl1.txt
+D:\CourseProject\Pacman\Pacman01\PacmanGUI\bin\Release\net6.0-windows\Resources\lvl2.txt
+D:\CourseProject\Pacman\Pacman01\PacmanGUI\bin\Release\net6.0-windows\Resources\lvl3.txt
+D:\CourseProject\Pacman\Pacman01\PacmanGUI\bin\Release\net6.0-windows\CodeBase.exe
+D:\CourseProject\Pacman\Pacman01\PacmanGUI\bin\Release\net6.0-windows\Resources.resx
+D:\CourseProject\Pacman\Pacman01\PacmanGUI\bin\Release\net6.0-windows\CodeBase.runtimeconfig.json
+D:\CourseProject\Pacman\Pacman01\PacmanGUI\bin\Release\net6.0-windows\D3DCompiler_47_cor3.dll
+D:\CourseProject\Pacman\Pacman01\PacmanGUI\bin\Release\net6.0-windows\PenImc_cor3.dll
+D:\CourseProject\Pacman\Pacman01\PacmanGUI\bin\Release\net6.0-windows\PresentationNative_cor3.dll
+D:\CourseProject\Pacman\Pacman01\PacmanGUI\bin\Release\net6.0-windows\vcruntime140_cor3.dll
+D:\CourseProject\Pacman\Pacman01\PacmanGUI\bin\Release\net6.0-windows\wpfgfx_cor3.dll
+D:\CourseProject\Pacman\Pacman01\PacmanGUI\bin\Release\net6.0-windows\CodeBase.pdb
+D:\CourseProject\Pacman\Pacman01\PacmanGUI\bin\Release\net6.0-windows\PacmanGUI.exe

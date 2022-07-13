@@ -1,0 +1,6 @@
+D:\CourseProject\Pacman\Pacman01\CodeBase\bin\Release\net6.0\CodeBase.pdb
+D:\CourseProject\Pacman\Pacman01\CodeBase\bin\Release\net6.0\Resources\lvl1.txt
+D:\CourseProject\Pacman\Pacman01\CodeBase\bin\Release\net6.0\Resources\lvl2.txt
+D:\CourseProject\Pacman\Pacman01\CodeBase\bin\Release\net6.0\Resources\lvl3.txt
+D:\CourseProject\Pacman\Pacman01\CodeBase\bin\Release\net6.0\Properties\Resources.resx
+D:\CourseProject\Pacman\Pacman01\CodeBase\bin\Release\net6.0\CodeBase.exe

@@ -103,5 +103,14 @@ namespace PacmanGUI
                     control.Text = MultilingualInterface.VictoryFormLang(control.Name, lang);
             }
         }
+
+        public static void LevelEditor(LevelEditorForm levelEditorForm, string lang)
+        {
+            foreach (Control control in levelEditorForm.Controls)
+            {
+                if (control is Button || control is Label)
+                    control.Text = MultilingualInterface.LevelEditorFormLang(control.Name, lang);
+            }
+        }
     }
 }

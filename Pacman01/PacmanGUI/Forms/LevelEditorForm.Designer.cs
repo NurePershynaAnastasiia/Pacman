@@ -241,7 +241,7 @@
             this.CreateBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Firebrick;
             this.CreateBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Salmon;
             this.CreateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CreateBtn.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.CreateBtn.Font = new System.Drawing.Font("Lucida Console", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.CreateBtn.Location = new System.Drawing.Point(983, 623);
             this.CreateBtn.Name = "CreateBtn";
             this.CreateBtn.Size = new System.Drawing.Size(181, 60);

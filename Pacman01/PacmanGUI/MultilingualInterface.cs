@@ -58,7 +58,7 @@ namespace PacmanGUI
             Translation.Add("labelEnergizer2", new Languages("Коли Привиди в Наляканому Режимі,\r\nПакмен може \"з'їсти\" іх, щоб\r\nнейтралізувати на деякий час ", "When Ghosts are in Scared mode,\r\nPacMan can \"eat\" them to neutralize\r\nfor some time"));
             Translation.Add("labelCoin", new Languages("Монета, яку\r\nПакмен має з'їсти,\r\nщоб підвищити\r\nрахунок", "Coin, which \r\nPacMan has to \r\neat to \r\nearn Points"));
             Translation.Add("labelWall", new Languages("Стіна\r\n(непроникна\r\nперешкода\r\nдля Пакмена\r\nта Ворогів", "Wall\r\n(impenetrable\r\nobstacle for\r\nPacMan and\r\nEnemies)"));
-            Translation.Add("labelBonus", new Languages("Бонус (якщо з'їсти,\r\nдодає 10 монет\r\nдо Загального\r\nРахунку)", "Bonus (adds \r\n10 points to \r\nGeneral Score\r\nif eaten)"));
+            Translation.Add("labelBonus", new Languages("Бонус (якщо з'їсти,\r\nдодає 5 монет\r\nдо Загального\r\nРахунку)", "Bonus (adds \r\n5 points to \r\nGeneral Score\r\nif eaten)"));
 
 
             if (lang == "eng")
@@ -116,6 +116,22 @@ namespace PacmanGUI
             Translation.Add("ExitBtn", new Languages("Вихід", "Exit"));
             Translation.Add("BackToMenuBtn", new Languages("До Меню", "Back to Menu"));
             Translation.Add("generalScoreLabel", new Languages("Загальний рахунок: ", "General Score: "));
+
+            if (lang == "eng")
+                return Translation[name].EnVer;
+            return Translation[name].UkrVer;
+        }
+
+        public static string LevelEditorFormLang(string name, string lang)
+        {
+            Dictionary<string, Languages> Translation = new Dictionary<string, Languages>();
+            Translation.Add("PlayBtn", new Languages("Грати", "Play"));
+            Translation.Add("BackBtn", new Languages("Назад", "Back"));
+            Translation.Add("CreateBtn", new Languages("Створити", "Create"));
+            Translation.Add("GameElementsLabel", new Languages("Ігрові Елементи", "Game Elements"));
+            Translation.Add("FieldSizeLabel", new Languages("Розмір Поля", "Field Size"));
+            Translation.Add("HeightLabel", new Languages("Висота", "Height"));
+            Translation.Add("WidthLabel", new Languages("Ширина", "Width"));
 
             if (lang == "eng")
                 return Translation[name].EnVer;
