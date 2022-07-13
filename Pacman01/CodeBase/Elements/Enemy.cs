@@ -48,11 +48,11 @@ namespace CodeBase.Elements
                 this.isEaten = true;
         }
 
-        public override string Name()
+        public override string getName()
         {
             return "enemy";
         }
 
-        public override char Direction { get; set; }
+        public char Direction { get; set; }
     }
 }

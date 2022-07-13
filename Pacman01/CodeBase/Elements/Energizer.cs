@@ -35,11 +35,9 @@ namespace CodeBase.Elements
             AudioPlaybackEngine.Instance.PlaySound(new CachedSound("pacman_energizer.wav"));
         }
 
-        public override string Name()
+        public override string getName()
         {
             return "energizer";
         }
-
-        public override char Direction { get; set; }
     }
 }

@@ -31,11 +31,11 @@ namespace CodeBase.Elements
 
         public override void Action(Game game) { }
 
-        public override string Name()
+        public override string getName()
         {
             return "pacman";
         }
 
-        public override char Direction { get; set; }
+        public char Direction { get; set; }
     }
 }

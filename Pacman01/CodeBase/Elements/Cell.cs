@@ -25,11 +25,10 @@ namespace CodeBase.Elements
             return false;
         }
 
-        public override char Direction { get; set; }
 
         public override void Action(Game game) { }
 
-        public override string Name()
+        public override string getName()
         {
             return "cell";
         }

@@ -23,12 +23,6 @@ namespace CodeBase.Elements
 
         public override int Y { get; set; }
 
-        public override char Direction { get; set; }
-
-        public void Clear()
-        {
-            Console.Write("");
-        }
 
         public override bool isObstacle()
         {
@@ -43,7 +37,7 @@ namespace CodeBase.Elements
             AudioPlaybackEngine.Instance.PlaySound(new CachedSound("pacman_chomp.wav"));
         }
 
-        public override string Name()
+        public override string getName()
         {
             return "coin";
         }

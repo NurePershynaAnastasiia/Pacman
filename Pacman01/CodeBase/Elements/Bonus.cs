@@ -15,8 +15,8 @@ namespace CodeBase.Elements
             this.Y = y;
         }
         public override int X { get; set; }
+
         public override int Y { get; set; }
-        public override char Direction { get; set; }
 
         public override void Action(Game game)
         {
@@ -28,7 +28,7 @@ namespace CodeBase.Elements
             return false;
         }
 
-        public override string Name()
+        public override string getName()
         {
             return "bonus";
         }

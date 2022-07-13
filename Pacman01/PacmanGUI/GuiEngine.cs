@@ -59,7 +59,7 @@ namespace PacmanGUI
                 for (int j = 0; j < field.Width; j++)
                 {
                     Bitmap currentObj;
-                    if (fieldEnemies[i, j].Name() == "enemy")
+                    if (fieldEnemies[i, j].getName() == "enemy")
                         currentObj = Resources.enemy_left;
                     else
                         currentObj = DefineTexture(field[i, j]);
@@ -89,12 +89,12 @@ namespace PacmanGUI
             textureInfo.Add("cell", Resources.cell);
             textureInfo.Add("energizer", Resources.energizer);
             textureInfo.Add("bonus", Resources.bonus);
-            if (element.Name() == "pacman")
+            if (element.getName() == "pacman")
                 textureInfo.Add("pacman", DefineTexturePacman(element));
-            if (element.Name() == "enemy")
+            if (element.getName() == "enemy")
                 textureInfo.Add("enemy", DefineTextureEnemy(element));
 
-            return textureInfo[element.Name()];
+            return textureInfo[element.getName()];
         }
 
         public static Bitmap DefineTextureEnemy(Element element)
@@ -129,7 +129,7 @@ namespace PacmanGUI
                 default: currentObj = Resources.pacman0; break;
             }
 
-            switch (element.Direction)
+            switch (pacman.Direction)
             {
                 case 'l': currentObj.RotateFlip(RotateFlipType.Rotate180FlipY); break;
                 case 'u': currentObj.RotateFlip(RotateFlipType.Rotate90FlipY); break;

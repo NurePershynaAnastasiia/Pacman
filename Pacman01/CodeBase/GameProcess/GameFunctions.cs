@@ -134,7 +134,7 @@ namespace CodeBase.GameProcess
             int y = rnd.Next(1, field.Height - 1);
             int x = rnd.Next(1, field.Width - 1);
 
-            if (field[y, x].Name() == "cell")
+            if (field[y, x].getName() == "cell")
             {
                 field[y, x] = new Bonus(y, x);
                 Draw(new Bonus(y, x));

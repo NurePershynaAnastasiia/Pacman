@@ -29,7 +29,7 @@ namespace PacmanConsole
         public static void Draw(Element element)
         {
             Console.SetCursorPosition(element.Y, element.X);
-            string name = element.Name();
+            string name = element.getName();
  
             if (name == "pacman")
                 DrawPacman((Pacman)element);

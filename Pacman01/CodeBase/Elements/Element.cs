@@ -13,9 +13,8 @@ namespace CodeBase.Elements
     {
         abstract public int X { get; set; }
         abstract public int Y { get; set; }
-        abstract public char Direction { get; set; }
         abstract public void Action(Game game);
         abstract public bool isObstacle();
-        abstract public string Name();
+        abstract public string getName();
     }
 }
