@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LevelEditorForm));
             this.GameElementsLabel = new System.Windows.Forms.Label();
             this.PacmanPictureBox = new System.Windows.Forms.PictureBox();
             this.EnemyPictureBox = new System.Windows.Forms.PictureBox();
@@ -57,11 +58,11 @@
             // 
             this.GameElementsLabel.AutoSize = true;
             this.GameElementsLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.GameElementsLabel.Font = new System.Drawing.Font("Lucida Console", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.GameElementsLabel.Font = new System.Drawing.Font("Lucida Console", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.GameElementsLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.GameElementsLabel.Location = new System.Drawing.Point(908, 96);
+            this.GameElementsLabel.Location = new System.Drawing.Point(885, 96);
             this.GameElementsLabel.Name = "GameElementsLabel";
-            this.GameElementsLabel.Size = new System.Drawing.Size(316, 37);
+            this.GameElementsLabel.Size = new System.Drawing.Size(301, 35);
             this.GameElementsLabel.TabIndex = 0;
             this.GameElementsLabel.Text = "Game Elements";
             // 
@@ -305,9 +306,10 @@
             this.Controls.Add(this.PacmanPictureBox);
             this.Controls.Add(this.GameElementsLabel);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LevelEditorForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LevelEditorForm";
+            this.Text = "Level Editor";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LevelEditorForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.PacmanPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EnemyPictureBox)).EndInit();

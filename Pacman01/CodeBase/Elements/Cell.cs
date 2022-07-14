@@ -25,7 +25,6 @@ namespace CodeBase.Elements
             return false;
         }
 
-
         public override void Action(Game game) { }
 
         public override string getName()
