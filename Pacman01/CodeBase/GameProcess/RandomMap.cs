@@ -69,24 +69,16 @@ namespace CodeBase.GameProcess
             return false;
         }
 
-        public static Coords GetDirectionCell(int direction)
+        public static Coords GetDirectionElement(int direction, string element)
         {
+            int addition = 0;
+            if (element == "cell")
+                addition = 1;
             Dictionary<int, Coords> getDirection = new Dictionary<int, Coords>();
-            getDirection.Add(1, new Coords(-2, 0));
-            getDirection.Add(2, new Coords(2, 0));
-            getDirection.Add(3, new Coords(0, -2));
-            getDirection.Add(4, new Coords(0, 2));
-
-            return getDirection[direction];
-        }
-
-        public static Coords GetDirectionWall(int direction)
-        {
-            Dictionary<int, Coords> getDirection = new Dictionary<int, Coords>();
-            getDirection.Add(1, new Coords(-1, 0));
-            getDirection.Add(2, new Coords(1, 0));
-            getDirection.Add(3, new Coords(0, -1));
-            getDirection.Add(4, new Coords(0, 1));
+            getDirection.Add(1, new Coords(-1 - addition, 0));
+            getDirection.Add(2, new Coords(1 + addition, 0));
+            getDirection.Add(3, new Coords(0, -1 - addition));
+            getDirection.Add(4, new Coords(0, 1 + addition));
 
             return getDirection[direction];
         }
@@ -99,7 +91,7 @@ namespace CodeBase.GameProcess
             do
             {
                 direction = random.Next(1, 5);
-            } while (IsUnvisited(new Coords(newCell.x + GetDirectionCell(direction).x, newCell.y + GetDirectionCell(direction).y), field, fieldVisited) == false);
+            } while (IsUnvisited(new Coords(newCell.x + GetDirectionElement(direction, "cell").x, newCell.y + GetDirectionElement(direction, "cell").y), field, fieldVisited) == false);
 
             return direction;
         }
@@ -124,11 +116,11 @@ namespace CodeBase.GameProcess
                 {
                     cellStack.Push((Cell)field[x, y]);
                     int direction = ChooseUnvisitedNeighbour((Cell)field[x, y], field, fieldVisited);
-                    int cellBetweenX = x + GetDirectionWall(direction).x;
-                    int cellBetweenY = y + GetDirectionWall(direction).y;
+                    int cellBetweenX = x + GetDirectionElement(direction, "wall").x;
+                    int cellBetweenY = y + GetDirectionElement(direction, "wall").y;
                     field[cellBetweenX, cellBetweenY] = new Cell(cellBetweenX, cellBetweenY);
-                    x += GetDirectionCell(direction).x;
-                    y += GetDirectionCell(direction).y;
+                    x += GetDirectionElement(direction, "cell").x;
+                    y += GetDirectionElement(direction, "cell").y;
                     unvisitedCells--;
                 }
                 else if (cellStack.Count > 0)
@@ -158,7 +150,7 @@ namespace CodeBase.GameProcess
             int wallsAround = 0;
             for (int i = 1; i <= 4; i++)
             {
-                Coords currentCoords = new Coords(cell.X + GetDirectionWall(i).x, cell.Y + GetDirectionWall(i).y);
+                Coords currentCoords = new Coords(cell.X + GetDirectionElement(i, "wall").x, cell.Y + GetDirectionElement(i, "wall").y);
                 if (InBounds(currentCoords, field, false))
                 {
                     if (field[currentCoords.x, currentCoords.y] is Wall)
@@ -172,7 +164,7 @@ namespace CodeBase.GameProcess
         {
             for (int i = 1; i <= 4; i++)
             {
-                Coords currentCoords = new Coords(cell.X + GetDirectionWall(i).x, cell.Y + GetDirectionWall(i).y);
+                Coords currentCoords = new Coords(cell.X + GetDirectionElement(i, "wall").x, cell.Y + GetDirectionElement(i, "wall").y);
                 if (InBounds(currentCoords, field, true))
                 {
                     if (field[currentCoords.x, currentCoords.y] is Wall)
