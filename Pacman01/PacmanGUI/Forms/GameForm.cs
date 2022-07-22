@@ -51,17 +51,8 @@ namespace PacmanGUI
 
         public void DrawStats(Game game)
         {
+            LanguageChanger.ScoreLabelsHandler(scoreLabel, generalScoreLabel, game.Language);
             Level currentLevel = game.CurrentLevel;
-            if (game.Language == "eng")
-            {
-                scoreLabel.Text = "Score: ";
-                generalScoreLabel.Text = "General score: ";
-            }
-            if (game.Language == "ukr")
-            {
-                scoreLabel.Text = "Рахунок: ";
-                generalScoreLabel.Text = "Загальний рахунок: ";
-            }
             scoreLabel.Text += currentLevel.Field.Score.ToString();
             generalScoreLabel.Text += game.GeneralScore.ToString();
         }

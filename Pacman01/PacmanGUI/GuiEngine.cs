@@ -14,6 +14,17 @@ namespace PacmanGUI
     {
         public static char direction = ' ';
 
+        public static Dictionary<string, Bitmap> textureInfo = new Dictionary<string, Bitmap>()
+            {
+                { "coin", Resources.coin },
+                { "wall", Resources.wall },
+                { "cell", Resources.cell },
+                { "energizer", Resources.energizer },
+                { "bonus", Resources.bonus },
+                { "pacman", Resources.pacman0 },
+                { "enemy", Resources.enemy_right }
+            };
+
         public static void Playing(Game game, GameFunctions.Draw draw, GameFunctions.DrawStats drawStats, GameForm gameForm)
         {
             Level currentLevel = game.CurrentLevel;
@@ -70,28 +81,24 @@ namespace PacmanGUI
 
         public static void GetDirection (KeyEventArgs e)
         {
-            Dictionary<Keys, char> keyInfo = new Dictionary<Keys, char>();
-            keyInfo.Add(Keys.W, 'u');
-            keyInfo.Add(Keys.S, 'd');
-            keyInfo.Add(Keys.A, 'l');
-            keyInfo.Add(Keys.D, 'r');
-            keyInfo.Add(Keys.P, 'p');
+            Dictionary<Keys, char> keyInfo = new Dictionary<Keys, char>()
+            {
+                { Keys.W, 'u' },
+                { Keys.S, 'd' },
+                { Keys.A, 'l' },
+                { Keys.D, 'r' },
+                { Keys.P, 'p' },
+            };
 
             direction = keyInfo[e.KeyCode];
         }
 
         public static Bitmap DefineTexture(Element element)
         {
-            Dictionary<string, Bitmap> textureInfo = new Dictionary<string, Bitmap>();
-            textureInfo.Add("coin", Resources.coin);
-            textureInfo.Add("wall", Resources.wall);
-            textureInfo.Add("cell", Resources.cell);
-            textureInfo.Add("energizer", Resources.energizer);
-            textureInfo.Add("bonus", Resources.bonus);
             if (element.getName() == "pacman")
-                textureInfo.Add("pacman", DefineTexturePacman(element));
+                textureInfo["pacman"] = DefineTexturePacman(element);
             if (element.getName() == "enemy")
-                textureInfo.Add("enemy", DefineTextureEnemy(element));
+                textureInfo["enemy"] = DefineTextureEnemy(element);
 
             return textureInfo[element.getName()];
         }
@@ -101,11 +108,13 @@ namespace PacmanGUI
             Bitmap currentObj;
             Enemy enemy = (Enemy)element;
 
-            Dictionary<char, Bitmap> textureEnemyInfo = new Dictionary<char, Bitmap>();
-            textureEnemyInfo.Add('r', Resources.enemy_right);
-            textureEnemyInfo.Add('l', Resources.enemy_left);
-            textureEnemyInfo.Add('u', Resources.enemy_up); 
-            textureEnemyInfo.Add('d', Resources.enemy_down);
+            Dictionary<char, Bitmap> textureEnemyInfo = new Dictionary<char, Bitmap>()
+            {
+                { 'r', Resources.enemy_right },
+                { 'l', Resources.enemy_left },
+                { 'u', Resources.enemy_up },
+                { 'd', Resources.enemy_down }
+            };
 
             currentObj = textureEnemyInfo[enemy.Direction];
             if (enemy.isScared || enemy.isEaten)

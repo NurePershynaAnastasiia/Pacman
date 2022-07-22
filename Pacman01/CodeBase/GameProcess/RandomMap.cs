@@ -13,7 +13,15 @@ namespace CodeBase.GameProcess
     {
         public static int unvisitedCells = 0;
         public static Cell[] cellsUnvisitedArray = new Cell[200];
-        
+
+        enum Directions
+        {
+            up,
+            down,
+            left,
+            right
+        }
+
         public static Field GenerateGrid()
         {
             Random rnd = new Random();
@@ -63,9 +71,11 @@ namespace CodeBase.GameProcess
 
         public static bool HasUnvisitedNeighbours(Cell cell, Field field, bool[,] fieldVisited)
         {
-            if (IsUnvisited(new Coords(cell.X - 2, cell.Y), field, fieldVisited) || IsUnvisited(new Coords(cell.X + 2, cell.Y), field, fieldVisited)
-                || IsUnvisited(new Coords(cell.X, cell.Y - 2), field, fieldVisited) || IsUnvisited(new Coords(cell.X, cell.Y + 2), field, fieldVisited))
-                return true;
+            foreach (int i in Enum.GetValues(typeof(Directions)))
+            {
+                if (IsUnvisited(new Coords(cell.X + GetDirectionElement(i, "cell").x, cell.Y + GetDirectionElement(i, "cell").y), field, fieldVisited))
+                    return true;
+            }
             return false;
         }
 
@@ -74,11 +84,13 @@ namespace CodeBase.GameProcess
             int addition = 0;
             if (element == "cell")
                 addition = 1;
-            Dictionary<int, Coords> getDirection = new Dictionary<int, Coords>();
-            getDirection.Add(1, new Coords(-1 - addition, 0));
-            getDirection.Add(2, new Coords(1 + addition, 0));
-            getDirection.Add(3, new Coords(0, -1 - addition));
-            getDirection.Add(4, new Coords(0, 1 + addition));
+            Dictionary<int, Coords> getDirection = new Dictionary<int, Coords>()
+            {
+                { 0, new Coords(-1 - addition, 0) },
+                { 1, new Coords(1 + addition, 0) },
+                { 2, new Coords(0, -1 - addition) },
+                { 3, new Coords(0, 1 + addition) }
+            };
 
             return getDirection[direction];
         }
@@ -90,7 +102,7 @@ namespace CodeBase.GameProcess
             int direction;
             do
             {
-                direction = random.Next(1, 5);
+                direction = random.Next(0, 4);
             } while (IsUnvisited(new Coords(newCell.x + GetDirectionElement(direction, "cell").x, newCell.y + GetDirectionElement(direction, "cell").y), field, fieldVisited) == false);
 
             return direction;
@@ -148,7 +160,7 @@ namespace CodeBase.GameProcess
         public static int WallsAround(Cell cell, Field field)
         {
             int wallsAround = 0;
-            for (int i = 1; i <= 4; i++)
+            foreach (int i in Enum.GetValues(typeof(Directions)))
             {
                 Coords currentCoords = new Coords(cell.X + GetDirectionElement(i, "wall").x, cell.Y + GetDirectionElement(i, "wall").y);
                 if (InBounds(currentCoords, field, false))
@@ -162,7 +174,7 @@ namespace CodeBase.GameProcess
 
         public static Field RemoveWalls(Cell cell, Field field)
         {
-            for (int i = 1; i <= 4; i++)
+            foreach (int i in Enum.GetValues(typeof(Directions)))
             {
                 Coords currentCoords = new Coords(cell.X + GetDirectionElement(i, "wall").x, cell.Y + GetDirectionElement(i, "wall").y);
                 if (InBounds(currentCoords, field, true))
@@ -197,44 +209,13 @@ namespace CodeBase.GameProcess
                 for (int j = 0; j < field.Width; j++)
                 {
                     if (field[i, j] is Cell)
-                    {
-                        int randomNow = random.Next(1, 200);
-                        switch (randomNow)
-                        {
-                            case 1:
-                                if (currentPacmanNumber == 0 && i < 5)
-                                {
-                                    currentPacmanNumber++;
-                                    field[i, j] = new Pacman(i, j, 0);
-                                }
-                                break;
-                            case 2:
-                                if (currentEnemiesNumber < enemiesNumber && i > 5)
-                                {
-                                    currentEnemiesNumber++;
-                                    field[i, j] = new Enemy(i, j);
-                                }
-                                break;
-                            case 3:
-                                if (currentEnergizersNumber < energizersNumber)
-                                {
-                                    currentEnergizersNumber++;
-                                    field[i, j] = new Energizer(i, j);
-                                }
-                                break;
-                            default:
-                                field[i, j] = new Coin(i, j);
-                                break;
-                        }
-                        if (randomNow > 3)
-                            field[i, j] = new Coin(i, j);
-                    }
+                        field[i, j] = new Coin(i, j);
                 }
             }
             while (currentPacmanNumber < 1)
             {
                 int randomX = random.Next(1, 5);
-                int randomY = random.Next(1, 5);
+                int randomY = random.Next(1, field.Width - 1);
                 if (field[randomX, randomY] is Coin)
                 {
                     currentPacmanNumber++;
@@ -243,7 +224,7 @@ namespace CodeBase.GameProcess
             }
             while (currentEnemiesNumber < enemiesNumber)
             {
-                int randomX = random.Next(1, field.Height - 1);
+                int randomX = random.Next(5, field.Height - 1);
                 int randomY = random.Next(1, field.Width - 1);
                 if (field[randomX, randomY] is Coin)
                 {

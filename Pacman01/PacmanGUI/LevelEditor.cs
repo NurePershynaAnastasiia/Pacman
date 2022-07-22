@@ -47,29 +47,23 @@ namespace PacmanGUI
             PictureBox pictureBox = (PictureBox)sender;
             int x = (pictureBox.Location.Y - 80) / 50;
             int y = (pictureBox.Location.X - 80) / 50;
+            pictureBox.BackgroundImage = GuiEngine.textureInfo[currentElement];
             switch (currentElement)
             {
                 case "pacman":
                     if (!isPacmanPlaced(game.CurrentLevel.Field))
-                    {
-                        pictureBox.BackgroundImage = Resources.pacman0;
                         game.CurrentLevel.Field[x, y] = new Pacman(x, y, 0);
-                    }
                     break;
                 case "enemy":
-                    pictureBox.BackgroundImage = Resources.enemy_right;
                     game.CurrentLevel.Field[x, y] = new Enemy(x, y);
                     break;
                 case "coin":
-                    pictureBox.BackgroundImage = Resources.coin;
                     game.CurrentLevel.Field[x, y] = new Coin(x, y);
                     break;
                 case "energizer":
-                    pictureBox.BackgroundImage = Resources.energizer;
                     game.CurrentLevel.Field[x, y] = new Energizer(x, y);
                     break;
                 case "wall":
-                    pictureBox.BackgroundImage = Resources.wall;
                     game.CurrentLevel.Field[x, y] = new Wall(x, y);
                     break;
             }

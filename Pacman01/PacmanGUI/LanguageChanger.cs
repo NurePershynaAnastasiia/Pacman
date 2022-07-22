@@ -37,5 +37,19 @@ namespace PacmanGUI
                 UkrBtn.Enabled = false;
             }
         }
+
+        public static void ScoreLabelsHandler(Label scoreLabel, Label generalScoreLabel, string lang)
+        {
+            if (lang == "eng")
+            {
+                scoreLabel.Text = "Score: ";
+                generalScoreLabel.Text = "General score: ";
+            }
+            if (lang == "ukr")
+            {
+                scoreLabel.Text = "Рахунок: ";
+                generalScoreLabel.Text = "Загальний рахунок: ";
+            }
+        }
     }
 }

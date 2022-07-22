@@ -115,10 +115,12 @@ namespace CodeBase.GameProcess
 
         public static LevelInfo LevelInfo(int lvl)
         {
-            Dictionary<int, LevelInfo> levelInfo = new Dictionary<int, LevelInfo>();
-            levelInfo.Add(1, new LevelInfo(path: "lvl1.txt", pathOutput: "lvl1Output.txt"));
-            levelInfo.Add(2, new LevelInfo(path: "lvl2.txt", pathOutput: "lvl2Output.txt"));
-            levelInfo.Add(3, new LevelInfo(path: "lvl3.txt", pathOutput: "lvl3Output.txt"));
+            Dictionary<int, LevelInfo> levelInfo = new Dictionary<int, LevelInfo>()
+            {
+                { 1, new LevelInfo(path: "lvl1.txt", pathOutput: "lvl1Output.txt") },
+                { 2, new LevelInfo(path: "lvl2.txt", pathOutput: "lvl2Output.txt") },
+                { 3, new LevelInfo(path: "lvl3.txt", pathOutput: "lvl3Output.txt") }
+            };
             //levelInfo.Add(4, new Level(path: "RandomLevel.txt", pathOutput: "RandomLevel.txt"));
 
             return levelInfo[lvl];
@@ -126,11 +128,13 @@ namespace CodeBase.GameProcess
 
         public static Design DesignInfo(int key)
         {
-            Dictionary<int, Design> designInfo = new Dictionary<int, Design>();
-            designInfo.Add(0, new Design(appearace: 'o', price: 0));
-            designInfo.Add(1, new Design(appearace: 'O', price: 20));
-            designInfo.Add(2, new Design(appearace: 'Q', price: 50));
-            designInfo.Add(3, new Design(appearace: 'G', price: 100));
+            Dictionary<int, Design> designInfo = new Dictionary<int, Design>()
+            {
+                { 0, new Design(appearace: 'o', price: 0) },
+                { 1, new Design(appearace: 'O', price: 20) },
+                { 2, new Design(appearace: 'Q', price: 50) },
+                { 3, new Design(appearace: 'G', price: 100) }
+            };
 
             return designInfo[key];
         }
