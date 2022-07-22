@@ -23,7 +23,7 @@ namespace PacmanGUI
             this.game = game;
             InitializeComponent();
             PointsNumberLabel.Text = game.GeneralScore.ToString();
-            LanguageChanger.Shop(this, game.Language);
+            LanguageChanger.Translate(this, game.Language);
         }
 
         private void BuyBtn_Click(object sender, EventArgs e)

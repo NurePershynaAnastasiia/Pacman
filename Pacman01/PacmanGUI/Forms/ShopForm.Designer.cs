@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShopForm));
-            this.titlePictureBox = new System.Windows.Forms.PictureBox();
+            this.shopTitlePictureBox = new System.Windows.Forms.PictureBox();
             this.BackBtn = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -45,22 +45,22 @@
             this.Satan1Label = new System.Windows.Forms.Label();
             this.Satan2Label = new System.Windows.Forms.Label();
             this.PointsNumberLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.titlePictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shopTitlePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
-            // titlePictureBox
+            // shopTitlePictureBox
             // 
-            this.titlePictureBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.titlePictureBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.titlePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.titlePictureBox.Location = new System.Drawing.Point(193, 38);
-            this.titlePictureBox.Name = "titlePictureBox";
-            this.titlePictureBox.Size = new System.Drawing.Size(329, 98);
-            this.titlePictureBox.TabIndex = 0;
-            this.titlePictureBox.TabStop = false;
+            this.shopTitlePictureBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.shopTitlePictureBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.shopTitlePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.shopTitlePictureBox.Location = new System.Drawing.Point(193, 38);
+            this.shopTitlePictureBox.Name = "shopTitlePictureBox";
+            this.shopTitlePictureBox.Size = new System.Drawing.Size(329, 98);
+            this.shopTitlePictureBox.TabIndex = 0;
+            this.shopTitlePictureBox.TabStop = false;
             // 
             // BackBtn
             // 
@@ -299,14 +299,14 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.BackBtn);
-            this.Controls.Add(this.titlePictureBox);
+            this.Controls.Add(this.shopTitlePictureBox);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ShopForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Shop";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ShopForm_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.titlePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shopTitlePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -317,7 +317,7 @@
 
         #endregion
 
-        public PictureBox titlePictureBox;
+        public PictureBox shopTitlePictureBox;
         public Button BackBtn;
         public PictureBox pictureBox2;
         public PictureBox pictureBox3;

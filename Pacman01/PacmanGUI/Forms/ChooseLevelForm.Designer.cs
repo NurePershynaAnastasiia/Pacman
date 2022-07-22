@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChooseLevelForm));
             this.BackBtn = new System.Windows.Forms.Button();
-            this.titlePictureBox = new System.Windows.Forms.PictureBox();
+            this.chooseLevelTitlePictureBox = new System.Windows.Forms.PictureBox();
             this.Lvl1Btn = new System.Windows.Forms.Button();
             this.Lvl2Btn = new System.Windows.Forms.Button();
             this.Lvl3Btn = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.RandomMapBtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.titlePictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chooseLevelTitlePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,17 +59,17 @@
             this.BackBtn.UseVisualStyleBackColor = false;
             this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
-            // titlePictureBox
+            // chooseLevelTitlePictureBox
             // 
-            this.titlePictureBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.titlePictureBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.titlePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.titlePictureBox.ErrorImage = null;
-            this.titlePictureBox.Location = new System.Drawing.Point(262, 72);
-            this.titlePictureBox.Name = "titlePictureBox";
-            this.titlePictureBox.Size = new System.Drawing.Size(584, 87);
-            this.titlePictureBox.TabIndex = 11;
-            this.titlePictureBox.TabStop = false;
+            this.chooseLevelTitlePictureBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.chooseLevelTitlePictureBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.chooseLevelTitlePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.chooseLevelTitlePictureBox.ErrorImage = null;
+            this.chooseLevelTitlePictureBox.Location = new System.Drawing.Point(262, 72);
+            this.chooseLevelTitlePictureBox.Name = "chooseLevelTitlePictureBox";
+            this.chooseLevelTitlePictureBox.Size = new System.Drawing.Size(584, 87);
+            this.chooseLevelTitlePictureBox.TabIndex = 11;
+            this.chooseLevelTitlePictureBox.TabStop = false;
             // 
             // Lvl1Btn
             // 
@@ -179,7 +179,7 @@
             this.Controls.Add(this.Lvl3Btn);
             this.Controls.Add(this.Lvl2Btn);
             this.Controls.Add(this.Lvl1Btn);
-            this.Controls.Add(this.titlePictureBox);
+            this.Controls.Add(this.chooseLevelTitlePictureBox);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.pictureBox2);
             this.DoubleBuffered = true;
@@ -188,7 +188,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Choose Level";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ChooseLevelForm_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.titlePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chooseLevelTitlePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -198,7 +198,7 @@
         #endregion
 
         public Button BackBtn;
-        public PictureBox titlePictureBox;
+        public PictureBox chooseLevelTitlePictureBox;
         public Button Lvl1Btn;
         public Button Lvl2Btn;
         public Button Lvl3Btn;

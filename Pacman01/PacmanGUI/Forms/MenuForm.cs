@@ -23,7 +23,8 @@ namespace PacmanGUI
             this.Size = new Size(800, 870);
             this.game = game;
             InitializeComponent();
-            LanguageChanger.Menu(this, game.Language);
+            LanguageChanger.Translate(this, game.Language);
+            LanguageChanger.LanguageButtonsHandler(this.EngBtn, this.UkrBtn, game.Language);
         }
 
         private void ExitBtn_Click(object sender, EventArgs e)
@@ -64,21 +65,15 @@ namespace PacmanGUI
         private void EngBtn_Click(object sender, EventArgs e)
         {
             game.Language = "eng";
-            LanguageChanger.Menu(this, "eng");
-            EngBtn.Enabled = false;
-            EngBtn.BackColor = Color.Firebrick;
-            UkrBtn.BackColor = Color.Tomato;
-            UkrBtn.Enabled = true;
+            LanguageChanger.Translate(this, "eng");
+            LanguageChanger.LanguageButtonsHandler(this.EngBtn, this.UkrBtn, "eng");
         }
 
         private void UkrBtn_Click(object sender, EventArgs e)
         {
             game.Language = "ukr";
-            LanguageChanger.Menu(this, "ukr");
-            EngBtn.Enabled = true;
-            UkrBtn.BackColor = Color.Firebrick;
-            EngBtn.BackColor = Color.Tomato;
-            UkrBtn.Enabled = false;
+            LanguageChanger.Translate(this, "ukr");
+            LanguageChanger.LanguageButtonsHandler(this.EngBtn, this.UkrBtn, "ukr");
         }
     }
 }

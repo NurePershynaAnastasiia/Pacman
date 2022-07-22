@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InstructionsForm));
-            this.titlePictureBox = new System.Windows.Forms.PictureBox();
+            this.instructionsTitlePictureBox = new System.Windows.Forms.PictureBox();
             this.BackBtn = new System.Windows.Forms.Button();
             this.labelPacman = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -46,7 +46,7 @@
             this.labelEnergizer2 = new System.Windows.Forms.Label();
             this.labelBonus = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.titlePictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.instructionsTitlePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -56,16 +56,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // titlePictureBox
+            // instructionsTitlePictureBox
             // 
-            this.titlePictureBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.titlePictureBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.titlePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.titlePictureBox.Location = new System.Drawing.Point(60, 57);
-            this.titlePictureBox.Name = "titlePictureBox";
-            this.titlePictureBox.Size = new System.Drawing.Size(664, 89);
-            this.titlePictureBox.TabIndex = 5;
-            this.titlePictureBox.TabStop = false;
+            this.instructionsTitlePictureBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.instructionsTitlePictureBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.instructionsTitlePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.instructionsTitlePictureBox.Location = new System.Drawing.Point(60, 57);
+            this.instructionsTitlePictureBox.Name = "instructionsTitlePictureBox";
+            this.instructionsTitlePictureBox.Size = new System.Drawing.Size(664, 89);
+            this.instructionsTitlePictureBox.TabIndex = 5;
+            this.instructionsTitlePictureBox.TabStop = false;
             // 
             // BackBtn
             // 
@@ -294,7 +294,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.labelPacman);
             this.Controls.Add(this.BackBtn);
-            this.Controls.Add(this.titlePictureBox);
+            this.Controls.Add(this.instructionsTitlePictureBox);
             this.Controls.Add(this.pictureBox6);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -302,7 +302,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Instructions";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.InstructionsForm_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.titlePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.instructionsTitlePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -316,7 +316,7 @@
         }
 
         #endregion
-        public PictureBox titlePictureBox;
+        public PictureBox instructionsTitlePictureBox;
         public Button BackBtn;
         public Label labelPacman;
         public PictureBox pictureBox2;

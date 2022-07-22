@@ -22,7 +22,7 @@ namespace PacmanGUI
             this.Size = new Size(800, 870);
             this.game = game;
             InitializeComponent();
-            LanguageChanger.Instructions(this, game.Language);
+            LanguageChanger.Translate(this, game.Language);
         }
 
         private void BackBtn_Click(object sender, EventArgs e)

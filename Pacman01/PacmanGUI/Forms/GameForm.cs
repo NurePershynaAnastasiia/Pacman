@@ -27,7 +27,7 @@ namespace PacmanGUI
             this.game = game;
             InitializeComponent();
             pauseLabel.Hide();
-            LanguageChanger.Game(this, game.Language);
+            LanguageChanger.Translate(this, game.Language);
             resetGame();
         }
 

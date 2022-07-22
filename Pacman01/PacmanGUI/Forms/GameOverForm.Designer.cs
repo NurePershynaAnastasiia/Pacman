@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameOverForm));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.titlePictureBox = new System.Windows.Forms.PictureBox();
+            this.gameOverTitlePictureBox = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.ExitBtn = new System.Windows.Forms.Button();
             this.generalScoreLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.titlePictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gameOverTitlePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,17 +51,17 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // titlePictureBox
+            // gameOverTitlePictureBox
             // 
-            this.titlePictureBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.titlePictureBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.titlePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.titlePictureBox.Location = new System.Drawing.Point(139, 202);
-            this.titlePictureBox.Name = "titlePictureBox";
-            this.titlePictureBox.Size = new System.Drawing.Size(508, 126);
-            this.titlePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.titlePictureBox.TabIndex = 1;
-            this.titlePictureBox.TabStop = false;
+            this.gameOverTitlePictureBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.gameOverTitlePictureBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.gameOverTitlePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gameOverTitlePictureBox.Location = new System.Drawing.Point(139, 202);
+            this.gameOverTitlePictureBox.Name = "gameOverTitlePictureBox";
+            this.gameOverTitlePictureBox.Size = new System.Drawing.Size(508, 126);
+            this.gameOverTitlePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gameOverTitlePictureBox.TabIndex = 1;
+            this.gameOverTitlePictureBox.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -117,7 +117,7 @@
             this.Controls.Add(this.generalScoreLabel);
             this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.titlePictureBox);
+            this.Controls.Add(this.gameOverTitlePictureBox);
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -126,7 +126,7 @@
             this.Text = "Game Over";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.GameOverForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.titlePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gameOverTitlePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -136,7 +136,7 @@
         #endregion
 
         public PictureBox pictureBox1;
-        public PictureBox titlePictureBox;
+        public PictureBox gameOverTitlePictureBox;
         public PictureBox pictureBox3;
         public Button ExitBtn;
         public Label generalScoreLabel;

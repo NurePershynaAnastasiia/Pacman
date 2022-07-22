@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VictoryForm));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.titlePictureBox = new System.Windows.Forms.PictureBox();
+            this.victoryTitlePictureBox = new System.Windows.Forms.PictureBox();
             this.ExitBtn = new System.Windows.Forms.Button();
             this.BackToMenuBtn = new System.Windows.Forms.Button();
             this.generalScoreLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.titlePictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.victoryTitlePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -50,17 +50,17 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // titlePictureBox
+            // victoryTitlePictureBox
             // 
-            this.titlePictureBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.titlePictureBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.titlePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.titlePictureBox.Location = new System.Drawing.Point(187, 238);
-            this.titlePictureBox.Name = "titlePictureBox";
-            this.titlePictureBox.Size = new System.Drawing.Size(433, 126);
-            this.titlePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.titlePictureBox.TabIndex = 1;
-            this.titlePictureBox.TabStop = false;
+            this.victoryTitlePictureBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.victoryTitlePictureBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.victoryTitlePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.victoryTitlePictureBox.Location = new System.Drawing.Point(187, 238);
+            this.victoryTitlePictureBox.Name = "victoryTitlePictureBox";
+            this.victoryTitlePictureBox.Size = new System.Drawing.Size(433, 126);
+            this.victoryTitlePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.victoryTitlePictureBox.TabIndex = 1;
+            this.victoryTitlePictureBox.TabStop = false;
             // 
             // ExitBtn
             // 
@@ -123,7 +123,7 @@
             this.Controls.Add(this.generalScoreLabel);
             this.Controls.Add(this.BackToMenuBtn);
             this.Controls.Add(this.ExitBtn);
-            this.Controls.Add(this.titlePictureBox);
+            this.Controls.Add(this.victoryTitlePictureBox);
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -132,7 +132,7 @@
             this.Text = "Victory";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.VictoryForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.titlePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.victoryTitlePictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,7 +141,7 @@
         #endregion
 
         public PictureBox pictureBox1;
-        public PictureBox titlePictureBox;
+        public PictureBox victoryTitlePictureBox;
         public Button ExitBtn;
         public Button BackToMenuBtn;
         public Label generalScoreLabel;
