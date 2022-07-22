@@ -35,13 +35,13 @@ namespace PacmanConsole
         public static void DrawWall(Field field, Wall wall)
         {
             string resString = "";
-            if (RandomMap.InBounds(new Coords(wall.X - 1, wall.Y), field) && field[wall.X - 1, wall.Y] is Wall)
+            if (RandomMap.InBounds(new Coords(wall.X - 1, wall.Y), field, false) && field[wall.X - 1, wall.Y] is Wall)
                 resString += "1";
-            if (RandomMap.InBounds(new Coords(wall.X + 1, wall.Y), field) && field[wall.X + 1, wall.Y] is Wall)
+            if (RandomMap.InBounds(new Coords(wall.X + 1, wall.Y), field, false) && field[wall.X + 1, wall.Y] is Wall)
                 resString += "2";
-            if (RandomMap.InBounds(new Coords(wall.X , wall.Y + 1), field) && field[wall.X, wall.Y + 1] is Wall)
+            if (RandomMap.InBounds(new Coords(wall.X , wall.Y + 1), field, false) && field[wall.X, wall.Y + 1] is Wall)
                 resString += "3";
-            if (RandomMap.InBounds(new Coords(wall.X, wall.Y - 1), field) && field[wall.X, wall.Y - 1] is Wall)
+            if (RandomMap.InBounds(new Coords(wall.X, wall.Y - 1), field, false) && field[wall.X, wall.Y - 1] is Wall)
                 resString += "4";
 
             Dictionary<string, char> wallTexture = new Dictionary<string, char>();

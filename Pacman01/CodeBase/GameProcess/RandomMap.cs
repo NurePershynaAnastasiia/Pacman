@@ -37,23 +37,23 @@ namespace CodeBase.GameProcess
             return field;
         }
 
-        public static bool InBounds(Coords element, Field field)
+        public static bool InBounds(Coords element, Field field, bool isInFrame)
         {
-            if (element.x >= 0 && element.x < field.Height && element.y >= 0 && element.y < field.Width)
-                return true;
-            return false;
-        }
-
-        public static bool InBoundsFrame(Coords element, Field field)
-        {
-            if (element.x > 0 && element.x < field.Height - 1 && element.y > 0 && element.y < field.Width - 1)
+            if (isInFrame)
+            {
+                if (element.x > 0 && element.x < field.Height - 1 && element.y > 0 && element.y < field.Width - 1)
+                    return true;
+                else
+                    return false;
+            }
+            else if (element.x >= 0 && element.x < field.Height && element.y >= 0 && element.y < field.Width)
                 return true;
             return false;
         }
 
         public static bool IsUnvisited(Coords element, Field field, bool [,] fieldVisited)
         {
-            if (InBoundsFrame(element, field))
+            if (InBounds(element, field, true))
             {
                 if (fieldVisited[element.x, element.y] == false)
                     return true;
@@ -159,7 +159,7 @@ namespace CodeBase.GameProcess
             for (int i = 1; i <= 4; i++)
             {
                 Coords currentCoords = new Coords(cell.X + GetDirectionWall(i).x, cell.Y + GetDirectionWall(i).y);
-                if (InBounds(currentCoords, field))
+                if (InBounds(currentCoords, field, false))
                 {
                     if (field[currentCoords.x, currentCoords.y] is Wall)
                         wallsAround++;
@@ -173,7 +173,7 @@ namespace CodeBase.GameProcess
             for (int i = 1; i <= 4; i++)
             {
                 Coords currentCoords = new Coords(cell.X + GetDirectionWall(i).x, cell.Y + GetDirectionWall(i).y);
-                if (InBoundsFrame(currentCoords, field))
+                if (InBounds(currentCoords, field, true))
                 {
                     if (field[currentCoords.x, currentCoords.y] is Wall)
                         field[currentCoords.x, currentCoords.y] = new Cell(currentCoords.x, currentCoords.y);
