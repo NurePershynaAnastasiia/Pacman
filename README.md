@@ -5,7 +5,8 @@ OOP course work, 1st course
 Ігрова програма, написана на C#
 Game program written on C#
 
-Screenshots of the program:
+Screenshots of the program:  
+
 Windows Forms:
 ![image](https://github.com/NurePershynaAnastasiia/Pacman/assets/104227176/694dd5cc-1015-401c-a84a-346be1cdf836)
 ![image](https://github.com/NurePershynaAnastasiia/Pacman/assets/104227176/9af9769e-fa8f-4f3c-a9f4-6ba91b3a000e)
